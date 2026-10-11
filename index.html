@@ -23,6 +23,9 @@
   <meta name="twitter:description" content="Visual storytelling, research communication, editorial design and information design.">
   <meta name="twitter:image" content="https://mariaveravisual.github.io/assets/image-001-88962888ea57.jpg">
 
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="72652adc-74e3-4a58-8fe7-31967dc9fd72"></script>
+
 <style>
   :root{
     --bg:#ffffff;
@@ -3433,6 +3436,27 @@
 
 <script>
 
+  // Portfolio analytics — Umami
+  function trackPortfolioEvent(name, data = {}, retry = 0){
+    if(window.umami && typeof window.umami.track === "function"){
+      window.umami.track(name, data);
+      return;
+    }
+    if(retry < 5){
+      setTimeout(() => trackPortfolioEvent(name, data, retry + 1), 400);
+    }
+  }
+
+  function trackPortfolioPage(url, title, retry = 0){
+    if(window.umami && typeof window.umami.track === "function"){
+      window.umami.track(props => ({ ...props, url, title }));
+      return;
+    }
+    if(retry < 5){
+      setTimeout(() => trackPortfolioPage(url, title, retry + 1), 400);
+    }
+  }
+
   const workNav = document.querySelector('[data-nav="work"]');
   const visualNav = document.querySelector('[data-nav="visual"]');
   const aboutNav = document.querySelector('[data-nav="about"]');
@@ -3463,18 +3487,26 @@
   workNav.addEventListener("click", e=>{
     e.preventDefault();
     showWork();
+    trackPortfolioPage("/", "Maria Vera — Case Studies");
+    trackPortfolioEvent("section_view", {section:"case_studies"});
   });
   visualNav.addEventListener("click", e=>{
     e.preventDefault();
     showVisual();
+    trackPortfolioPage("/visual-work", "Maria Vera — Visual Work");
+    trackPortfolioEvent("section_view", {section:"visual_work"});
   });
   aboutNav.addEventListener("click", e=>{
     e.preventDefault();
     showAbout();
+    trackPortfolioPage("/about", "Maria Vera — About");
+    trackPortfolioEvent("section_view", {section:"about"});
   });
   document.querySelector(".brand").addEventListener("click", e=>{
     e.preventDefault();
     showWork();
+    trackPortfolioPage("/", "Maria Vera — Case Studies");
+    trackPortfolioEvent("section_view", {section:"case_studies", source:"brand"});
   });
 
   const projects = {
@@ -3512,6 +3544,17 @@
     card.addEventListener("click",()=>{
       const key = card.dataset.project;
       const p = projects[key];
+
+      const caseAnalytics = {
+        fiji:{slug:"fiji", title:"Plastic Waste in Fiji"},
+        dark:{slug:"dark-vessels", title:"Dark Vessels"},
+        shrimp:{slug:"shrimp-welfare", title:"Hidden Suffering: Shrimp Welfare"}
+      };
+      const analyticsCase = caseAnalytics[key];
+      if(analyticsCase){
+        trackPortfolioPage(`/case-studies/${analyticsCase.slug}`, `Maria Vera — ${analyticsCase.title}`);
+        trackPortfolioEvent("case_study_open", {project:key});
+      }
       document.getElementById("overlayLabel").textContent = p.label;
 
       const darkCase = document.getElementById("darkCase");
@@ -3583,6 +3626,42 @@
         targetCard.click();
         overlay.scrollTop = 0;
       }
+    });
+  });
+
+
+  // Engagement events: PDFs, contact links and research sources.
+  document.querySelectorAll('button[onclick*="pdf/"]').forEach(button=>{
+    button.addEventListener("click", ()=>{
+      const caseRoot = button.closest("#fijiCase, #darkCase, #shrimpCase");
+      const project = caseRoot?.id === "fijiCase" ? "fiji"
+        : caseRoot?.id === "darkCase" ? "dark"
+        : caseRoot?.id === "shrimpCase" ? "shrimp"
+        : "unknown";
+      trackPortfolioEvent("pdf_open", {project});
+    }, {capture:true});
+  });
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link=>{
+    link.addEventListener("click", ()=>{
+      trackPortfolioEvent("contact_click", {type:"email"});
+    });
+  });
+
+  document.querySelectorAll('a[href*="linkedin.com"]').forEach(link=>{
+    link.addEventListener("click", ()=>{
+      trackPortfolioEvent("contact_click", {type:"linkedin"});
+    });
+  });
+
+  document.querySelectorAll('.case-source a').forEach(link=>{
+    link.addEventListener("click", ()=>{
+      const caseRoot = link.closest("#fijiCase, #darkCase, #shrimpCase");
+      const project = caseRoot?.id === "fijiCase" ? "fiji"
+        : caseRoot?.id === "darkCase" ? "dark"
+        : caseRoot?.id === "shrimpCase" ? "shrimp"
+        : "unknown";
+      trackPortfolioEvent("source_research_click", {project});
     });
   });
 
