@@ -2715,6 +2715,57 @@
     margin-top:14px !important;
   }
 
+
+  /* About expertise — five balanced columns */
+  .about-expertise-grid{
+    grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+    gap:clamp(24px,3vw,52px) !important;
+    align-items:start !important;
+  }
+
+  .expertise-column h2{
+    margin-bottom:20px !important;
+    font-size:13px !important;
+    line-height:1.15 !important;
+    letter-spacing:.08em !important;
+  }
+
+  .expertise-column li{
+    margin-bottom:10px !important;
+    font-size:clamp(15px,1.05vw,18px) !important;
+    line-height:1.3 !important;
+    letter-spacing:-.015em !important;
+  }
+
+  @media(max-width:1200px){
+    .about-expertise-grid{
+      grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+      gap:42px 36px !important;
+    }
+  }
+
+  @media(max-width:800px){
+    .about-expertise-grid{
+      grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+      gap:38px 30px !important;
+    }
+  }
+
+  @media(max-width:560px){
+    .about-expertise-grid{
+      grid-template-columns:1fr !important;
+      gap:34px !important;
+    }
+
+    .expertise-column h2{
+      font-size:12px !important;
+    }
+
+    .expertise-column li{
+      font-size:16px !important;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -2956,7 +3007,7 @@
       <div class="about-body">
         <p>Hi! My name is Maria, and I’m a visual designer with over 10 years of experience across editorial, digital, branding and e-commerce design.</p>
 
-        <p>I'm looking for a long-term role aligned with my purpose: to make others' lives better, and to make life itself better. And I'm looking for a place where I can put my heart in and where people's values are aligned with the values I deeply believe in: <strong>integrity, truth, love and beauty.</strong></p>
+        <p>I'm looking for a long-term role aligned with my purpose: to make others' lives better, and to make life itself better. And I'm looking for a place where I can put my heart in and where people's values are aligned with the values I deeply believe in: integrity, truth and love.</p>
 
         <p>I’m deeply interested in visual storytelling and research communication, turning complex information into clear, engaging and meaningful visual narratives.</p>
 
@@ -3022,6 +3073,18 @@
           <li>OpenArt</li>
           <li>Adobe Firefly</li>
           <li>Claude</li>
+        </ul>
+      </div>
+
+
+      <div class="expertise-column">
+        <h2>Working Style</h2>
+        <ul>
+          <li>Thoughtful</li>
+          <li>Independent</li>
+          <li>Easy-going &amp; Curious</li>
+          <li>Adaptable</li>
+          <li>Collaborative</li>
         </ul>
       </div>
 
