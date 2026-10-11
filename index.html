@@ -2083,6 +2083,201 @@
     }
   }
 
+
+  /* Mobile responsive fixes — navigation + Visual Work */
+  @media (max-width: 700px) {
+    :root{
+      --pad: 18px;
+    }
+
+    header{
+      align-items:center !important;
+      padding:16px var(--pad) !important;
+      gap:12px !important;
+    }
+
+    .brand{
+      flex:0 0 auto !important;
+      font-size:11px !important;
+      letter-spacing:.11em !important;
+      white-space:nowrap !important;
+    }
+
+    nav{
+      display:flex !important;
+      flex:0 1 auto !important;
+      flex-wrap:nowrap !important;
+      justify-content:flex-end !important;
+      align-items:center !important;
+      gap:10px !important;
+      font-size:10.5px !important;
+      white-space:nowrap !important;
+    }
+
+    nav a,
+    nav a:nth-child(3){
+      display:block !important;
+      padding-bottom:3px !important;
+    }
+
+    /* Reduce excess vertical space in the Visual Work intro on phones */
+    .visual-hero{
+      min-height:auto !important;
+      padding-top:64px !important;
+      padding-bottom:48px !important;
+      row-gap:36px !important;
+    }
+
+    .visual-hero h1{
+      font-size:clamp(48px,15vw,66px) !important;
+      line-height:.94 !important;
+    }
+
+    .visual-hero-side p{
+      font-size:18px !important;
+      line-height:1.38 !important;
+    }
+
+    .visual-section-head{
+      padding-top:24px !important;
+      padding-bottom:24px !important;
+      margin-bottom:44px !important;
+      row-gap:14px !important;
+    }
+
+    /* Force every Visual Work project into a true single-column mobile layout */
+    .visual-project,
+    .visual-project.visual-project-secondary{
+      display:grid !important;
+      grid-template-columns:minmax(0,1fr) !important;
+      gap:30px !important;
+      width:100% !important;
+      padding-top:52px !important;
+      align-items:start !important;
+    }
+
+    .visual-project:first-of-type{
+      padding-top:36px !important;
+    }
+
+    .visual-project-copy{
+      position:static !important;
+      top:auto !important;
+      width:100% !important;
+      max-width:none !important;
+      padding:0 !important;
+    }
+
+    .visual-project-number{
+      margin-bottom:16px !important;
+    }
+
+    .visual-project-copy h2{
+      margin-bottom:20px !important;
+      font-size:clamp(38px,11vw,52px) !important;
+      line-height:1 !important;
+    }
+
+    .visual-project-copy p{
+      max-width:none !important;
+      font-size:17px !important;
+      line-height:1.48 !important;
+    }
+
+    .visual-project-note{
+      margin-top:20px !important;
+      max-width:none !important;
+      font-size:12px !important;
+      line-height:1.5 !important;
+    }
+
+    .visual-project-meta{
+      margin-top:24px !important;
+      line-height:1.45 !important;
+    }
+
+    /* Carousel becomes full-width underneath the copy */
+    .vw-carousel{
+      grid-column:1 !important;
+      width:100% !important;
+      max-width:none !important;
+      min-width:0 !important;
+      margin:0 !important;
+      justify-self:stretch !important;
+    }
+
+    .vw-stage{
+      position:relative !important;
+      width:100% !important;
+      height:auto !important;
+      max-height:none !important;
+      aspect-ratio:1 / 1 !important;
+      overflow:hidden !important;
+    }
+
+    .vw-slide{
+      position:absolute !important;
+      inset:0 !important;
+      width:100% !important;
+      height:100% !important;
+    }
+
+    .vw-slide img{
+      display:block !important;
+      width:100% !important;
+      height:100% !important;
+      object-fit:contain !important;
+    }
+
+    .vw-arrow{
+      width:42px !important;
+      height:42px !important;
+      font-size:20px !important;
+    }
+
+    .vw-prev{left:10px !important;}
+    .vw-next{right:10px !important;}
+
+    .vw-controls{
+      width:100% !important;
+      padding-top:14px !important;
+    }
+
+    .vw-dots{
+      gap:8px !important;
+      flex-wrap:nowrap !important;
+    }
+
+    .vw-dot{
+      width:7px !important;
+      height:7px !important;
+      flex:0 0 7px !important;
+    }
+
+    .vw-counter{
+      flex:0 0 auto !important;
+      white-space:nowrap !important;
+      writing-mode:horizontal-tb !important;
+    }
+  }
+
+  @media (max-width: 390px) {
+    header{
+      padding-left:14px !important;
+      padding-right:14px !important;
+      gap:9px !important;
+    }
+
+    .brand{
+      font-size:10.5px !important;
+    }
+
+    nav{
+      gap:8px !important;
+      font-size:10px !important;
+    }
+  }
+
 </style>
 </head>
 <body>
