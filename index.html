@@ -2638,6 +2638,66 @@
     }
   }
 
+
+  /* Original research source */
+  .case-source{
+    display:grid;
+    grid-template-columns:minmax(120px,.32fr) minmax(0,1fr);
+    gap:28px;
+    align-items:start;
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+
+  .case-source-label{
+    font-size:10px;
+    line-height:1.2;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  .case-source a{
+    justify-self:start;
+    font-size:14px;
+    line-height:1.45;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:border-color .18s ease;
+  }
+
+  .case-source a:hover,
+  .case-source a:focus-visible{
+    border-bottom-color:var(--ink);
+  }
+
+  .case-source-arrow{
+    display:inline-block;
+    margin-left:5px;
+    transition:transform .18s ease;
+  }
+
+  .case-source a:hover .case-source-arrow,
+  .case-source a:focus-visible .case-source-arrow{
+    transform:translate(2px,-2px);
+  }
+
+  @media(max-width:700px){
+    .case-source{
+      grid-template-columns:1fr;
+      gap:9px;
+      margin-top:24px;
+      padding-top:20px;
+    }
+
+    .case-source a{
+      font-size:13.5px;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -3055,6 +3115,13 @@
       <button type="button" onclick="window.open('pdf/Quantifying_Shrimp_Welfare_Threats_Visual_Summary_Maria_Vera.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
     </div>
 
+    <div class="case-source">
+      <span class="case-source-label">Source research</span>
+      <a href="https://rethinkpriorities.org/research-area/quantifying-and-prioritizing-shrimp-welfare-threats/" target="_blank" rel="noopener noreferrer">
+        Rethink Priorities — Quantifying and prioritizing shrimp welfare threats<span class="case-source-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
     <nav class="case-project-nav" aria-label="Case study navigation">
       <button type="button" class="case-project-link prev" data-case-target="dark">
         <small>Previous project</small>
@@ -3147,6 +3214,13 @@
       <button type="button" onclick="window.open('pdf/Fiji_Plastic_Waste_Profile_Redesign_Maria_Vera_IUCN.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
     </div>
 
+    <div class="case-source">
+      <span class="case-source-label">Source research</span>
+      <a href="https://iucn.org/sites/default/files/2023-08/fiji-country-overview-.pdf" target="_blank" rel="noopener noreferrer">
+        IUCN — Fiji Plastic Waste Profile<span class="case-source-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
     <nav class="case-project-nav" aria-label="Case study navigation">
       <div class="case-nav-spacer" aria-hidden="true"></div>
       <button type="button" class="case-project-link next" data-case-target="dark">
@@ -3236,6 +3310,13 @@
     <div class="dark-report-link">
       <strong>View the complete editorial report</strong>
       <button type="button" onclick="window.open('pdf/The_Dark_Fleet_Visual_Communication_Maria_Vera.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
+    </div>
+
+    <div class="case-source">
+      <span class="case-source-label">Source research</span>
+      <a href="https://globalfishingwatch.org/data/radar-illuminated-ocean/" target="_blank" rel="noopener noreferrer">
+        Global Fishing Watch — A Radar-Illuminated Ocean Reveals Dark Fleets<span class="case-source-arrow" aria-hidden="true">↗</span>
+      </a>
     </div>
 
     <nav class="case-project-nav" aria-label="Case study navigation">
