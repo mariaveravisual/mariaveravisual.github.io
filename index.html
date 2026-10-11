@@ -2412,6 +2412,90 @@
     }
   }
 
+
+  /* Mobile header — centered editorial navigation */
+  @media (max-width: 700px) {
+    header{
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:22px !important;
+      padding:20px 18px 22px !important;
+      text-align:center !important;
+    }
+
+    .brand{
+      width:100% !important;
+      text-align:center !important;
+      font-size:15px !important;
+      line-height:1 !important;
+      letter-spacing:.14em !important;
+      white-space:nowrap !important;
+    }
+
+    nav{
+      width:auto !important;
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:12px !important;
+      font-size:18px !important;
+      line-height:1.15 !important;
+      white-space:nowrap !important;
+    }
+
+    nav a,
+    nav a:nth-child(3){
+      position:relative !important;
+      display:block !important;
+      min-height:0 !important;
+      padding:2px 0 5px !important;
+      border:0 !important;
+      border-radius:0 !important;
+      background:transparent !important;
+      text-align:center !important;
+    }
+
+    /* Remove all hover / inactive underlines on mobile */
+    nav a::after,
+    nav a:hover::after,
+    nav a:focus-visible::after{
+      width:0 !important;
+      height:1px !important;
+      left:0 !important;
+      right:0 !important;
+      bottom:0 !important;
+      margin:auto !important;
+      background:var(--ink) !important;
+    }
+
+    /* Active section only */
+    body:not(.show-visual):not(.show-about) nav a[data-nav="work"]::after,
+    body.show-visual nav a[data-nav="visual"]::after,
+    body.show-about nav a[data-nav="about"]::after{
+      width:100% !important;
+    }
+  }
+
+  @media (max-width: 390px) {
+    header{
+      padding-left:14px !important;
+      padding-right:14px !important;
+      gap:20px !important;
+    }
+
+    .brand{
+      font-size:14px !important;
+    }
+
+    nav{
+      font-size:17px !important;
+      gap:11px !important;
+    }
+  }
+
 </style>
 </head>
 <body>
