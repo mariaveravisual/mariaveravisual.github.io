@@ -3,7 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maria Vera — Portfolio</title>
+<title>Maria Vera — Visual Designer &amp; Storyteller</title>
+  <meta name="description" content="Maria Vera — Visual Designer & Storyteller. Selected work in visual storytelling, research communication, editorial design and information design.">
+  <meta name="author" content="Maria Vera">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://mariaveravisual.github.io/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='white'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='24' font-weight='600' fill='%23111111'%3EMV%3C/text%3E%3C/svg%3E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mariaveravisual.github.io/">
+  <meta property="og:title" content="Maria Vera — Visual Designer & Storyteller">
+  <meta property="og:description" content="Visual storytelling, research communication, editorial design and information design.">
+  <meta property="og:image" content="https://mariaveravisual.github.io/assets/image-001-88962888ea57.jpg">
+  <meta property="og:image:alt" content="Selected editorial work from Maria Vera's visual design portfolio">
+  <meta property="og:site_name" content="Maria Vera">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maria Vera — Visual Designer & Storyteller">
+  <meta name="twitter:description" content="Visual storytelling, research communication, editorial design and information design.">
+  <meta name="twitter:image" content="https://mariaveravisual.github.io/assets/image-001-88962888ea57.jpg">
+
 <style>
   :root{
     --bg:#ffffff;
@@ -2496,6 +2515,129 @@
     }
   }
 
+
+  /* Case study project information */
+  .case-meta-strip{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:28px;
+    margin-top:48px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    max-width:1040px;
+  }
+  .case-meta-item{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .case-meta-label{
+    font-size:10px;
+    line-height:1;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .case-meta-value{
+    font-size:14px;
+    line-height:1.45;
+    color:var(--ink);
+  }
+
+  /* Previous / Next case study navigation */
+  .case-project-nav{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    margin-top:74px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+  .case-project-nav .case-nav-spacer{min-height:1px}
+  .case-project-link{
+    appearance:none;
+    border:0;
+    background:transparent;
+    color:var(--ink);
+    padding:0;
+    font:inherit;
+    cursor:pointer;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    max-width:420px;
+  }
+  .case-project-link.next{
+    justify-self:end;
+    text-align:right;
+    align-items:flex-end;
+  }
+  .case-project-link small{
+    font-size:10px;
+    line-height:1;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .case-project-link strong{
+    font-size:clamp(24px,2.3vw,36px);
+    line-height:1.05;
+    letter-spacing:-.035em;
+    font-weight:500;
+  }
+  .case-project-link strong span{
+    display:inline-block;
+    transition:transform .2s ease;
+  }
+  .case-project-link:hover strong span{
+    transform:translateX(4px);
+  }
+  .case-project-link.prev:hover strong span{
+    transform:translateX(-4px);
+  }
+
+  @media(max-width:800px){
+    .case-meta-strip{
+      grid-template-columns:1fr 1fr;
+      gap:22px 24px;
+      margin-top:34px;
+      padding-top:20px;
+    }
+    .case-meta-value{
+      font-size:13px;
+    }
+    .case-project-nav{
+      grid-template-columns:1fr;
+      gap:28px;
+      margin-top:58px;
+      padding-top:26px;
+    }
+    .case-project-nav .case-nav-spacer{display:none}
+    .case-project-link,
+    .case-project-link.next{
+      justify-self:start;
+      text-align:left;
+      align-items:flex-start;
+      max-width:none;
+    }
+    .case-project-link.next{
+      justify-self:end;
+      text-align:right;
+      align-items:flex-end;
+    }
+    .case-project-link strong{
+      font-size:28px;
+    }
+  }
+
+  @media(max-width:520px){
+    .case-meta-strip{
+      grid-template-columns:1fr;
+      gap:18px;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -2846,6 +2988,24 @@
     <section class="shrimp-case-intro">
       <h2>Hidden Suffering: Shrimp Welfare</h2>
       <p>A visual storytelling project translating research on farmed shrimp welfare into a clearer and more accessible narrative, using editorial design, illustration and information hierarchy to make complex findings easier to understand.</p>
+      <div class="case-meta-strip" aria-label="Project information">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Type</span>
+          <span class="case-meta-value">Independent concept</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-value">Visual storytelling · Editorial &amp; information design</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Focus</span>
+          <span class="case-meta-value">Research communication · Animal welfare</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-value">2026</span>
+        </div>
+      </div>
     </section>
 
     <div class="shrimp-story">
@@ -2894,12 +3054,38 @@
       <strong>View the complete editorial report</strong>
       <button type="button" onclick="window.open('pdf/Quantifying_Shrimp_Welfare_Threats_Visual_Summary_Maria_Vera.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
     </div>
+
+    <nav class="case-project-nav" aria-label="Case study navigation">
+      <button type="button" class="case-project-link prev" data-case-target="dark">
+        <small>Previous project</small>
+        <strong><span>← Dark Vessels</span></strong>
+      </button>
+      <div class="case-nav-spacer" aria-hidden="true"></div>
+    </nav>
   </div>
 
   <div class="fiji-case" id="fijiCase">
     <section class="fiji-case-intro">
       <h2>Plastic Waste in Fiji</h2>
       <p>An editorial redesign translating research on plastic waste, disposal and leakage in Fiji into a clearer and more approachable visual narrative.</p>
+      <div class="case-meta-strip" aria-label="Project information">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Type</span>
+          <span class="case-meta-value">Independent concept</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-value">Editorial &amp; information design · Visual storytelling</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Focus</span>
+          <span class="case-meta-value">Research communication · Plastic pollution</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-value">2026</span>
+        </div>
+      </div>
     </section>
 
     <div class="fiji-story">
@@ -2960,12 +3146,38 @@
       <strong>View the complete editorial report</strong>
       <button type="button" onclick="window.open('pdf/Fiji_Plastic_Waste_Profile_Redesign_Maria_Vera_IUCN.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
     </div>
+
+    <nav class="case-project-nav" aria-label="Case study navigation">
+      <div class="case-nav-spacer" aria-hidden="true"></div>
+      <button type="button" class="case-project-link next" data-case-target="dark">
+        <small>Next project</small>
+        <strong><span>Dark Vessels →</span></strong>
+      </button>
+    </nav>
   </div>
 
   <div class="dark-case" id="darkCase">
     <section class="dark-case-intro">
       <h2>Dark Vessels</h2>
       <p>A visual storytelling project exploring hidden fishing activity and the challenge of making complex marine data easier to understand.</p>
+      <div class="case-meta-strip" aria-label="Project information">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Type</span>
+          <span class="case-meta-value">Independent concept</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-value">Visual storytelling · Data interpretation · Editorial design</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Focus</span>
+          <span class="case-meta-value">Research communication · Ocean transparency</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-value">2026</span>
+        </div>
+      </div>
     </section>
 
     <div class="dark-story">
@@ -3025,6 +3237,17 @@
       <strong>View the complete editorial report</strong>
       <button type="button" onclick="window.open('pdf/The_Dark_Fleet_Visual_Communication_Maria_Vera.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
     </div>
+
+    <nav class="case-project-nav" aria-label="Case study navigation">
+      <button type="button" class="case-project-link prev" data-case-target="fiji">
+        <small>Previous project</small>
+        <strong><span>← Plastic Waste in Fiji</span></strong>
+      </button>
+      <button type="button" class="case-project-link next" data-case-target="shrimp">
+        <small>Next project</small>
+        <strong><span>Hidden Suffering →</span></strong>
+      </button>
+    </nav>
   </div>
 
   <div class="case-hero" id="genericCaseHero">
@@ -3191,6 +3414,18 @@
     document.body.style.overflow="";
   }
   document.getElementById("closeOverlay").addEventListener("click", closeOverlay);
+
+  document.querySelectorAll("[data-case-target]").forEach(button=>{
+    button.addEventListener("click",()=>{
+      const target = button.dataset.caseTarget;
+      const targetCard = document.querySelector(`.project[data-project="${target}"]`);
+      if(targetCard){
+        targetCard.click();
+        overlay.scrollTop = 0;
+      }
+    });
+  });
+
   document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeOverlay(); });
 
   const io = new IntersectionObserver(entries=>{
