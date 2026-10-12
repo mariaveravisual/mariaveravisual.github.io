@@ -24,7 +24,7 @@
   <meta name="twitter:image" content="https://mariaveravisual.github.io/assets/image-001-88962888ea57.jpg">
 
   <!-- Umami Analytics -->
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="72652adc-74e3-4a58-8fe7-31967dc9fd72"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="72652adc-74e3-4a58-8fe7-31967dc9fd72" data-auto-pageview="false"></script>
 
 <style>
   :root{
@@ -3109,7 +3109,7 @@
     <div class="site-footer-grid">
       <div class="site-footer-name">Maria Vera</div>
       <div class="site-footer-role">Visual Designer &amp; Storyteller</div>
-      <div class="site-footer-copy">© 2026</div>
+      <div class="site-footer-copy">© <span id="copyrightYear">2026</span></div>
       <div class="site-footer-links">
         <a href="mailto:mariavera.visual@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/mariaveram/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -3509,6 +3509,24 @@
     trackPortfolioEvent("section_view", {section:"case_studies", source:"brand"});
   });
 
+  const caseRoutes = {
+    fiji:{path:"/case-studies/fiji", title:"Plastic Waste in Fiji"},
+    dark:{path:"/case-studies/dark-vessels", title:"Dark Vessels"},
+    shrimp:{path:"/case-studies/shrimp-welfare", title:"Hidden Suffering: Shrimp Welfare"}
+  };
+  const caseKeyByPath = Object.fromEntries(
+    Object.entries(caseRoutes).map(([key, value]) => [value.path, key])
+  );
+
+  function cleanPortfolioPath(path){
+    const cleaned = (path || "/").replace(/\/+$/, "");
+    return cleaned || "/";
+  }
+
+  function updateDocumentTitle(title){
+    document.title = title || "Maria Vera — Visual Designer & Storyteller";
+  }
+
   const projects = {
     shrimp:{
       label:"Research communication",
@@ -3540,94 +3558,170 @@
   };
 
   const overlay = document.getElementById("overlay");
+
+  function renderCaseOverlay(key){
+    const p = projects[key];
+    if(!p) return false;
+
+    document.getElementById("overlayLabel").textContent = p.label;
+
+    const darkCase = document.getElementById("darkCase");
+    const fijiCase = document.getElementById("fijiCase");
+    const shrimpCase = document.getElementById("shrimpCase");
+    const genericCaseHero = document.getElementById("genericCaseHero");
+    const caseArt = document.getElementById("caseArt");
+    const genericCaseColumns = document.getElementById("genericCaseColumns");
+    const genericPdfDemo = document.getElementById("genericPdfDemo");
+
+    darkCase.classList.toggle("active", key === "dark");
+    fijiCase.classList.toggle("active", key === "fiji");
+    shrimpCase.classList.toggle("active", key === "shrimp");
+
+    if(["dark","fiji","shrimp"].includes(key)){
+      genericCaseHero.style.display = "none";
+      caseArt.style.display = "none";
+      genericCaseColumns.style.display = "none";
+      genericPdfDemo.style.display = "none";
+    } else {
+      genericCaseHero.style.display = "";
+      caseArt.style.display = "";
+      genericCaseColumns.style.display = "";
+      genericPdfDemo.style.display = "";
+      document.getElementById("caseTitle").textContent = p.title;
+      document.getElementById("caseText").textContent = p.text;
+      document.getElementById("caseFacts").innerHTML = p.facts;
+      document.getElementById("caseApproach").textContent = p.approach;
+      document.getElementById("caseArt").innerHTML = p.art;
+    }
+
+    overlay.classList.add("opened");
+    overlay.setAttribute("aria-hidden","false");
+    overlay.scrollTop = 0;
+    document.body.style.overflow = "hidden";
+    return true;
+  }
+
+  function openCase(key, options = {}){
+    const route = caseRoutes[key];
+    if(!route || !renderCaseOverlay(key)) return;
+
+    const historyMode = options.historyMode || "push";
+    const currentState = history.state || {};
+    const origin = options.origin || currentState.origin || "home";
+    const depth = Number.isFinite(options.depth)
+      ? options.depth
+      : (historyMode === "push" ? (Number(currentState.depth) || 0) + 1 : (Number(currentState.depth) || 0));
+
+    const state = {portfolioView:"case", case:key, origin, depth};
+    if(historyMode === "push") history.pushState(state, "", route.path);
+    else if(historyMode === "replace") history.replaceState(state, "", route.path);
+
+    updateDocumentTitle(`Maria Vera — ${route.title}`);
+
+    if(options.track !== false){
+      trackPortfolioPage(route.path, `Maria Vera — ${route.title}`);
+      trackPortfolioEvent("case_study_open", {project:key, source:options.source || "portfolio"});
+    }
+  }
+
+  function closeOverlayVisual(){
+    overlay.classList.remove("opened");
+    overlay.setAttribute("aria-hidden","true");
+    document.body.style.overflow = "";
+  }
+
+  function returnToHome(options = {}){
+    closeOverlayVisual();
+    showWork();
+    updateDocumentTitle("Maria Vera — Visual Designer & Storyteller");
+
+    if(options.historyMode === "replace"){
+      history.replaceState({portfolioView:"home", depth:0}, "", "/");
+    }
+    if(options.track){
+      trackPortfolioPage("/", "Maria Vera — Case Studies");
+    }
+  }
+
   document.querySelectorAll(".project").forEach(card=>{
     card.addEventListener("click",()=>{
       const key = card.dataset.project;
-      const p = projects[key];
-
-      const caseAnalytics = {
-        fiji:{slug:"fiji", title:"Plastic Waste in Fiji"},
-        dark:{slug:"dark-vessels", title:"Dark Vessels"},
-        shrimp:{slug:"shrimp-welfare", title:"Hidden Suffering: Shrimp Welfare"}
-      };
-      const analyticsCase = caseAnalytics[key];
-      if(analyticsCase){
-        trackPortfolioPage(`/case-studies/${analyticsCase.slug}`, `Maria Vera — ${analyticsCase.title}`);
-        trackPortfolioEvent("case_study_open", {project:key});
-      }
-      document.getElementById("overlayLabel").textContent = p.label;
-
-      const darkCase = document.getElementById("darkCase");
-      const fijiCase = document.getElementById("fijiCase");
-      const shrimpCase = document.getElementById("shrimpCase");
-      const genericCaseHero = document.getElementById("genericCaseHero");
-      const caseArt = document.getElementById("caseArt");
-      const genericCaseColumns = document.getElementById("genericCaseColumns");
-      const genericPdfDemo = document.getElementById("genericPdfDemo");
-
-      if(key === "dark"){
-        darkCase.classList.add("active");
-        fijiCase.classList.remove("active");
-        shrimpCase.classList.remove("active");
-        genericCaseHero.style.display = "none";
-        caseArt.style.display = "none";
-        genericCaseColumns.style.display = "none";
-        genericPdfDemo.style.display = "none";
-      } else if(key === "fiji"){
-        fijiCase.classList.add("active");
-        darkCase.classList.remove("active");
-        shrimpCase.classList.remove("active");
-        genericCaseHero.style.display = "none";
-        caseArt.style.display = "none";
-        genericCaseColumns.style.display = "none";
-        genericPdfDemo.style.display = "none";
-      } else if(key === "shrimp"){
-        shrimpCase.classList.add("active");
-        darkCase.classList.remove("active");
-        fijiCase.classList.remove("active");
-        genericCaseHero.style.display = "none";
-        caseArt.style.display = "none";
-        genericCaseColumns.style.display = "none";
-        genericPdfDemo.style.display = "none";
-      } else {
-        darkCase.classList.remove("active");
-        fijiCase.classList.remove("active");
-        shrimpCase.classList.remove("active");
-        genericCaseHero.style.display = "";
-        caseArt.style.display = "";
-        genericCaseColumns.style.display = "";
-        genericPdfDemo.style.display = "";
-
-        document.getElementById("caseTitle").textContent = p.title;
-        document.getElementById("caseText").textContent = p.text;
-        document.getElementById("caseFacts").innerHTML = p.facts;
-        document.getElementById("caseApproach").textContent = p.approach;
-        document.getElementById("caseArt").innerHTML = p.art;
-      }
-
-      overlay.classList.add("opened");
-      overlay.setAttribute("aria-hidden","false");
-      overlay.scrollTop = 0;
-      document.body.style.overflow="hidden";
+      openCase(key, {historyMode:"push", origin:"home", source:"case_studies"});
     });
   });
+
   function closeOverlay(){
-    overlay.classList.remove("opened");
-    overlay.setAttribute("aria-hidden","true");
-    document.body.style.overflow="";
+    const state = history.state || {};
+    if(state.portfolioView === "case" && state.origin === "home" && Number(state.depth) > 0){
+      history.go(-Number(state.depth));
+      return;
+    }
+    returnToHome({historyMode:"replace", track:true});
   }
+
   document.getElementById("closeOverlay").addEventListener("click", closeOverlay);
 
   document.querySelectorAll("[data-case-target]").forEach(button=>{
     button.addEventListener("click",()=>{
       const target = button.dataset.caseTarget;
-      const targetCard = document.querySelector(`.project[data-project="${target}"]`);
-      if(targetCard){
-        targetCard.click();
-        overlay.scrollTop = 0;
-      }
+      const state = history.state || {};
+      openCase(target, {
+        historyMode:"push",
+        origin:state.origin || "home",
+        source:"case_navigation"
+      });
+      overlay.scrollTop = 0;
     });
   });
+
+  function applyLocationRoute(options = {}){
+    const params = new URLSearchParams(window.location.search);
+    const forwardedRoute = params.get("portfolioRoute");
+    let path = forwardedRoute ? cleanPortfolioPath(forwardedRoute) : cleanPortfolioPath(window.location.pathname);
+    const key = caseKeyByPath[path];
+
+    if(key){
+      if(forwardedRoute){
+        history.replaceState({portfolioView:"case", case:key, origin:"direct", depth:0}, "", path);
+      } else if(!history.state || history.state.portfolioView !== "case"){
+        history.replaceState({portfolioView:"case", case:key, origin:"direct", depth:0}, "", path);
+      }
+      renderCaseOverlay(key);
+      updateDocumentTitle(`Maria Vera — ${caseRoutes[key].title}`);
+      if(options.track !== false){
+        trackPortfolioPage(path, `Maria Vera — ${caseRoutes[key].title}`);
+        trackPortfolioEvent("case_study_open", {project:key, source:"direct_url"});
+      }
+      return;
+    }
+
+    closeOverlayVisual();
+    updateDocumentTitle("Maria Vera — Visual Designer & Storyteller");
+    if(forwardedRoute || window.location.search.includes("portfolioRoute=")){
+      history.replaceState({portfolioView:"home", depth:0}, "", "/");
+    } else if(!history.state){
+      history.replaceState({portfolioView:"home", depth:0}, "", cleanPortfolioPath(window.location.pathname));
+    }
+    if(options.track !== false){
+      trackPortfolioPage("/", "Maria Vera — Case Studies");
+    }
+  }
+
+  window.addEventListener("popstate", ()=>{
+    const path = cleanPortfolioPath(window.location.pathname);
+    const key = caseKeyByPath[path];
+    if(key){
+      renderCaseOverlay(key);
+      updateDocumentTitle(`Maria Vera — ${caseRoutes[key].title}`);
+      trackPortfolioPage(path, `Maria Vera — ${caseRoutes[key].title}`);
+    } else {
+      closeOverlayVisual();
+      showWork();
+      updateDocumentTitle("Maria Vera — Visual Designer & Storyteller");
+      trackPortfolioPage("/", "Maria Vera — Case Studies");
+    }
+  });
+
 
 
   // Engagement events: PDFs, contact links and research sources.
@@ -3665,7 +3759,13 @@
     });
   });
 
-  document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeOverlay(); });
+  const copyrightYear = document.getElementById("copyrightYear");
+  if(copyrightYear) copyrightYear.textContent = new Date().getFullYear();
+
+  // Open a directly shared case-study URL (or track the normal home view).
+  applyLocationRoute({track:true});
+
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape" && overlay.classList.contains("opened")) closeOverlay(); });
 
   const io = new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add("visible"); });

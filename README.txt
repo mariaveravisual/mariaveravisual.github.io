@@ -1,11 +1,15 @@
-Maria Vera Portfolio — GitHub Pages version
 
-Upload the CONTENTS of this folder to the root of:
-mariaveravisual/mariaveravisual.github.io
 
-Required structure:
-- index.html
-- assets/
-- pdf/
+CASE STUDY DIRECT URLS
+----------------------
+This version keeps the existing overlay design but adds shareable URLs:
+- /case-studies/fiji
+- /case-studies/dark-vessels
+- /case-studies/shrimp-welfare
 
-Do not rename or move the assets/ or pdf/ folders unless you also update their paths in index.html.
+IMPORTANT: upload 404.html to the repository root together with index.html.
+GitHub Pages uses it to forward directly opened case-study URLs back into the portfolio app.
+
+Also included:
+- Umami tracking for case-study routes and engagement events
+- automatic copyright year
