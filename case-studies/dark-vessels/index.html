@@ -1,0 +1,4047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="/">
+<title>Maria Vera — Dark Vessels</title>
+  <meta name="description" content="Independent visual storytelling case study explaining how AIS, optical imagery, SAR and VIIRS can reveal vessel activity at sea.">
+  <meta name="author" content="Maria Vera">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://mariaveravisual.github.io/case-studies/dark-vessels/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='white'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-size='24' font-weight='600' fill='%23111111'%3EMV%3C/text%3E%3C/svg%3E">
+
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mariaveravisual.github.io/case-studies/dark-vessels/">
+  <meta property="og:title" content="Maria Vera — Dark Vessels">
+  <meta property="og:description" content="Independent visual storytelling case study explaining how AIS, optical imagery, SAR and VIIRS can reveal vessel activity at sea.">
+  <meta property="og:image" content="https://mariaveravisual.github.io/assets/image-002-5a8266fd9fa2.jpg">
+  <meta property="og:image:width" content="2048">
+  <meta property="og:image:height" content="1280">
+  <meta property="og:image:alt" content="Dark Vessels — Maria Vera portfolio">
+  <meta property="og:site_name" content="Maria Vera">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maria Vera — Dark Vessels">
+  <meta name="twitter:description" content="Independent visual storytelling case study explaining how AIS, optical imagery, SAR and VIIRS can reveal vessel activity at sea.">
+  <meta name="twitter:image" content="https://mariaveravisual.github.io/assets/image-002-5a8266fd9fa2.jpg">
+
+  <!-- Umami Analytics -->
+  <link rel="preconnect" href="https://cloud.umami.is" crossorigin>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="72652adc-74e3-4a58-8fe7-31967dc9fd72" data-auto-pageview="false"></script>
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --paper:#ffffff;
+    --ink:#171717;
+    --muted:#77746f;
+    --line:rgba(23,23,23,.18);
+    --pad:clamp(22px,4vw,64px);
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  button{font:inherit}
+  .shell{max-width:1800px;margin:0 auto}
+
+  header{
+    position:sticky;
+    top:0;
+    z-index:20;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px var(--pad);
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(23,23,23,.08);
+  }
+  .brand{
+    font-size:14px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+  nav{display:flex;gap:26px;font-size:13px}
+  nav a{position:relative;padding-bottom:4px}
+  nav a::after{
+    content:"";
+    position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--ink);
+    transition:width .25s ease;
+  }
+  nav a:hover::after{width:100%}
+
+  .hero{
+    min-height:70vh;
+    padding:clamp(80px,12vh,150px) var(--pad) 70px;
+    display:grid;
+    grid-template-columns:1.35fr .65fr;
+    gap:40px;
+    align-items:end;
+  }
+  .kicker{
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    margin-bottom:22px;
+  }
+  h1{
+    margin:0;
+    font-family:var(--serif);
+    font-size:clamp(54px,8vw,126px);
+    line-height:.92;
+    font-weight:400;
+    letter-spacing:-.045em;
+    max-width:1100px;
+  }
+  .hero-side{
+    align-self:end;
+    max-width:420px;
+    margin-left:auto;
+  }
+  .hero-side p{
+    margin:0 0 24px;
+    font-size:clamp(18px,2vw,26px);
+    line-height:1.32;
+    letter-spacing:-.02em;
+  }
+  .scroll-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+  }
+  .scroll-link span{transition:transform .25s ease}
+  .scroll-link:hover span{transform:translateY(4px)}
+
+  .section{
+    padding:90px var(--pad);
+  }
+  .section-head{
+    display:flex;justify-content:space-between;gap:30px;align-items:flex-end;
+    padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:34px;
+  }
+  .section-head h2{
+    margin:0;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+  }
+  .section-head p{
+    margin:0;max-width:560px;color:var(--muted);font-size:14px;line-height:1.5;text-align:right;
+  }
+
+  .project{
+    display:grid;
+    grid-template-columns:1.65fr .75fr;
+    gap:34px;
+    margin-bottom:100px;
+    cursor:pointer;
+  }
+  .project:nth-child(even){grid-template-columns:.75fr 1.65fr}
+  .project:nth-child(even) .project-visual{order:2}
+  .project-visual{
+    aspect-ratio:16/10;
+    overflow:hidden;
+    background:#ddd;
+    position:relative;
+  }
+  .art{
+    width:100%;height:100%;
+    transition:transform .7s cubic-bezier(.2,.7,.2,1), filter .35s ease;
+  }
+  .project:hover .art{transform:scale(1.018)}
+  .project-meta{
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:4px 0 6px;
+  }
+  .project-number{font-size:11px;letter-spacing:.12em;color:var(--muted)}
+  .project-meta h3{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(34px,4vw,62px);line-height:1;
+    letter-spacing:-.035em;margin:28px 0 18px;
+  }
+  .project-meta p{font-size:15px;line-height:1.55;max-width:360px;color:#3d3b38}
+  .tags{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:20px}
+  .open{margin-top:auto;padding-top:30px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .open b{display:inline-block;transition:transform .25s ease}
+  .project:hover .open b{transform:translateX(6px)}
+
+  .about{
+    display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;
+    padding:130px var(--pad);
+    background:var(--paper);
+  }
+  .about-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  .about-copy{
+    font-family:var(--serif);
+    font-size:clamp(32px,4vw,60px);
+    line-height:1.08;
+    letter-spacing:-.035em;
+    max-width:1050px;
+  }
+  .about-copy small{
+    display:block;font-family:var(--sans);font-size:14px;line-height:1.6;
+    color:var(--muted);letter-spacing:0;margin-top:35px;max-width:640px;
+  }
+
+  footer{
+    padding:55px var(--pad) 42px;
+    display:flex;justify-content:space-between;gap:30px;align-items:flex-end;
+  }
+  footer .name{font-family:var(--serif);font-size:clamp(28px,4vw,52px);letter-spacing:-.03em}
+  footer .links{display:flex;gap:20px;font-size:13px}
+
+  /* Project overlay / case study */
+  .overlay{
+    position:fixed;inset:0;z-index:100;background:var(--paper);
+    overflow:auto;opacity:0;visibility:hidden;transform:translateY(14px);
+    transition:opacity .32s ease, transform .32s ease, visibility .32s;
+  }
+  .overlay.opened{opacity:1;visibility:visible;transform:none}
+  .overlay-top{
+    position:sticky;top:0;z-index:4;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:20px var(--pad);background:rgba(255,255,255,.94);
+    backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.08);
+  }
+  .overlay-top .title{font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .close{
+    border:0;background:transparent;cursor:pointer;
+    font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:7px 0;
+  }
+  .case-hero{padding:90px var(--pad) 40px}
+  .case-hero h2{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(58px,8vw,120px);line-height:.92;letter-spacing:-.045em;margin:0 0 40px;
+  }
+  .case-intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid var(--line);padding-top:24px}
+  .case-intro p{font-size:16px;line-height:1.6;max-width:580px}
+  .case-intro .facts{font-size:12px;line-height:1.8;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .case-wide{margin:50px var(--pad) 100px;aspect-ratio:16/8;overflow:hidden}
+  .case-wide .art{transform:none!important}
+  .case-columns{
+    padding:0 var(--pad) 120px;
+    display:grid;grid-template-columns:.7fr 1.3fr;gap:80px;
+  }
+  .case-columns h4{
+    margin:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  }
+  .case-columns p{
+    margin:0;font-family:var(--serif);font-size:clamp(28px,3vw,46px);line-height:1.13;letter-spacing:-.025em;
+  }
+  .pdf-demo{
+    margin:0 var(--pad) 100px;padding:32px;border:1px solid var(--line);
+    display:flex;justify-content:space-between;gap:30px;align-items:center;
+  }
+  .pdf-demo strong{font-family:var(--serif);font-size:24px;font-weight:400}
+  .pdf-demo span{font-size:12px;color:var(--muted)}
+  .pdf-demo button{
+    border:1px solid var(--ink);background:transparent;padding:13px 18px;cursor:pointer;
+    text-transform:uppercase;font-size:11px;letter-spacing:.1em;
+  }
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.visible{opacity:1;transform:none}
+
+  @media(max-width:850px){
+    header{align-items:flex-start}
+    nav{gap:13px;flex-wrap:wrap;justify-content:flex-end}
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-side{margin-left:0}
+    .project,.project:nth-child(even){grid-template-columns:1fr}
+    .project:nth-child(even) .project-visual{order:0}
+    .about{grid-template-columns:1fr;gap:40px}
+    .section-head{display:block}
+    .section-head p{text-align:left;margin-top:12px}
+    .case-intro,.case-columns{grid-template-columns:1fr}
+    .pdf-demo{align-items:flex-start;flex-direction:column}
+  }
+  @media(max-width:600px){
+    header{padding-top:16px;padding-bottom:16px}
+    nav{font-size:12px}
+    nav a:nth-child(3){display:none}
+    .hero{padding-top:70px}
+    .section{padding-top:70px;padding-bottom:70px}
+  }
+
+  /* Project text treatment based on the supplied reference */
+  .project-meta{
+    justify-content:flex-start;
+    padding:2px 0 4px;
+  }
+  .project-meta h3{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:clamp(34px,3.25vw,58px);
+    line-height:1.02;
+    letter-spacing:-.045em;
+    margin:0 0 clamp(30px,4vw,58px);
+  }
+  .project-meta p{
+    font-size:clamp(22px,2.35vw,39px);
+    line-height:1.18;
+    letter-spacing:-.035em;
+    max-width:760px;
+    color:var(--ink);
+    margin:0;
+  }
+  .open{
+    margin-top:clamp(48px,6vw,90px);
+    padding-top:0;
+    width:max-content;
+    border-bottom:1.5px solid var(--ink);
+    font-size:clamp(20px,2.1vw,34px);
+    line-height:1.25;
+    letter-spacing:-.025em;
+    text-transform:none;
+    padding-bottom:3px;
+  }
+  .open b{font-weight:400}
+
+  .about-page{
+    display:none;
+    min-height:calc(100vh - 69px);
+    padding:clamp(80px,11vw,160px) var(--pad) 90px;
+  }
+  .about-page.active{display:block}
+  .about-page-inner{
+    display:grid;
+    grid-template-columns:.45fr 1.55fr;
+    gap:70px;
+    max-width:1500px;
+  }
+  .about-page-label{
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding-top:12px;
+  }
+  .about-page-copy h2{
+    margin:0;
+    font-family:var(--sans);
+    font-weight:400;
+    font-size:clamp(42px,5.7vw,90px);
+    line-height:1.02;
+    letter-spacing:-.055em;
+    max-width:1200px;
+  }
+  .about-page-copy > p{
+    margin:55px 0 0;
+    max-width:760px;
+    font-size:clamp(18px,1.8vw,27px);
+    line-height:1.45;
+    letter-spacing:-.02em;
+  }
+  .about-contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    margin-top:100px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    max-width:760px;
+  }
+  .about-contact > div{display:flex;flex-direction:column;gap:10px}
+  .about-contact-label{
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .about-contact a{
+    width:max-content;
+    font-size:16px;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:2px;
+  }
+
+  body.show-about main{display:none}
+  body.show-about .about-page{display:block}
+
+  @media(max-width:850px){
+    .about-page-inner{grid-template-columns:1fr;gap:38px}
+    .about-contact{grid-template-columns:1fr}
+    .project-meta p{font-size:clamp(21px,4.8vw,32px)}
+  }
+
+
+  /* Preserve the natural 2400×1500 ratio for images inside project pages */
+  .case-wide{
+    aspect-ratio:auto;
+    overflow:visible;
+  }
+  .case-wide img.art{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+
+
+  /* Dark Vessels editorial case-study */
+  .dark-case{
+    display:none;
+    padding:0 var(--pad) 120px;
+  }
+  .dark-case.active{display:block}
+  .dark-case-intro{
+    max-width:1100px;
+    padding:90px 0 70px;
+  }
+  .dark-case-intro h2, .dark-case-intro h1{
+    margin:0 0 34px;
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(58px,8vw,118px);
+    line-height:.92;
+    letter-spacing:-.055em;
+  }
+  .dark-case-intro p{
+    margin:0;
+    max-width:800px;
+    font-size:clamp(21px,2.3vw,34px);
+    line-height:1.28;
+    letter-spacing:-.025em;
+  }
+  .dark-story{
+    display:grid;
+    gap:110px;
+  }
+  .dark-story-block{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:70px;
+    align-items:start;
+  }
+  .dark-story-block.reverse{
+    grid-template-columns:1.3fr .7fr;
+  }
+  .dark-story-block.reverse .dark-copy{order:2}
+  .dark-story-block.reverse .dark-placeholder{order:1}
+  .dark-copy{
+    max-width:560px;
+    padding-top:12px;
+  }
+  .dark-copy .eyebrow{
+    font-size:11px;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:18px;
+  }
+  .dark-copy h3{
+    margin:0 0 20px;
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(28px,3vw,48px);
+    line-height:1.05;
+    letter-spacing:-.04em;
+  }
+  .dark-copy p{
+    margin:0;
+    font-size:clamp(17px,1.5vw,23px);
+    line-height:1.5;
+    letter-spacing:-.015em;
+    color:#2f2f2f;
+  }
+  .dark-placeholder{
+    aspect-ratio:16/10;
+    background:#f3f3f3;
+    border:1px solid #dedede;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    color:#8a8a8a;
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .dark-full{
+    margin:10px 0 0;
+  }
+  .dark-full .dark-placeholder{
+    aspect-ratio:16/8;
+  }
+  .dark-report-link{
+    margin-top:120px;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:center;
+  }
+  .dark-report-link strong{
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(24px,2.5vw,40px);
+    letter-spacing:-.03em;
+  }
+  .dark-report-link button{
+    border:0;
+    background:transparent;
+    padding:0 0 4px;
+    border-bottom:1px solid var(--ink);
+    cursor:pointer;
+    font-size:16px;
+  }
+
+  @media(max-width:850px){
+    .dark-story-block,
+    .dark-story-block.reverse{
+      grid-template-columns:1fr;
+      gap:34px;
+    }
+    .dark-story-block.reverse .dark-copy,
+    .dark-story-block.reverse .dark-placeholder{
+      order:initial;
+    }
+    .dark-story{gap:80px}
+    .dark-report-link{
+      align-items:flex-start;
+      flex-direction:column;
+    }
+  }
+
+
+  .dark-placeholder img.art{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+
+  /* Show editorial spreads in full inside Dark Vessels case study */
+  .dark-placeholder{
+    aspect-ratio:auto;
+    background:#ffffff;
+    border:0;
+    padding:0;
+    overflow:visible;
+  }
+  .dark-placeholder img.art{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+  .dark-full .dark-placeholder{
+    aspect-ratio:auto;
+  }
+
+
+  /* Subtle page-like shadow for editorial images */
+  .dark-placeholder img.art,
+  .case-wide img.art{
+    box-shadow:
+      0 1px 2px rgba(0,0,0,.05),
+      0 8px 22px rgba(0,0,0,.07);
+  }
+
+
+  .dark-full .dark-placeholder img.art{
+    box-shadow:
+      0 1px 2px rgba(0,0,0,.05),
+      0 8px 22px rgba(0,0,0,.07);
+  }
+
+
+  /* Fiji editorial case-study */
+  .fiji-case{
+    display:none;
+    padding:0 var(--pad) 120px;
+  }
+  .fiji-case.active{display:block}
+  .fiji-case-intro{
+    max-width:1100px;
+    padding:90px 0 70px;
+  }
+  .fiji-case-intro h2{
+    margin:0 0 34px;
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(58px,8vw,118px);
+    line-height:.92;
+    letter-spacing:-.055em;
+  }
+  .fiji-case-intro p{
+    margin:0;
+    max-width:860px;
+    font-size:clamp(21px,2.3vw,34px);
+    line-height:1.28;
+    letter-spacing:-.025em;
+  }
+  .fiji-story{
+    display:grid;
+    gap:110px;
+  }
+  .fiji-story-block{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:70px;
+    align-items:start;
+  }
+  .fiji-story-block.reverse{
+    grid-template-columns:1.3fr .7fr;
+  }
+  .fiji-story-block.reverse .fiji-copy{order:2}
+  .fiji-story-block.reverse .fiji-placeholder{order:1}
+  .fiji-copy{
+    max-width:560px;
+    padding-top:12px;
+  }
+  .fiji-copy .eyebrow{
+    font-size:11px;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:18px;
+  }
+  .fiji-copy h3{
+    margin:0 0 20px;
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(28px,3vw,48px);
+    line-height:1.05;
+    letter-spacing:-.04em;
+  }
+  .fiji-copy p{
+    margin:0;
+    font-size:clamp(17px,1.5vw,23px);
+    line-height:1.5;
+    letter-spacing:-.015em;
+    color:#2f2f2f;
+  }
+  .fiji-placeholder{
+    aspect-ratio:16/10;
+    background:#f6f6f6;
+    border:1px solid #dedede;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    color:#8a8a8a;
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .fiji-full{
+    margin:0;
+  }
+  .fiji-full .fiji-placeholder{
+    aspect-ratio:16/8;
+  }
+  .fiji-note{
+    margin-top:110px;
+    max-width:760px;
+    font-size:13px;
+    line-height:1.55;
+    color:var(--muted);
+  }
+  .fiji-report-link{
+    margin-top:42px;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:center;
+  }
+  .fiji-report-link strong{
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(24px,2.5vw,40px);
+    letter-spacing:-.03em;
+  }
+  .fiji-report-link button{
+    border:0;
+    background:transparent;
+    padding:0 0 4px;
+    border-bottom:1px solid var(--ink);
+    cursor:pointer;
+    font-size:16px;
+  }
+  @media(max-width:850px){
+    .fiji-story-block,
+    .fiji-story-block.reverse{
+      grid-template-columns:1fr;
+      gap:34px;
+    }
+    .fiji-story-block.reverse .fiji-copy,
+    .fiji-story-block.reverse .fiji-placeholder{
+      order:initial;
+    }
+    .fiji-story{gap:80px}
+    .fiji-report-link{
+      align-items:flex-start;
+      flex-direction:column;
+    }
+  }
+
+
+  .fiji-placeholder{
+    aspect-ratio:auto;
+    background:#ffffff;
+    border:0;
+    padding:0;
+    overflow:visible;
+  }
+  .fiji-placeholder img.art{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    box-shadow:
+      0 1px 2px rgba(0,0,0,.05),
+      0 8px 22px rgba(0,0,0,.07);
+  }
+  .fiji-image-stack{
+    display:grid;
+    gap:36px;
+  }
+
+
+  /* Shrimp Welfare editorial case-study */
+  .shrimp-case{
+    display:none;
+    padding:0 var(--pad) 120px;
+  }
+  .shrimp-case.active{display:block}
+  .shrimp-case-intro{
+    max-width:1100px;
+    padding:90px 0 70px;
+  }
+  .shrimp-case-intro h2{
+    margin:0 0 34px;
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(58px,8vw,118px);
+    line-height:.92;
+    letter-spacing:-.055em;
+  }
+  .shrimp-case-intro p{
+    margin:0;
+    max-width:860px;
+    font-size:clamp(21px,2.3vw,34px);
+    line-height:1.28;
+    letter-spacing:-.025em;
+  }
+  .shrimp-story{
+    display:grid;
+    gap:110px;
+  }
+  .shrimp-story-block{
+    display:grid;
+    grid-template-columns:.7fr 1.3fr;
+    gap:70px;
+    align-items:start;
+  }
+  .shrimp-story-block.reverse{
+    grid-template-columns:1.3fr .7fr;
+  }
+  .shrimp-story-block.reverse .shrimp-copy{order:2}
+  .shrimp-story-block.reverse .shrimp-placeholder{order:1}
+  .shrimp-copy{
+    max-width:560px;
+    padding-top:12px;
+  }
+  .shrimp-copy .eyebrow{
+    font-size:11px;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:18px;
+  }
+  .shrimp-copy h3{
+    margin:0 0 20px;
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(28px,3vw,48px);
+    line-height:1.05;
+    letter-spacing:-.04em;
+  }
+  .shrimp-copy p{
+    margin:0;
+    font-size:clamp(17px,1.5vw,23px);
+    line-height:1.5;
+    letter-spacing:-.015em;
+    color:#2f2f2f;
+  }
+  .shrimp-placeholder{
+    aspect-ratio:16/10;
+    background:#f6f6f6;
+    border:1px solid #dedede;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    color:#8a8a8a;
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .shrimp-note{
+    margin-top:110px;
+    max-width:760px;
+    font-size:13px;
+    line-height:1.55;
+    color:var(--muted);
+  }
+  .shrimp-report-link{
+    margin-top:42px;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:center;
+  }
+  .shrimp-report-link strong{
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:clamp(24px,2.5vw,40px);
+    letter-spacing:-.03em;
+  }
+  .shrimp-report-link button{
+    border:0;
+    background:transparent;
+    padding:0 0 4px;
+    border-bottom:1px solid var(--ink);
+    cursor:pointer;
+    font-size:16px;
+  }
+  @media(max-width:850px){
+    .shrimp-story-block,
+    .shrimp-story-block.reverse{
+      grid-template-columns:1fr;
+      gap:34px;
+    }
+    .shrimp-story-block.reverse .shrimp-copy,
+    .shrimp-story-block.reverse .shrimp-placeholder{
+      order:initial;
+    }
+    .shrimp-story{gap:80px}
+    .shrimp-report-link{
+      align-items:flex-start;
+      flex-direction:column;
+    }
+  }
+
+
+  .shrimp-placeholder{
+    aspect-ratio:auto;
+    background:#ffffff;
+    border:0;
+    padding:0;
+    overflow:visible;
+  }
+  .shrimp-placeholder img.art{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    box-shadow:
+      0 1px 2px rgba(0,0,0,.05),
+      0 8px 22px rgba(0,0,0,.07);
+  }
+
+
+  /* Top-level internal pages */
+  .visual-page{
+    display:none;
+    min-height:calc(100vh - 69px);
+    padding:clamp(80px,11vw,150px) var(--pad) 100px;
+    background:#fff;
+  }
+  .visual-page.active{display:block}
+  .visual-page-inner h1{
+    margin:0;
+    font-family:var(--sans);
+    font-size:clamp(56px,7vw,110px);
+    line-height:.95;
+    letter-spacing:-.055em;
+    font-weight:400;
+  }
+
+  /* About — Squarespace-inspired layout */
+  .about-page{
+    display:none;
+    min-height:calc(100vh - 69px);
+    padding:clamp(110px,12vw,190px) var(--pad) 110px;
+    background:#fff;
+  }
+  .about-page.active{display:block}
+  .about-squarespace{
+    display:grid;
+    grid-template-columns:minmax(0,1.06fr) minmax(420px,.94fr);
+    gap:clamp(70px,8vw,140px);
+    align-items:start;
+    max-width:1750px;
+    margin:0 auto;
+  }
+  .about-text-column h1, .about-text-column h2.seo-demoted-title{
+    margin:0 0 clamp(56px,6vw,95px);
+    font-family:var(--sans);
+    font-size:clamp(52px,5.2vw,82px);
+    line-height:1;
+    letter-spacing:-.055em;
+    font-weight:400;
+  }
+  .about-body{
+    max-width:900px;
+  }
+  .about-body p{
+    margin:0 0 28px;
+    font-size:clamp(20px,1.85vw,31px);
+    line-height:1.32;
+    letter-spacing:-.025em;
+  }
+  .about-body strong{font-weight:700}
+  .about-links{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:24px;
+    margin-top:34px;
+  }
+  .about-links a{
+    font-size:clamp(19px,1.65vw,28px);
+    border-bottom:1.5px solid var(--ink);
+    padding-bottom:2px;
+  }
+  .about-image-column{
+    position:sticky;
+    top:105px;
+  }
+  .about-image-column img{
+    display:block;
+    width:100%;
+    height:auto;
+    min-height:720px;
+    max-height:1050px;
+    object-fit:cover;
+    object-position:center;
+  }
+
+  body.show-about main,
+  body.show-about .visual-page{display:none}
+  body.show-about .about-page{display:block}
+
+  body.show-visual main,
+  body.show-visual .about-page{display:none}
+  body.show-visual .visual-page{display:block}
+
+  @media(max-width:950px){
+    .about-squarespace{
+      grid-template-columns:1fr;
+      gap:55px;
+    }
+    .about-image-column{
+      position:static;
+      order:-1;
+    }
+    .about-image-column img{
+      min-height:0;
+      max-height:none;
+      aspect-ratio:4/5;
+    }
+  }
+
+
+  .hero h1, .hero h2.seo-demoted-title{
+    font-family:var(--sans);
+    font-weight:400;
+  }
+
+
+  /* More compact About layout */
+  .about-page{
+    padding-top:clamp(78px,8vw,120px);
+    padding-bottom:70px;
+  }
+  .about-text-column h1, .about-text-column h2.seo-demoted-title{
+    margin-bottom:clamp(34px,4vw,58px);
+  }
+  .about-body p{
+    margin-bottom:18px;
+    font-size:clamp(17px,1.35vw,22px);
+    line-height:1.28;
+  }
+  .about-links{
+    margin-top:22px;
+    gap:16px;
+  }
+  .about-links a{
+    font-size:clamp(16px,1.25vw,20px);
+  }
+
+
+  /* Visual Work page */
+  .visual-page{
+    display:none;
+    min-height:calc(100vh - 69px);
+    padding:0 var(--pad) 120px;
+    background:#fff;
+  }
+  .visual-page.active{display:block}
+
+  .visual-hero{
+    min-height:58vh;
+    padding:clamp(90px,11vh,145px) 0 75px;
+    display:grid;
+    grid-template-columns:1.35fr .65fr;
+    gap:40px;
+    align-items:end;
+  }
+  .visual-hero h1, .visual-hero h2.seo-demoted-title{
+    margin:0;
+    font-family:var(--sans);
+    font-size:clamp(54px,8vw,126px);
+    line-height:.92;
+    font-weight:400;
+    letter-spacing:-.055em;
+    max-width:1100px;
+  }
+  .visual-hero-side{
+    max-width:440px;
+    margin-left:auto;
+  }
+  .visual-hero-side p{
+    margin:0;
+    font-size:clamp(18px,2vw,26px);
+    line-height:1.32;
+    letter-spacing:-.02em;
+  }
+
+  .visual-project{
+    padding-top:78px;
+    border-top:1px solid var(--line);
+    display:grid;
+    grid-template-columns:.62fr 1.38fr;
+    gap:clamp(50px,7vw,110px);
+    align-items:start;
+  }
+  .visual-project-copy{
+    position:sticky;
+    top:105px;
+  }
+  .visual-project-number{
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:22px;
+  }
+  .visual-project-copy h2{
+    margin:0 0 26px;
+    font-family:var(--sans);
+    font-size:clamp(38px,4.2vw,68px);
+    line-height:.98;
+    letter-spacing:-.05em;
+    font-weight:500;
+  }
+  .visual-project-copy p{
+    margin:0;
+    max-width:500px;
+    font-size:clamp(17px,1.5vw,22px);
+    line-height:1.5;
+    letter-spacing:-.015em;
+  }
+  .visual-project-meta{
+    margin-top:28px;
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  .vw-carousel{
+    max-width:820px;
+    margin-left:auto;
+    outline:none;
+  }
+  .vw-stage{
+    position:relative;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    background:#111;
+  }
+  .vw-slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transform:translateX(24px);
+    transition:opacity .35s ease, transform .35s ease;
+    pointer-events:none;
+  }
+  .vw-slide.active{
+    opacity:1;
+    transform:translateX(0);
+    pointer-events:auto;
+  }
+  .vw-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .vw-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:48px;
+    height:48px;
+    border:0;
+    border-radius:50%;
+    background:rgba(255,255,255,.9);
+    color:#111;
+    font-size:23px;
+    line-height:1;
+    cursor:pointer;
+    z-index:3;
+    box-shadow:0 4px 16px rgba(0,0,0,.16);
+    transition:transform .2s ease, background .2s ease;
+  }
+  .vw-arrow:hover{
+    background:#fff;
+    transform:translateY(-50%) scale(1.04);
+  }
+  .vw-prev{left:16px}
+  .vw-next{right:16px}
+
+  .vw-controls{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding-top:16px;
+  }
+  .vw-dots{
+    display:flex;
+    gap:9px;
+    align-items:center;
+  }
+  .vw-dot{
+    width:7px;
+    height:7px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:#c8c8c8;
+    cursor:pointer;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .vw-dot.active{
+    background:#111;
+    transform:scale(1.3);
+  }
+  .vw-counter{
+    font-size:12px;
+    letter-spacing:.08em;
+    color:var(--muted);
+  }
+
+  @media(max-width:900px){
+    .visual-hero{
+      grid-template-columns:1fr;
+      min-height:auto;
+    }
+    .visual-hero-side{
+      margin-left:0;
+    }
+    .visual-project{
+      grid-template-columns:1fr;
+      gap:42px;
+    }
+    .visual-project-copy{
+      position:static;
+    }
+    .vw-carousel{
+      margin-left:0;
+      max-width:none;
+    }
+  }
+
+
+  /* Enlarge Visual Work carousel and keep it directly beside the project copy */
+  .visual-project{
+    grid-template-columns:minmax(280px,.48fr) minmax(0,1.52fr);
+    gap:clamp(42px,5vw,80px);
+    align-items:start;
+  }
+
+  .vw-carousel{
+    width:100%;
+    max-width:none;
+    margin:0;
+  }
+
+  .vw-stage{
+    width:100%;
+    aspect-ratio:1/1;
+  }
+
+  .visual-project-copy{
+    padding-top:4px;
+  }
+
+  @media(max-width:1200px){
+    .visual-project{
+      grid-template-columns:minmax(260px,.55fr) minmax(0,1.45fr);
+      gap:40px;
+    }
+  }
+
+  @media(max-width:900px){
+    .visual-project{
+      grid-template-columns:1fr;
+    }
+  }
+
+
+  /* Slightly smaller carousel so the project fits more comfortably in one viewport */
+  .visual-project{
+    grid-template-columns:minmax(300px,.58fr) minmax(0,1.42fr);
+    gap:clamp(38px,4.5vw,70px);
+  }
+
+  .vw-carousel{
+    width:min(100%, 720px);
+    margin:0;
+  }
+
+  .vw-stage{
+    width:100%;
+    aspect-ratio:1/1;
+    max-height:72vh;
+  }
+
+  .vw-slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+
+  @media(max-width:1200px){
+    .vw-carousel{
+      width:min(100%, 650px);
+    }
+  }
+
+  @media(max-width:900px){
+    .vw-carousel{
+      width:100%;
+    }
+    .vw-stage{
+      max-height:none;
+    }
+  }
+
+
+  .visual-scroll-link{
+    margin-top:26px;
+  }
+  .visual-section-head{
+    margin-bottom:58px;
+  }
+
+
+  .visual-project-secondary{
+    margin-top:110px;
+    padding-top:78px;
+    border-top:1px solid var(--line);
+  }
+  .vw2-slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transform:translateX(24px);
+    transition:opacity .35s ease, transform .35s ease;
+    pointer-events:none;
+  }
+  .vw2-slide.active{
+    opacity:1;
+    transform:translateX(0);
+    pointer-events:auto;
+  }
+  .vw2-slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .vw2-dot{
+    width:7px;
+    height:7px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:#c8c8c8;
+    cursor:pointer;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .vw2-dot.active{
+    background:#111;
+    transform:scale(1.3);
+  }
+
+
+  .vw3-slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transform:translateX(24px);
+    transition:opacity .35s ease, transform .35s ease;
+    pointer-events:none;
+  }
+  .vw3-slide.active{
+    opacity:1;
+    transform:translateX(0);
+    pointer-events:auto;
+  }
+  .vw3-slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .vw3-dot{
+    width:7px;
+    height:7px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:#c8c8c8;
+    cursor:pointer;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .vw3-dot.active{
+    background:#111;
+    transform:scale(1.3);
+  }
+
+
+  .vw4-slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transform:translateX(24px);
+    transition:opacity .35s ease, transform .35s ease;
+    pointer-events:none;
+  }
+  .vw4-slide.active{
+    opacity:1;
+    transform:translateX(0);
+    pointer-events:auto;
+  }
+  .vw4-slide img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .vw4-dot{
+    width:7px;
+    height:7px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:#c8c8c8;
+    cursor:pointer;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .vw4-dot.active{
+    background:#111;
+    transform:scale(1.3);
+  }
+
+
+  /* Match Visual Work header spacing and proportions to Case Studies */
+  .visual-hero{
+    min-height:72vh;
+    padding:clamp(135px,16vh,210px) 0 95px;
+    grid-template-columns:1.35fr .65fr;
+    align-items:end;
+  }
+
+  .visual-hero-side{
+    align-self:end;
+    padding-bottom:14px;
+  }
+
+  .visual-section-head{
+    margin-top:0;
+    margin-bottom:72px;
+  }
+
+
+  /* Match Visual Work hero spacing exactly to Case Studies */
+  .visual-hero{
+    min-height:70vh;
+    padding:clamp(80px,12vh,150px) var(--pad) 70px;
+    grid-template-columns:1.35fr .65fr;
+    align-items:end;
+  }
+
+  .visual-hero-side{
+    align-self:end;
+    padding-bottom:0;
+  }
+
+  .visual-section-head{
+    margin-top:0;
+    margin-bottom:58px;
+  }
+
+
+  /* Unified header grid for Case Studies + Visual Work */
+  .hero,
+  .visual-hero{
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);
+    column-gap:clamp(56px,7vw,120px);
+    align-items:end;
+    min-height:70vh;
+    padding:clamp(80px,12vh,150px) var(--pad) 70px;
+  }
+
+  .hero > div:first-child,
+  .visual-hero > div:first-child{
+    align-self:end;
+  }
+
+  .hero .kicker,
+  .visual-hero .kicker{
+    margin:0 0 28px;
+  }
+
+  .hero h1, .hero h2.seo-demoted-title,
+  .visual-hero h1, .visual-hero h2.seo-demoted-title{
+    margin:0;
+  }
+
+  .hero-side,
+  .visual-hero-side{
+    align-self:end;
+    margin:0;
+    padding:0;
+  }
+
+  .hero-side p,
+  .visual-hero-side p{
+    margin:0;
+  }
+
+  .hero-side .scroll-link,
+  .visual-hero-side .scroll-link{
+    margin-top:28px;
+  }
+
+  /* One divider only, with perfectly aligned left/right labels */
+  .section-head,
+  .shared-section-head,
+  .visual-section-head{
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);
+    column-gap:clamp(56px,7vw,120px);
+    align-items:baseline;
+    margin:0;
+    padding:28px 0 24px;
+    border-top:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .section-head h2,
+  .shared-section-head h2,
+  .visual-section-head h2{
+    grid-column:1;
+    margin:0;
+    padding:0;
+  }
+
+  .section-head p,
+  .shared-section-head p,
+  .visual-section-head p{
+    grid-column:2;
+    margin:0;
+    padding:0;
+    justify-self:start;
+    text-align:left;
+  }
+
+  /* Remove accidental duplicate lines/spacers from older overrides */
+  .visual-project{
+    border-top:0;
+  }
+
+  .visual-project-secondary{
+    border-top:1px solid var(--line);
+  }
+
+  @media(max-width:900px){
+    .hero,
+    .visual-hero,
+    .section-head,
+    .shared-section-head,
+    .visual-section-head{
+      grid-template-columns:1fr;
+      row-gap:24px;
+    }
+
+    .section-head p,
+    .shared-section-head p,
+    .visual-section-head p{
+      grid-column:1;
+    }
+  }
+
+
+  /* Fix Visual Work left alignment with the lower Selected Work row */
+  .visual-hero{
+    padding-left:0;
+    padding-right:0;
+  }
+
+
+  /* Keep the Case Studies description on one line in desktop layouts */
+  .shared-section-head p{
+    white-space:nowrap;
+  }
+
+  @media(max-width:1100px){
+    .shared-section-head p{
+      white-space:normal;
+    }
+  }
+
+
+  /* Case Studies lower header: keep description on one line */
+  #work .section-head{
+    grid-template-columns:auto 1fr;
+    column-gap:48px;
+  }
+
+  #work .section-head p{
+    max-width:none;
+    width:auto;
+    white-space:nowrap;
+    justify-self:end;
+    text-align:right;
+  }
+
+  @media(max-width:1100px){
+    #work .section-head{
+      grid-template-columns:1fr;
+      row-gap:12px;
+    }
+    #work .section-head p{
+      white-space:normal;
+      justify-self:start;
+      text-align:left;
+    }
+  }
+
+
+  /* Align the Case Studies lower Selected Work row with Visual Work */
+  #work.section{
+    padding-top:0;
+  }
+
+
+  /* Match spacing below the Case Studies divider to Visual Work */
+  #work .section-head{
+    margin-bottom:78px;
+  }
+
+
+  /* About — skills / software / AI tools */
+  .about-expertise{
+    margin-top:110px;
+    padding-top:34px;
+    border-top:1px solid var(--line);
+  }
+
+  .about-expertise-kicker{
+    margin-bottom:48px;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+
+  .about-expertise-grid{
+    display:grid;
+    grid-template-columns:1.35fr .85fr .85fr;
+    gap:clamp(50px,7vw,110px);
+    align-items:start;
+  }
+
+  .expertise-column h2{
+    margin:0 0 24px;
+    font-family:var(--sans);
+    font-size:15px;
+    line-height:1;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .expertise-column ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+
+  .expertise-column li{
+    margin:0 0 12px;
+    font-size:clamp(18px,1.5vw,23px);
+    line-height:1.25;
+    letter-spacing:-.02em;
+  }
+
+  @media(max-width:900px){
+    .about-expertise{
+      margin-top:75px;
+    }
+
+    .about-expertise-grid{
+      grid-template-columns:1fr;
+      gap:48px;
+    }
+  }
+
+
+  .about-expertise-grid{
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:clamp(36px,4.5vw,72px);
+  }
+
+  @media(max-width:1100px){
+    .about-expertise-grid{
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media(max-width:700px){
+    .about-expertise-grid{
+      grid-template-columns:1fr;
+    }
+  }
+
+
+  .about-location{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:48px;
+    font-size:13px;
+    line-height:1;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+
+  .about-location svg{
+    width:18px;
+    height:18px;
+    flex:0 0 auto;
+  }
+
+
+  /* Shared footer */
+  .site-footer{
+    margin-top:110px;
+    padding:34px var(--pad) 28px;
+    border-top:1px solid var(--line);
+    background:#fff;
+  }
+
+  .site-footer-main{
+    display:grid;
+    grid-template-columns:1fr 1fr auto;
+    gap:40px;
+    align-items:end;
+  }
+
+  .site-footer-brand{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .site-footer-brand strong{
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:-.02em;
+  }
+
+  .site-footer-brand span,
+  .site-footer-location,
+  .site-footer-links a,
+  .site-footer-bottom{
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  .site-footer-links{
+    display:flex;
+    gap:18px;
+    justify-content:flex-end;
+  }
+
+  .site-footer-links a{
+    color:var(--ink);
+    border-bottom:1px solid var(--ink);
+    padding-bottom:2px;
+  }
+
+  .site-footer-bottom{
+    margin-top:26px;
+    padding-top:18px;
+    border-top:1px solid rgba(23,23,23,.08);
+  }
+
+  body.show-about .site-footer,
+  body.show-visual .site-footer{
+    display:block;
+  }
+
+  @media(max-width:800px){
+    .site-footer-main{
+      grid-template-columns:1fr;
+      align-items:start;
+    }
+
+    .site-footer-links{
+      justify-content:flex-start;
+    }
+  }
+
+
+  /* Unified footer across all top-level pages */
+  .site-footer{
+    width:100%;
+    box-sizing:border-box;
+    margin-top:110px;
+    padding:34px var(--pad) 28px;
+    border-top:1px solid var(--line);
+    background:#fff;
+  }
+
+  .site-footer-main{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:40px;
+    align-items:end;
+    width:100%;
+  }
+
+  .site-footer-brand{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .site-footer-links{
+    display:flex;
+    gap:18px;
+    justify-content:flex-end;
+    align-items:end;
+  }
+
+  .site-footer-bottom{
+    margin-top:26px;
+    padding-top:18px;
+    border-top:1px solid rgba(23,23,23,.08);
+    text-align:center;
+  }
+
+  .site-footer-bottom span{
+    display:block;
+    width:100%;
+    text-align:center;
+  }
+
+  @media(max-width:800px){
+    .site-footer-main{
+      grid-template-columns:1fr;
+      align-items:start;
+    }
+
+    .site-footer-links{
+      justify-content:flex-start;
+    }
+  }
+
+
+  .visual-project-note{
+    margin-top:18px;
+    max-width:500px;
+    font-size:12px;
+    line-height:1.45;
+    color:#8a8a8a;
+  }
+
+
+  /* About image: static, no parallax */
+  .about-image-column{
+    position:static !important;
+    top:auto !important;
+    transform:none !important;
+  }
+
+  .about-image-column img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    transform:none !important;
+    transition:none !important;
+  }
+
+
+  /* Final footer alignment: single row on desktop */
+  body .site-footer{
+    display:block !important;
+    width:100% !important;
+    margin:110px 0 0 !important;
+    padding:0 !important;
+    border-top:1px solid var(--line) !important;
+    background:#fff !important;
+  }
+
+  body .site-footer-inner{
+    width:100% !important;
+    box-sizing:border-box !important;
+    padding:34px var(--pad) 28px !important;
+  }
+
+  body .site-footer-main{
+    display:grid !important;
+    grid-template-columns:1fr auto 1fr !important;
+    gap:40px !important;
+    align-items:center !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  body .site-footer-brand{
+    justify-self:start !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:6px !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  body .site-footer-copy{
+    justify-self:center !important;
+    align-self:center !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:13px !important;
+    line-height:1.2 !important;
+    color:var(--muted) !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+  }
+
+  body .site-footer-links{
+    justify-self:end !important;
+    align-self:center !important;
+    display:flex !important;
+    gap:18px !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  body .site-footer-bottom{
+    display:none !important;
+  }
+
+  @media(max-width:800px){
+    body .site-footer-main{
+      grid-template-columns:1fr !important;
+      row-gap:16px !important;
+      align-items:start !important;
+    }
+
+    body .site-footer-copy,
+    body .site-footer-links{
+      justify-self:start !important;
+    }
+  }
+
+
+  /* Align © 2026 with the lower line of the brand block and with Email / LinkedIn */
+  body .site-footer-main{
+    align-items:end !important;
+  }
+
+  body .site-footer-copy{
+    align-self:end !important;
+    padding-bottom:2px !important;
+  }
+
+  body .site-footer-links{
+    align-self:end !important;
+    padding-bottom:0 !important;
+  }
+
+
+  /* Perfect baseline alignment for the lower footer row */
+  body .site-footer-main{
+    display:grid !important;
+    grid-template-columns:1fr auto 1fr !important;
+    gap:40px !important;
+    align-items:end !important;
+  }
+
+  body .site-footer-brand{
+    display:grid !important;
+    grid-template-rows:auto auto !important;
+    row-gap:6px !important;
+    align-self:end !important;
+  }
+
+  body .site-footer-brand strong{
+    grid-row:1 !important;
+  }
+
+  body .site-footer-brand span{
+    grid-row:2 !important;
+    line-height:1.2 !important;
+  }
+
+  body .site-footer-copy{
+    align-self:end !important;
+    justify-self:center !important;
+    line-height:1.2 !important;
+    margin:0 !important;
+    padding:0 !important;
+    transform:none !important;
+  }
+
+  body .site-footer-links{
+    align-self:end !important;
+    justify-self:end !important;
+    display:flex !important;
+    align-items:baseline !important;
+    line-height:1.2 !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  body .site-footer-links a{
+    line-height:1.2 !important;
+    margin:0 !important;
+    padding-bottom:2px !important;
+  }
+
+  /* Match the visible baseline of © with the muted descriptor line */
+  body .site-footer-copy,
+  body .site-footer-brand span{
+    font-size:13px !important;
+  }
+
+
+  /* Footer rebuilt as a true two-row grid */
+  body .site-footer{
+    display:block !important;
+    width:100% !important;
+    margin:110px 0 0 !important;
+    padding:0 !important;
+    border-top:1px solid var(--line) !important;
+    background:#fff !important;
+  }
+
+  body .site-footer-inner{
+    width:100% !important;
+    box-sizing:border-box !important;
+    padding:34px var(--pad) 28px !important;
+  }
+
+  body .site-footer-grid{
+    display:grid !important;
+    grid-template-columns:1fr auto 1fr !important;
+    grid-template-rows:auto auto !important;
+    column-gap:40px !important;
+    row-gap:6px !important;
+    width:100% !important;
+    align-items:baseline !important;
+  }
+
+  body .site-footer-name{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    justify-self:start !important;
+    font-size:18px !important;
+    line-height:1.2 !important;
+    font-weight:600 !important;
+    letter-spacing:-.02em !important;
+    color:var(--ink) !important;
+  }
+
+  body .site-footer-role{
+    grid-column:1 !important;
+    grid-row:2 !important;
+    justify-self:start !important;
+  }
+
+  body .site-footer-copy{
+    grid-column:2 !important;
+    grid-row:2 !important;
+    justify-self:center !important;
+  }
+
+  body .site-footer-links{
+    grid-column:3 !important;
+    grid-row:2 !important;
+    justify-self:end !important;
+    display:flex !important;
+    gap:18px !important;
+    align-items:baseline !important;
+  }
+
+  body .site-footer-role,
+  body .site-footer-copy,
+  body .site-footer-links,
+  body .site-footer-links a{
+    font-size:13px !important;
+    line-height:1.2 !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  body .site-footer-role,
+  body .site-footer-copy{
+    color:var(--muted) !important;
+  }
+
+  body .site-footer-links a{
+    color:var(--ink) !important;
+    border-bottom:1px solid var(--ink) !important;
+    padding-bottom:2px !important;
+  }
+
+  body .site-footer-main,
+  body .site-footer-brand,
+  body .site-footer-bottom{
+    display:none !important;
+  }
+
+  @media(max-width:800px){
+    body .site-footer-grid{
+      grid-template-columns:1fr !important;
+      grid-template-rows:auto auto auto auto !important;
+      row-gap:10px !important;
+    }
+
+    body .site-footer-name,
+    body .site-footer-role,
+    body .site-footer-copy,
+    body .site-footer-links{
+      grid-column:1 !important;
+      justify-self:start !important;
+    }
+
+    body .site-footer-name{grid-row:1 !important;}
+    body .site-footer-role{grid-row:2 !important;}
+    body .site-footer-copy{grid-row:3 !important;}
+    body .site-footer-links{grid-row:4 !important;}
+  }
+
+  /* About image: visually match the height of the title + text block */
+  .about-image-column{
+    position:static !important;
+    top:auto !important;
+    transform:none !important;
+    align-self:start !important;
+    overflow:hidden !important;
+    height:var(--about-image-target, 680px) !important;
+    min-height:460px !important;
+    max-height:860px !important;
+  }
+
+  .about-image-column img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    max-height:none !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    transform:none !important;
+    transition:none !important;
+  }
+
+  @media(max-width:950px){
+    .about-image-column{
+      height:auto !important;
+      min-height:0 !important;
+      max-height:none !important;
+    }
+
+    .about-image-column img{
+      height:auto !important;
+      aspect-ratio:4/5 !important;
+      object-fit:cover !important;
+    }
+  }
+
+
+  /* Mobile responsive fixes — navigation + Visual Work */
+  @media (max-width: 700px) {
+    :root{
+      --pad: 18px;
+    }
+
+    header{
+      align-items:center !important;
+      padding:16px var(--pad) !important;
+      gap:12px !important;
+    }
+
+    .brand{
+      flex:0 0 auto !important;
+      font-size:11px !important;
+      letter-spacing:.11em !important;
+      white-space:nowrap !important;
+    }
+
+    nav{
+      display:flex !important;
+      flex:0 1 auto !important;
+      flex-wrap:nowrap !important;
+      justify-content:flex-end !important;
+      align-items:center !important;
+      gap:10px !important;
+      font-size:10.5px !important;
+      white-space:nowrap !important;
+    }
+
+    nav a,
+    nav a:nth-child(3){
+      display:block !important;
+      padding-bottom:3px !important;
+    }
+
+    /* Reduce excess vertical space in the Visual Work intro on phones */
+    .visual-hero{
+      min-height:auto !important;
+      padding-top:64px !important;
+      padding-bottom:48px !important;
+      row-gap:36px !important;
+    }
+
+    .visual-hero h1, .visual-hero h2.seo-demoted-title{
+      font-size:clamp(48px,15vw,66px) !important;
+      line-height:.94 !important;
+    }
+
+    .visual-hero-side p{
+      font-size:18px !important;
+      line-height:1.38 !important;
+    }
+
+    .visual-section-head{
+      padding-top:24px !important;
+      padding-bottom:24px !important;
+      margin-bottom:44px !important;
+      row-gap:14px !important;
+    }
+
+    /* Force every Visual Work project into a true single-column mobile layout */
+    .visual-project,
+    .visual-project.visual-project-secondary{
+      display:grid !important;
+      grid-template-columns:minmax(0,1fr) !important;
+      gap:30px !important;
+      width:100% !important;
+      padding-top:52px !important;
+      align-items:start !important;
+    }
+
+    .visual-project:first-of-type{
+      padding-top:36px !important;
+    }
+
+    .visual-project-copy{
+      position:static !important;
+      top:auto !important;
+      width:100% !important;
+      max-width:none !important;
+      padding:0 !important;
+    }
+
+    .visual-project-number{
+      margin-bottom:16px !important;
+    }
+
+    .visual-project-copy h2{
+      margin-bottom:20px !important;
+      font-size:clamp(38px,11vw,52px) !important;
+      line-height:1 !important;
+    }
+
+    .visual-project-copy p{
+      max-width:none !important;
+      font-size:17px !important;
+      line-height:1.48 !important;
+    }
+
+    .visual-project-note{
+      margin-top:20px !important;
+      max-width:none !important;
+      font-size:12px !important;
+      line-height:1.5 !important;
+    }
+
+    .visual-project-meta{
+      margin-top:24px !important;
+      line-height:1.45 !important;
+    }
+
+    /* Carousel becomes full-width underneath the copy */
+    .vw-carousel{
+      grid-column:1 !important;
+      width:100% !important;
+      max-width:none !important;
+      min-width:0 !important;
+      margin:0 !important;
+      justify-self:stretch !important;
+    }
+
+    .vw-stage{
+      position:relative !important;
+      width:100% !important;
+      height:auto !important;
+      max-height:none !important;
+      aspect-ratio:1 / 1 !important;
+      overflow:hidden !important;
+    }
+
+    .vw-slide{
+      position:absolute !important;
+      inset:0 !important;
+      width:100% !important;
+      height:100% !important;
+    }
+
+    .vw-slide img{
+      display:block !important;
+      width:100% !important;
+      height:100% !important;
+      object-fit:contain !important;
+    }
+
+    .vw-arrow{
+      width:42px !important;
+      height:42px !important;
+      font-size:20px !important;
+    }
+
+    .vw-prev{left:10px !important;}
+    .vw-next{right:10px !important;}
+
+    .vw-controls{
+      width:100% !important;
+      padding-top:14px !important;
+    }
+
+    .vw-dots{
+      gap:8px !important;
+      flex-wrap:nowrap !important;
+    }
+
+    .vw-dot{
+      width:7px !important;
+      height:7px !important;
+      flex:0 0 7px !important;
+    }
+
+    .vw-counter{
+      flex:0 0 auto !important;
+      white-space:nowrap !important;
+      writing-mode:horizontal-tb !important;
+    }
+  }
+
+  @media (max-width: 390px) {
+    header{
+      padding-left:14px !important;
+      padding-right:14px !important;
+      gap:9px !important;
+    }
+
+    .brand{
+      font-size:10.5px !important;
+    }
+
+    nav{
+      gap:8px !important;
+      font-size:10px !important;
+    }
+  }
+
+
+  /* Mobile navigation + footer polish */
+  @media (max-width: 700px) {
+    header{
+      display:grid !important;
+      grid-template-columns:1fr !important;
+      gap:14px !important;
+      padding:16px 18px 14px !important;
+      align-items:start !important;
+    }
+
+    .brand{
+      font-size:14px !important;
+      letter-spacing:.12em !important;
+      line-height:1 !important;
+    }
+
+    nav{
+      width:100% !important;
+      display:grid !important;
+      grid-template-columns:repeat(3,1fr) !important;
+      gap:8px !important;
+      font-size:12.5px !important;
+      line-height:1.1 !important;
+    }
+
+    nav a,
+    nav a:nth-child(3){
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      min-height:38px !important;
+      padding:0 8px !important;
+      border:1px solid var(--line) !important;
+      border-radius:999px !important;
+      text-align:center !important;
+      background:#fff !important;
+    }
+
+    nav a:hover,
+    nav a:focus-visible{
+      background:#f7f7f7 !important;
+    }
+
+    body .site-footer{
+      margin-top:78px !important;
+      border-top:1px solid var(--line) !important;
+    }
+
+    body .site-footer-inner{
+      padding:34px 18px 30px !important;
+    }
+
+    body .site-footer-grid{
+      grid-template-columns:1fr auto !important;
+      grid-template-rows:auto auto auto !important;
+      column-gap:18px !important;
+      row-gap:8px !important;
+      align-items:end !important;
+    }
+
+    body .site-footer-name{
+      grid-column:1 / -1 !important;
+      grid-row:1 !important;
+      justify-self:start !important;
+      font-size:28px !important;
+      line-height:1 !important;
+      letter-spacing:-.04em !important;
+      font-weight:500 !important;
+      margin-bottom:2px !important;
+    }
+
+    body .site-footer-role{
+      grid-column:1 / -1 !important;
+      grid-row:2 !important;
+      justify-self:start !important;
+      font-size:15px !important;
+      line-height:1.3 !important;
+      color:var(--muted) !important;
+    }
+
+    body .site-footer-copy{
+      grid-column:1 !important;
+      grid-row:3 !important;
+      justify-self:start !important;
+      align-self:end !important;
+      font-size:12px !important;
+      color:var(--muted) !important;
+      line-height:1.2 !important;
+      margin-top:18px !important;
+    }
+
+    body .site-footer-links{
+      grid-column:2 !important;
+      grid-row:3 !important;
+      justify-self:end !important;
+      align-self:end !important;
+      display:flex !important;
+      gap:16px !important;
+      margin-top:18px !important;
+    }
+
+    body .site-footer-links a{
+      font-size:14px !important;
+      line-height:1.2 !important;
+      padding-bottom:3px !important;
+      border-bottom:1px solid var(--ink) !important;
+    }
+  }
+
+  @media (max-width: 390px) {
+    header{
+      padding-left:14px !important;
+      padding-right:14px !important;
+    }
+
+    nav{
+      gap:6px !important;
+      font-size:11.5px !important;
+    }
+
+    nav a,
+    nav a:nth-child(3){
+      min-height:36px !important;
+      padding-left:5px !important;
+      padding-right:5px !important;
+    }
+
+    body .site-footer-inner{
+      padding-left:14px !important;
+      padding-right:14px !important;
+    }
+  }
+
+
+  /* Mobile header — centered editorial navigation */
+  @media (max-width: 700px) {
+    header{
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:22px !important;
+      padding:20px 18px 22px !important;
+      text-align:center !important;
+    }
+
+    .brand{
+      width:100% !important;
+      text-align:center !important;
+      font-size:15px !important;
+      line-height:1 !important;
+      letter-spacing:.14em !important;
+      white-space:nowrap !important;
+    }
+
+    nav{
+      width:auto !important;
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+      justify-content:center !important;
+      gap:12px !important;
+      font-size:18px !important;
+      line-height:1.15 !important;
+      white-space:nowrap !important;
+    }
+
+    nav a,
+    nav a:nth-child(3){
+      position:relative !important;
+      display:block !important;
+      min-height:0 !important;
+      padding:2px 0 5px !important;
+      border:0 !important;
+      border-radius:0 !important;
+      background:transparent !important;
+      text-align:center !important;
+    }
+
+    /* Remove all hover / inactive underlines on mobile */
+    nav a::after,
+    nav a:hover::after,
+    nav a:focus-visible::after{
+      width:0 !important;
+      height:1px !important;
+      left:0 !important;
+      right:0 !important;
+      bottom:0 !important;
+      margin:auto !important;
+      background:var(--ink) !important;
+    }
+
+    /* Active section only */
+    body:not(.show-visual):not(.show-about) nav a[data-nav="work"]::after,
+    body.show-visual nav a[data-nav="visual"]::after,
+    body.show-about nav a[data-nav="about"]::after{
+      width:100% !important;
+    }
+  }
+
+  @media (max-width: 390px) {
+    header{
+      padding-left:14px !important;
+      padding-right:14px !important;
+      gap:20px !important;
+    }
+
+    .brand{
+      font-size:14px !important;
+    }
+
+    nav{
+      font-size:17px !important;
+      gap:11px !important;
+    }
+  }
+
+
+  /* Case study project information */
+  .case-meta-strip{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:28px;
+    margin-top:48px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    max-width:1040px;
+  }
+  .case-meta-item{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .case-meta-label{
+    font-size:10px;
+    line-height:1;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .case-meta-value{
+    font-size:14px;
+    line-height:1.45;
+    color:var(--ink);
+  }
+
+  /* Previous / Next case study navigation */
+  .case-project-nav{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+    margin-top:74px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+  .case-project-nav .case-nav-spacer{min-height:1px}
+  .case-project-link{
+    appearance:none;
+    border:0;
+    background:transparent;
+    color:var(--ink);
+    padding:0;
+    font:inherit;
+    cursor:pointer;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    max-width:420px;
+  }
+  .case-project-link.next{
+    justify-self:end;
+    text-align:right;
+    align-items:flex-end;
+  }
+  .case-project-link small{
+    font-size:10px;
+    line-height:1;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .case-project-link strong{
+    font-size:clamp(24px,2.3vw,36px);
+    line-height:1.05;
+    letter-spacing:-.035em;
+    font-weight:500;
+  }
+  .case-project-link strong span{
+    display:inline-block;
+    transition:transform .2s ease;
+  }
+  .case-project-link:hover strong span{
+    transform:translateX(4px);
+  }
+  .case-project-link.prev:hover strong span{
+    transform:translateX(-4px);
+  }
+
+  @media(max-width:800px){
+    .case-meta-strip{
+      grid-template-columns:1fr 1fr;
+      gap:22px 24px;
+      margin-top:34px;
+      padding-top:20px;
+    }
+    .case-meta-value{
+      font-size:13px;
+    }
+    .case-project-nav{
+      grid-template-columns:1fr;
+      gap:28px;
+      margin-top:58px;
+      padding-top:26px;
+    }
+    .case-project-nav .case-nav-spacer{display:none}
+    .case-project-link,
+    .case-project-link.next{
+      justify-self:start;
+      text-align:left;
+      align-items:flex-start;
+      max-width:none;
+    }
+    .case-project-link.next{
+      justify-self:end;
+      text-align:right;
+      align-items:flex-end;
+    }
+    .case-project-link strong{
+      font-size:28px;
+    }
+  }
+
+  @media(max-width:520px){
+    .case-meta-strip{
+      grid-template-columns:1fr;
+      gap:18px;
+    }
+  }
+
+
+  /* Original research source */
+  .case-source{
+    display:grid;
+    grid-template-columns:minmax(120px,.32fr) minmax(0,1fr);
+    gap:28px;
+    align-items:start;
+    margin-top:28px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+
+  .case-source-label{
+    font-size:10px;
+    line-height:1.2;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  .case-source a{
+    justify-self:start;
+    font-size:14px;
+    line-height:1.45;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+    transition:border-color .18s ease;
+  }
+
+  .case-source a:hover,
+  .case-source a:focus-visible{
+    border-bottom-color:var(--ink);
+  }
+
+  .case-source-arrow{
+    display:inline-block;
+    margin-left:5px;
+    transition:transform .18s ease;
+  }
+
+  .case-source a:hover .case-source-arrow,
+  .case-source a:focus-visible .case-source-arrow{
+    transform:translate(2px,-2px);
+  }
+
+  @media(max-width:700px){
+    .case-source{
+      grid-template-columns:1fr;
+      gap:9px;
+      margin-top:24px;
+      padding-top:20px;
+    }
+
+    .case-source a{
+      font-size:13.5px;
+    }
+  }
+
+
+  /* Source research sits directly under each independent-project note */
+  .shrimp-note + .case-source,
+  .fiji-note + .case-source{
+    margin-top:18px;
+    padding-top:18px;
+  }
+
+
+  /* Remove divider between independent-project note and source research */
+  .shrimp-note + .case-source,
+  .fiji-note + .case-source{
+    border-top:0 !important;
+    padding-top:0 !important;
+    margin-top:14px !important;
+  }
+
+
+  /* About expertise — five balanced columns */
+  .about-expertise-grid{
+    grid-template-columns:repeat(5, minmax(0, 1fr)) !important;
+    gap:clamp(24px,3vw,52px) !important;
+    align-items:start !important;
+  }
+
+  .expertise-column h2{
+    margin-bottom:20px !important;
+    font-size:13px !important;
+    line-height:1.15 !important;
+    letter-spacing:.08em !important;
+  }
+
+  .expertise-column li{
+    margin-bottom:10px !important;
+    font-size:clamp(15px,1.05vw,18px) !important;
+    line-height:1.3 !important;
+    letter-spacing:-.015em !important;
+  }
+
+  @media(max-width:1200px){
+    .about-expertise-grid{
+      grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+      gap:42px 36px !important;
+    }
+  }
+
+  @media(max-width:800px){
+    .about-expertise-grid{
+      grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+      gap:38px 30px !important;
+    }
+  }
+
+  @media(max-width:560px){
+    .about-expertise-grid{
+      grid-template-columns:1fr !important;
+      gap:34px !important;
+    }
+
+    .expertise-column h2{
+      font-size:12px !important;
+    }
+
+    .expertise-column li{
+      font-size:16px !important;
+    }
+  }
+
+</style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Maria Vera",
+    "url":"https://mariaveravisual.github.io/",
+    "jobTitle":"Visual Designer & Storyteller",
+    "sameAs":["https://www.linkedin.com/in/mariaveram/"],
+    "knowsAbout":[
+      "Visual storytelling",
+      "Research communication",
+      "Editorial design",
+      "Information design",
+      "Data storytelling"
+    ]
+  }
+  </script>
+
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CreativeWork",
+    "name":"Dark Vessels",
+    "description":"Visual storytelling and research communication about ocean transparency and vessel detection.",
+    "url":"https://mariaveravisual.github.io/case-studies/dark-vessels/",
+    "image":"https://mariaveravisual.github.io/assets/image-002-5a8266fd9fa2.jpg",
+    "creator":{
+      "@type":"Person",
+      "name":"Maria Vera",
+      "url":"https://mariaveravisual.github.io/"
+    },
+    "dateCreated":"2026"
+  }
+  </script>
+
+</head>
+<body>
+<div class="shell">
+
+<header>
+  <a class="brand" href="#top">Maria Vera</a>
+  <nav>
+    <a href="#work" data-nav="work">Case Studies</a>
+    <a href="#visual-work" data-nav="visual">Visual Work</a>
+    <a href="#about-page" data-nav="about">About</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div>
+      <div class="kicker">Case Studies</div>
+      <h2 class="seo-demoted-title">Complex ideas made clear.</h2>
+    </div>
+    <div class="hero-side">
+      <p>Visual storytelling, information design and research communication.</p>
+      <a class="scroll-link" href="#work">Selected work <span>↓</span></a>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="section-head reveal">
+      <h2>Selected Work</h2>
+      <p>Selected case studies in editorial design, research communication and visual storytelling.</p>
+    </div>
+
+    <article class="project reveal" data-project="fiji">
+      <div class="project-visual">
+        <img class="art" src="assets/image-001-88962888ea57.jpg" alt="Plastic Waste in Fiji editorial spread" width="2048" height="1280" decoding="async" loading="lazy">
+      </div>
+      <div class="project-meta">
+        <div>
+          <h3>Plastic Waste in Fiji</h3>
+          <p>A visual exploration of plastic waste in Fiji, translating research, data and local context into a clear and engaging editorial narrative.</p>
+        </div>
+        <div class="open">View Project <b>→</b></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-project="dark">
+      <div class="project-visual">
+        <img class="art" src="assets/image-002-5a8266fd9fa2.jpg" alt="Dark Vessels editorial spread" width="2048" height="1280" decoding="async" loading="lazy">
+      </div>
+      <div class="project-meta">
+        <div>
+          <h3>Dark Vessels</h3>
+          <p>A visual storytelling project exploring hidden fishing activity and the challenge of making complex marine data easier to understand.</p>
+        </div>
+        <div class="open">View Project <b>→</b></div>
+      </div>
+    </article>
+
+    <article class="project reveal" data-project="shrimp">
+      <div class="project-visual">
+        <img class="art" src="assets/image-003-37ea2b3932cb.jpg" alt="Shrimp welfare editorial spread" width="2048" height="1280" decoding="async" loading="lazy">
+      </div>
+      <div class="project-meta">
+        <div>
+          <h3>Hidden Suffering: Shrimp Welfare</h3>
+          <p>Translating research on farmed shrimp welfare into a clear visual narrative, using editorial design, illustration and information hierarchy to make complex findings more accessible and engaging.</p>
+        </div>
+        <div class="open">View Project <b>→</b></div>
+      </div>
+    </article>
+  </section>
+</main>
+
+
+
+
+<section class="visual-page" id="visual-work" aria-hidden="true">
+  <div class="visual-hero">
+    <div>
+      <div class="kicker">Visual Work</div>
+      <h2 class="seo-demoted-title">Creative ideas made visible.</h2>
+    </div>
+    <div class="visual-hero-side">
+      <p>Campaigns, concepts and image-led pieces exploring how a visual idea can carry a message quickly and emotionally.</p>
+      <a class="scroll-link visual-scroll-link" href="#visual-projects">Selected work <span>↓</span></a>
+    </div>
+  </div>
+
+  <div class="section-head visual-section-head" id="visual-projects">
+    <h2>Selected Work</h2>
+    <p>Selected campaigns, concepts and image-led work.</p>
+  </div>
+
+  <section class="visual-project">
+    <div class="visual-project-copy">
+      <div class="visual-project-number">01 / Animal welfare campaign</div>
+      <h2>Breaking the Cycle</h2>
+      <p>A social campaign concept built as a seven-frame Instagram carousel, using repetition, pacing and a single visual environment to tell a short story about the cycle of intensive egg production.</p>
+      <div class="visual-project-note">Independent concept project. Not commissioned by the Animal Welfare Fund.</div>
+      <div class="visual-project-meta">Social Campaign · Art Direction · Visual Storytelling</div>
+    </div>
+
+    <div class="vw-carousel" id="chickenCarousel" tabindex="0" aria-label="Breaking the Cycle image carousel">
+      <div class="vw-stage">
+        <div class="vw-slide active"><img src="assets/image-004-cb1791dc4f29.jpg" alt="Animal Welfare Fund campaign slide 1" width="2000" height="2000" decoding="async" loading="lazy"></div>
+<div class="vw-slide"><img src="assets/image-005-ebf26797545e.jpg" alt="Animal Welfare Fund campaign slide 2" width="2000" height="2000" decoding="async" loading="lazy"></div>
+<div class="vw-slide"><img src="assets/image-006-1450396ca789.jpg" alt="Animal Welfare Fund campaign slide 3" width="2000" height="2000" decoding="async" loading="lazy"></div>
+<div class="vw-slide"><img src="assets/image-007-3c1ff44b3bc6.jpg" alt="Animal Welfare Fund campaign slide 4" width="2000" height="2000" decoding="async" loading="lazy"></div>
+<div class="vw-slide"><img src="assets/image-008-5874d56b1ed4.jpg" alt="Animal Welfare Fund campaign slide 5" width="2000" height="2000" decoding="async" loading="lazy"></div>
+<div class="vw-slide"><img src="assets/image-009-2a961873050c.jpg" alt="Animal Welfare Fund campaign slide 6" width="2000" height="2000" decoding="async" loading="lazy"></div>
+<div class="vw-slide"><img src="assets/image-010-1af58ad5ebf3.jpg" alt="Animal Welfare Fund campaign slide 7" width="2000" height="2000" decoding="async" loading="lazy"></div>
+        <button class="vw-arrow vw-prev" type="button" aria-label="Previous slide">←</button>
+        <button class="vw-arrow vw-next" type="button" aria-label="Next slide">→</button>
+      </div>
+      <div class="vw-controls">
+        <div class="vw-dots">
+          <button class="vw-dot active" type="button" aria-label="Go to slide 1" data-slide="0"></button>
+<button class="vw-dot" type="button" aria-label="Go to slide 2" data-slide="1"></button>
+<button class="vw-dot" type="button" aria-label="Go to slide 3" data-slide="2"></button>
+<button class="vw-dot" type="button" aria-label="Go to slide 4" data-slide="3"></button>
+<button class="vw-dot" type="button" aria-label="Go to slide 5" data-slide="4"></button>
+<button class="vw-dot" type="button" aria-label="Go to slide 6" data-slide="5"></button>
+<button class="vw-dot" type="button" aria-label="Go to slide 7" data-slide="6"></button>
+        </div>
+        <div class="vw-counter"><span id="vwCurrent">1</span> / 7</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visual-project visual-project-secondary">
+    <div class="visual-project-copy">
+      <div class="visual-project-number">02 / Animal welfare campaign</div>
+      <h2>Eyestalk Ablation</h2>
+      <p>A six-frame social campaign concept translating a difficult animal-welfare issue into a direct visual narrative, moving from the practice itself to the case for making ablation-free production the standard.</p>
+      <div class="visual-project-note">Independent concept project, based on Rethink Priorities research. Not commissioned by Rethink Priorities.</div>
+      <div class="visual-project-meta">Social Campaign · Art Direction · Visual Storytelling</div>
+    </div>
+
+    <div class="vw-carousel" id="shrimpCarousel" tabindex="0" aria-label="Eyestalk Ablation image carousel">
+      <div class="vw-stage">
+        <div class="vw2-slide active"><img src="assets/image-011-28350a416012.jpg" alt="Eyestalk Ablation campaign slide 1" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw2-slide"><img src="assets/image-012-f30499727d48.jpg" alt="Eyestalk Ablation campaign slide 2" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw2-slide"><img src="assets/image-013-69aea71bf382.jpg" alt="Eyestalk Ablation campaign slide 3" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw2-slide"><img src="assets/image-014-f347e951bbe0.jpg" alt="Eyestalk Ablation campaign slide 4" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw2-slide"><img src="assets/image-015-bbfc5289f19c.jpg" alt="Eyestalk Ablation campaign slide 5" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw2-slide"><img src="assets/image-016-88f5c40099df.jpg" alt="Eyestalk Ablation campaign slide 6" width="1080" height="1350" decoding="async" loading="lazy"></div>
+        <button class="vw-arrow vw-prev vw2-prev" type="button" aria-label="Previous slide">←</button>
+        <button class="vw-arrow vw-next vw2-next" type="button" aria-label="Next slide">→</button>
+      </div>
+      <div class="vw-controls">
+        <div class="vw-dots">
+          <button class="vw2-dot active" type="button" aria-label="Go to slide 1" data-slide="0"></button>
+<button class="vw2-dot" type="button" aria-label="Go to slide 2" data-slide="1"></button>
+<button class="vw2-dot" type="button" aria-label="Go to slide 3" data-slide="2"></button>
+<button class="vw2-dot" type="button" aria-label="Go to slide 4" data-slide="3"></button>
+<button class="vw2-dot" type="button" aria-label="Go to slide 5" data-slide="4"></button>
+<button class="vw2-dot" type="button" aria-label="Go to slide 6" data-slide="5"></button>
+        </div>
+        <div class="vw-counter"><span id="vw2Current">1</span> / 6</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="visual-project visual-project-secondary">
+    <div class="visual-project-copy">
+      <div class="visual-project-number">03 / Wildlife awareness campaign</div>
+      <h2>Give Them Space</h2>
+      <p>A six-frame awareness campaign explaining why approaching a seal pup can cause its mother to stay away, turning a simple behaviour change into a short visual story with a clear call to action.</p>
+      <div class="visual-project-meta">Social Campaign · Art Direction · Visual Storytelling</div>
+    </div>
+
+    <div class="vw-carousel" id="sealCarousel" tabindex="0" aria-label="Give Them Space image carousel">
+      <div class="vw-stage">
+        <div class="vw3-slide active"><img src="assets/image-017-87c8a91b1fcc.jpg" alt="Baby seal campaign slide 1" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw3-slide"><img src="assets/image-018-11f87f17997e.jpg" alt="Baby seal campaign slide 2" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw3-slide"><img src="assets/image-019-bf5fa5e2343f.jpg" alt="Baby seal campaign slide 3" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw3-slide"><img src="assets/image-020-9df70a051c8d.jpg" alt="Baby seal campaign slide 4" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw3-slide"><img src="assets/image-021-a5c4c51b36fe.jpg" alt="Baby seal campaign slide 5" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw3-slide"><img src="assets/image-022-bb7eb0a190c8.jpg" alt="Baby seal campaign slide 6" width="1080" height="1350" decoding="async" loading="lazy"></div>
+        <button class="vw-arrow vw-prev vw3-prev" type="button" aria-label="Previous slide">←</button>
+        <button class="vw-arrow vw-next vw3-next" type="button" aria-label="Next slide">→</button>
+      </div>
+      <div class="vw-controls">
+        <div class="vw-dots">
+          <button class="vw3-dot active" type="button" aria-label="Go to slide 1" data-slide="0"></button>
+<button class="vw3-dot" type="button" aria-label="Go to slide 2" data-slide="1"></button>
+<button class="vw3-dot" type="button" aria-label="Go to slide 3" data-slide="2"></button>
+<button class="vw3-dot" type="button" aria-label="Go to slide 4" data-slide="3"></button>
+<button class="vw3-dot" type="button" aria-label="Go to slide 5" data-slide="4"></button>
+<button class="vw3-dot" type="button" aria-label="Go to slide 6" data-slide="5"></button>
+        </div>
+        <div class="vw-counter"><span id="vw3Current">1</span> / 6</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="visual-project visual-project-secondary">
+    <div class="visual-project-copy">
+      <div class="visual-project-number">04 / Ocean conservation campaign</div>
+      <h2>More Time for Corals</h2>
+      <p>A six-frame visual campaign about coral bleaching and restoration, using a simple narrative arc to explain what corals are, why warming oceans threaten them, and why restoration efforts may only buy limited time.</p>
+      <div class="visual-project-meta">Social Campaign · Art Direction · Visual Storytelling</div>
+    </div>
+
+    <div class="vw-carousel" id="coralCarousel" tabindex="0" aria-label="More Time for Corals image carousel">
+      <div class="vw-stage">
+        <div class="vw4-slide active"><img src="assets/image-023-ee721cac482e.jpg" alt="Coral campaign slide 1" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw4-slide"><img src="assets/image-024-1f67cd525ec1.jpg" alt="Coral campaign slide 2" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw4-slide"><img src="assets/image-025-4e8857d806d6.jpg" alt="Coral campaign slide 3" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw4-slide"><img src="assets/image-026-3b6c97f84d09.jpg" alt="Coral campaign slide 4" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw4-slide"><img src="assets/image-027-9787937e40ad.jpg" alt="Coral campaign slide 5" width="1080" height="1350" decoding="async" loading="lazy"></div>
+<div class="vw4-slide"><img src="assets/image-028-06e103318838.jpg" alt="Coral campaign slide 6" width="1080" height="1350" decoding="async" loading="lazy"></div>
+        <button class="vw-arrow vw-prev vw4-prev" type="button" aria-label="Previous slide">←</button>
+        <button class="vw-arrow vw-next vw4-next" type="button" aria-label="Next slide">→</button>
+      </div>
+      <div class="vw-controls">
+        <div class="vw-dots">
+          <button class="vw4-dot active" type="button" aria-label="Go to slide 1" data-slide="0"></button>
+<button class="vw4-dot" type="button" aria-label="Go to slide 2" data-slide="1"></button>
+<button class="vw4-dot" type="button" aria-label="Go to slide 3" data-slide="2"></button>
+<button class="vw4-dot" type="button" aria-label="Go to slide 4" data-slide="3"></button>
+<button class="vw4-dot" type="button" aria-label="Go to slide 5" data-slide="4"></button>
+<button class="vw4-dot" type="button" aria-label="Go to slide 6" data-slide="5"></button>
+        </div>
+        <div class="vw-counter"><span id="vw4Current">1</span> / 6</div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<section class="about-page" id="about-page" aria-hidden="true">
+  <div class="about-squarespace">
+    <div class="about-text-column">
+      <h2 class="seo-demoted-title">Beyond the work</h2>
+
+      <div class="about-body">
+        <p>Hi! My name is Maria, and I’m a visual designer with over 10 years of experience across editorial, digital, branding and e-commerce design.</p>
+
+        <p>I'm looking for a long-term role aligned with my purpose: to make others' lives better, and to make life itself better. And I'm looking for a place where I can put my heart in and where people's values are aligned with the values I deeply believe in: integrity, truth and love.</p>
+
+        <p>I’m deeply interested in visual storytelling and research communication, turning complex information into clear, engaging and meaningful visual narratives.</p>
+
+        <p>I’ve worked remotely for many years, often while living and travelling in different parts of the world. Photography has become a big part of the way I observe places, people and stories, and it naturally influences how I approach design.</p>
+
+        <p>If you think I could be a good fit for your team, I’d be happy to hear from you.</p>
+
+        <p>I hope you have a wonderful day!</p>
+
+        <p>Maria</p>
+
+        <div class="about-links">
+          <a href="mailto:mariavera.visual@gmail.com">mariavera.visual@gmail.com</a>
+          <a href="https://www.linkedin.com/in/mariaveram/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-image-column">
+      <img src="assets/image-029-b59c5434e8f8.jpg" alt="Mangrove lagoon illustration" width="634" height="1200" decoding="async" loading="lazy">
+    </div>
+  </div>
+
+  <section class="about-expertise">
+    <div class="about-location">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+      <span>Spain · Remote / International</span>
+    </div>
+
+    <div class="about-expertise-grid">
+      <div class="expertise-column expertise-skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Creative Direction &amp; Concept Development</li>
+          <li>Visual Storytelling</li>
+          <li>Editorial Design &amp; Data Storytelling</li>
+          <li>Brand &amp; Visual Identity</li>
+          <li>Visual Systems &amp; Guidelines</li>
+          <li>AI-Enhanced Creative Workflows</li>
+          <li>Photography</li>
+        </ul>
+      </div>
+
+      <div class="expertise-column">
+        <h2>Software</h2>
+        <ul>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>Adobe Lightroom</li>
+        </ul>
+      </div>
+
+      <div class="expertise-column">
+        <h2>AI Tools</h2>
+        <ul>
+          <li>ChatGPT</li>
+          <li>Gemini</li>
+          <li>DALL·E</li>
+          <li>OpenArt</li>
+          <li>Adobe Firefly</li>
+          <li>Claude</li>
+        </ul>
+      </div>
+
+
+      <div class="expertise-column">
+        <h2>Working Style</h2>
+        <ul>
+          <li>Thoughtful</li>
+          <li>Independent</li>
+          <li>Easy-going &amp; Curious</li>
+          <li>Adaptable</li>
+          <li>Collaborative</li>
+        </ul>
+      </div>
+
+      <div class="expertise-column">
+        <h2>Languages</h2>
+        <ul>
+          <li>Spanish — Native</li>
+          <li>English — Professional Working Proficiency</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</section>
+</div>
+
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-grid">
+      <div class="site-footer-name">Maria Vera</div>
+      <div class="site-footer-role">Visual Designer &amp; Storyteller</div>
+      <div class="site-footer-copy">© <span id="copyrightYear">2026</span></div>
+      <div class="site-footer-links">
+        <a href="mailto:mariavera.visual@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/mariaveram/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" aria-hidden="true">
+  <div class="overlay-top">
+    <div class="title" id="overlayLabel">Case study</div>
+    <button class="close" id="closeOverlay">Close ×</button>
+  </div>
+
+
+
+  <div class="shrimp-case" id="shrimpCase">
+    <section class="shrimp-case-intro">
+      <h2>Hidden Suffering: Shrimp Welfare</h2>
+      <p>A visual storytelling project translating research on farmed shrimp welfare into a clearer and more accessible narrative, using editorial design, illustration and information hierarchy to make complex findings easier to understand.</p>
+      <div class="case-meta-strip" aria-label="Project information">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Type</span>
+          <span class="case-meta-value">Independent concept</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-value">Visual storytelling · Editorial &amp; information design</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Focus</span>
+          <span class="case-meta-value">Research communication · Animal welfare</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-value">2026</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="shrimp-story">
+      <section class="shrimp-story-block">
+        <div class="shrimp-copy">
+          <div class="eyebrow">01 — Comparing suffering</div>
+          <h3>Creating a common frame for very different harms.</h3>
+          <p>The research models each welfare threat across three dimensions: how many shrimp are affected, how long the harm lasts and how severe the pain is. These are translated into a common metric: disabling-equivalent pain.</p>
+        </div>
+        <div class="shrimp-placeholder"><img class="art" src="assets/image-030-948bd85bac7d.jpg" alt="How do you compare suffering" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="shrimp-story-block reverse">
+        <div class="shrimp-copy">
+          <div class="eyebrow">02 — Mapping the threats</div>
+          <h3>Structuring a complex welfare landscape.</h3>
+          <p>The 18 welfare threats were organised into six groups — water quality, pond habitat, feed management, health, transport and end of production — to make the research easier to scan and compare.</p>
+        </div>
+        <div class="shrimp-placeholder"><img class="art" src="assets/image-031-b5a8af8c5bf3.jpg" alt="18 threats different forms of harm" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="shrimp-story-block">
+        <div class="shrimp-copy">
+          <div class="eyebrow">03 — A counterintuitive finding</div>
+          <h3>Bringing chronic harm into focus.</h3>
+          <p>The highest mean estimates come from conditions that affect many shrimp over long periods. Widespread, chronic harms can add up to greater overall suffering than more visible but shorter events.</p>
+        </div>
+        <div class="shrimp-placeholder"><img class="art" src="assets/image-032-539e60cb1087.jpg" alt="The biggest harm may happen slowly" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="shrimp-story-block reverse">
+        <div class="shrimp-copy">
+          <div class="eyebrow">04 — Scale and uncertainty</div>
+          <h3>Putting individual suffering into perspective.</h3>
+          <p>Across hundreds of billions of farmed shrimp, individual harms can accumulate to an enormous total. At the same time, substantial uncertainty remains, and the evidence does not support confidently ranking most welfare threats.</p>
+        </div>
+        <div class="shrimp-placeholder"><img class="art" src="assets/image-033-6ea166adbe55.jpg" alt="The scale changes the picture" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+    </div>
+
+    <div class="shrimp-note">
+      Independent concept project based on research by Rethink Priorities. Not commissioned by Rethink Priorities.
+    </div>
+
+    <div class="case-source">
+      <span class="case-source-label">Source research</span>
+      <a href="https://rethinkpriorities.org/research-area/quantifying-and-prioritizing-shrimp-welfare-threats/" target="_blank" rel="noopener noreferrer">
+        Rethink Priorities — Quantifying and prioritizing shrimp welfare threats<span class="case-source-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="shrimp-report-link">
+      <strong>View the complete editorial report</strong>
+      <button type="button" onclick="window.open('pdf/Quantifying_Shrimp_Welfare_Threats_Visual_Summary_Maria_Vera.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
+    </div>
+
+    <nav class="case-project-nav" aria-label="Case study navigation">
+      <button type="button" class="case-project-link prev" data-case-target="dark">
+        <small>Previous project</small>
+        <strong><span>← Dark Vessels</span></strong>
+      </button>
+      <div class="case-nav-spacer" aria-hidden="true"></div>
+    </nav>
+  </div>
+
+  <div class="fiji-case" id="fijiCase">
+    <section class="fiji-case-intro">
+      <h2>Plastic Waste in Fiji</h2>
+      <p>An editorial redesign translating research on plastic waste, disposal and leakage in Fiji into a clearer and more approachable visual narrative.</p>
+      <div class="case-meta-strip" aria-label="Project information">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Type</span>
+          <span class="case-meta-value">Independent concept</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-value">Editorial &amp; information design · Visual storytelling</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Focus</span>
+          <span class="case-meta-value">Research communication · Plastic pollution</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-value">2026</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="fiji-story">
+      <section class="fiji-story-block">
+        <div class="fiji-copy">
+          <div class="eyebrow">01 — Setting the context</div>
+          <h3>Giving the data a sense of place.</h3>
+          <p>The story begins by situating Fiji geographically, socially and economically, giving the reader enough context to understand the scale and conditions behind the data that follows.</p>
+        </div>
+        <div class="fiji-placeholder"><img class="art" src="assets/image-034-40b6edff0c1d.jpg" alt="Fiji at a glance" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="fiji-story-block reverse">
+        <div class="fiji-copy">
+          <div class="eyebrow">02 — Making the methodology readable</div>
+          <h3>Turning a technical process into a visual sequence.</h3>
+          <p>The original research combines household, commercial, tourism and fisheries data with landfill checks and stakeholder interviews. I reorganised that methodology into a simpler sequence: imports, use, disposal and leakage.</p>
+        </div>
+        <div class="fiji-placeholder"><img class="art" src="assets/image-035-9759c8a9953f.jpg" alt="How Fiji plastic flows were measured" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="fiji-story-block">
+        <div class="fiji-copy">
+          <div class="eyebrow">03 — Finding the big picture</div>
+          <h3>Revealing the patterns behind the numbers.</h3>
+          <p>The central data story compares how much plastic waste is generated across households, commercial activity, tourism and fisheries, helping the reader see both the overall scale and the differences between sectors.</p>
+        </div>
+        <div class="fiji-image-stack">
+          <div class="fiji-placeholder"><img class="art" src="assets/image-036-1555e58e0793.jpg" alt="The big picture" width="1500" height="1060" decoding="async" loading="lazy"></div>
+          <div class="fiji-placeholder"><img class="art" src="assets/image-037-1e0182f61eaa.jpg" alt="Plastic waste by sector" width="1500" height="1060" decoding="async" loading="lazy"></div>
+        </div>
+      </section>
+
+      <section class="fiji-story-block reverse">
+        <div class="fiji-copy">
+          <div class="eyebrow">04 — Looking beyond total volume</div>
+          <h3>Showing why a small share can still matter.</h3>
+          <p>Fisheries contribute only a small share of Fiji’s total plastic waste, but lost fishing gear and consumer plastics can leak directly into the marine environment. That contrast became an important part of the narrative.</p>
+        </div>
+        <div class="fiji-placeholder"><img class="art" src="assets/image-038-172e66cd8a2e.jpg" alt="Plastic leakage from fisheries" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="fiji-story-block">
+        <div class="fiji-copy">
+          <div class="eyebrow">05 — Turning research into takeaways</div>
+          <h3>Distilling the study into a few memorable findings.</h3>
+          <p>The final summary distils the research into a small set of memorable figures, connecting total plastic waste, leakage by sector, tourism intensity and fishing gear leakage into one clear conclusion.</p>
+        </div>
+        <div class="fiji-placeholder"><img class="art" src="assets/image-039-79b0556b24ed.jpg" alt="What this means" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+    </div>
+
+    <div class="fiji-note">
+      Independent concept project based on IUCN’s Plastic Waste Free Islands research. Not commissioned by IUCN.
+    </div>
+
+    <div class="case-source">
+      <span class="case-source-label">Source research</span>
+      <a href="https://iucn.org/sites/default/files/2023-08/fiji-country-overview-.pdf" target="_blank" rel="noopener noreferrer">
+        IUCN — Fiji Plastic Waste Profile<span class="case-source-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="fiji-report-link">
+      <strong>View the complete editorial report</strong>
+      <button type="button" onclick="window.open('pdf/Fiji_Plastic_Waste_Profile_Redesign_Maria_Vera_IUCN.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
+    </div>
+
+    <nav class="case-project-nav" aria-label="Case study navigation">
+      <div class="case-nav-spacer" aria-hidden="true"></div>
+      <button type="button" class="case-project-link next" data-case-target="dark">
+        <small>Next project</small>
+        <strong><span>Dark Vessels →</span></strong>
+      </button>
+    </nav>
+  </div>
+
+  <div class="dark-case" id="darkCase">
+    <section class="dark-case-intro">
+      <h1>Dark Vessels</h1>
+      <p>A visual storytelling project exploring hidden fishing activity and the challenge of making complex marine data easier to understand.</p>
+      <div class="case-meta-strip" aria-label="Project information">
+        <div class="case-meta-item">
+          <span class="case-meta-label">Type</span>
+          <span class="case-meta-value">Independent concept</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Role</span>
+          <span class="case-meta-value">Visual storytelling · Data interpretation · Editorial design</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Focus</span>
+          <span class="case-meta-value">Research communication · Ocean transparency</span>
+        </div>
+        <div class="case-meta-item">
+          <span class="case-meta-label">Year</span>
+          <span class="case-meta-value">2026</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="dark-story">
+      <section class="dark-story-block">
+        <div class="dark-copy">
+          <div class="eyebrow">01 — The challenge</div>
+          <h3>Framing the visibility gap.</h3>
+          <p>Public vessel tracking only shows part of the picture. This project explores how satellite data can reveal activity that conventional tracking systems may miss.</p>
+        </div>
+        <div class="dark-placeholder"><img class="art" src="assets/image-040-b46c4f16fade.jpg" alt="Global AIS vessel activity map" width="1500" height="1060" decoding="async" loading="eager" fetchpriority="high"></div>
+      </section>
+
+      <section class="dark-story-block">
+        <div class="dark-copy">
+          <div class="eyebrow">02 — What is a dark vessel?</div>
+          <h3>Making “dark vessels” understandable.</h3>
+          <p>“Dark” does not automatically mean illegal. It simply means that public AIS data does not show the full picture.</p>
+        </div>
+        <div class="dark-placeholder"><img class="art" src="assets/image-041-4844372b0954.jpg" alt="What is a dark vessel editorial spread" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="dark-story-block reverse">
+        <div class="dark-copy">
+          <div class="eyebrow">03 — Seeing beyond AIS</div>
+          <h3>Building a layered view of vessel activity.</h3>
+          <p>Rather than treating AIS, optical imagery, SAR and VIIRS as isolated datasets, the narrative shows how each reveals a different layer of vessel activity at sea.</p>
+        </div>
+        <div class="dark-placeholder"><img class="art" src="assets/image-042-dd1e9da3b65c.jpg" alt="AIS, SAR, Optical and VIIRS comparison" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="dark-story-block">
+        <div class="dark-copy">
+          <div class="eyebrow">04 — From detection to meaning</div>
+          <h3>Turning satellite detections into a clearer story.</h3>
+          <p>The visual hierarchy moves from what can be tracked to what remains unmatched, helping explain why hidden or unreported activity matters.</p>
+        </div>
+        <div class="dark-placeholder"><img class="art" src="assets/image-043-f9b4b4477374.jpg" alt="Matched and unmatched SAR detections" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+
+      <section class="dark-story-block reverse">
+        <div class="dark-copy">
+          <div class="eyebrow">05 — Why it matters</div>
+          <h3>Connecting visibility to real-world decisions.</h3>
+          <p>Making vessel activity easier to interpret can support fisheries management, marine protection, compliance and enforcement, as well as research and transparency.</p>
+        </div>
+        <div class="dark-placeholder"><img class="art" src="assets/image-044-3d579307f89b.jpg" alt="Why Dark Vessels Matter editorial spread" width="1500" height="1060" decoding="async" loading="lazy"></div>
+      </section>
+    </div>
+
+    <section class="dark-full" style="margin-top:36px;">
+      <div class="dark-placeholder"><img class="art" src="assets/image-045-647ba603f819.jpg" alt="A More Visible Ocean editorial spread" width="1500" height="1060" decoding="async" loading="lazy"></div>
+</section>
+
+    <div class="fiji-note">Independent concept project based on Global Fishing Watch research and data. Not commissioned by Global Fishing Watch.</div>
+
+    <div class="case-source">
+      <span class="case-source-label">Source research</span>
+      <a href="https://globalfishingwatch.org/research-project-dark-vessels/" target="_blank" rel="noopener noreferrer">
+        Global Fishing Watch — Dark Vessels<span class="case-source-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+    <div class="dark-report-link">
+      <strong>View the complete editorial report</strong>
+      <button type="button" onclick="window.open('pdf/The_Dark_Fleet_Visual_Communication_Maria_Vera.pdf', '_blank', 'noopener,noreferrer')">View full PDF →</button>
+    </div>
+
+    <nav class="case-project-nav" aria-label="Case study navigation">
+      <button type="button" class="case-project-link prev" data-case-target="fiji">
+        <small>Previous project</small>
+        <strong><span>← Plastic Waste in Fiji</span></strong>
+      </button>
+      <button type="button" class="case-project-link next" data-case-target="shrimp">
+        <small>Next project</small>
+        <strong><span>Hidden Suffering →</span></strong>
+      </button>
+    </nav>
+  </div>
+
+  <div class="case-hero" id="genericCaseHero">
+    <h2 id="caseTitle">Project title</h2>
+    <div class="case-intro">
+      <p id="caseText">Project introduction.</p>
+      <div class="facts" id="caseFacts"></div>
+    </div>
+  </div>
+  <div class="case-wide" id="caseArt"></div>
+  <div class="case-columns" id="genericCaseColumns">
+    <h4>Approach</h4>
+    <p id="caseApproach">A concise explanation of the visual approach goes here.</p>
+  </div>
+  <div class="pdf-demo" id="genericPdfDemo">
+    <div>
+      <strong>Full editorial report</strong><br>
+      <span>This button can later open or extract the complete PDF embedded inside this same HTML file.</span>
+    </div>
+    <button onclick="alert('PDF placeholder — we can embed the real PDF here later.')">View full PDF</button>
+  </div>
+</div>
+
+<script>
+
+  // Portfolio analytics — Umami
+  function trackPortfolioEvent(name, data = {}, retry = 0){
+    if(window.umami && typeof window.umami.track === "function"){
+      window.umami.track(name, data);
+      return;
+    }
+    if(retry < 5){
+      setTimeout(() => trackPortfolioEvent(name, data, retry + 1), 400);
+    }
+  }
+
+  function trackPortfolioPage(url, title, retry = 0){
+    if(window.umami && typeof window.umami.track === "function"){
+      window.umami.track(props => ({ ...props, url, title }));
+      return;
+    }
+    if(retry < 5){
+      setTimeout(() => trackPortfolioPage(url, title, retry + 1), 400);
+    }
+  }
+
+  const workNav = document.querySelector('[data-nav="work"]');
+  const visualNav = document.querySelector('[data-nav="visual"]');
+  const aboutNav = document.querySelector('[data-nav="about"]');
+  const aboutPage = document.getElementById("about-page");
+  const visualPage = document.getElementById("visual-work");
+
+  function showWork(){
+    document.body.classList.remove("show-about","show-visual");
+    aboutPage.setAttribute("aria-hidden","true");
+    visualPage.setAttribute("aria-hidden","true");
+    window.scrollTo({top:0, behavior:"smooth"});
+  }
+  function showVisual(){
+    document.body.classList.remove("show-about");
+    document.body.classList.add("show-visual");
+    aboutPage.setAttribute("aria-hidden","true");
+    visualPage.setAttribute("aria-hidden","false");
+    window.scrollTo({top:0, behavior:"instant"});
+  }
+  function showAbout(){
+    document.body.classList.remove("show-visual");
+    document.body.classList.add("show-about");
+    visualPage.setAttribute("aria-hidden","true");
+    aboutPage.setAttribute("aria-hidden","false");
+    window.scrollTo({top:0, behavior:"instant"});
+  }
+
+  workNav.addEventListener("click", e=>{
+    e.preventDefault();
+    showWork();
+    trackPortfolioPage("/", "Maria Vera — Case Studies");
+    trackPortfolioEvent("section_view", {section:"case_studies"});
+  });
+  visualNav.addEventListener("click", e=>{
+    e.preventDefault();
+    showVisual();
+    trackPortfolioPage("/visual-work", "Maria Vera — Visual Work");
+    trackPortfolioEvent("section_view", {section:"visual_work"});
+  });
+  aboutNav.addEventListener("click", e=>{
+    e.preventDefault();
+    showAbout();
+    trackPortfolioPage("/about", "Maria Vera — About");
+    trackPortfolioEvent("section_view", {section:"about"});
+  });
+  document.querySelector(".brand").addEventListener("click", e=>{
+    e.preventDefault();
+    showWork();
+    trackPortfolioPage("/", "Maria Vera — Case Studies");
+    trackPortfolioEvent("section_view", {section:"case_studies", source:"brand"});
+  });
+
+  const caseRoutes = {
+    fiji:{path:"/case-studies/fiji/", title:"Plastic Waste in Fiji"},
+    dark:{path:"/case-studies/dark-vessels/", title:"Dark Vessels"},
+    shrimp:{path:"/case-studies/shrimp-welfare/", title:"Hidden Suffering: Shrimp Welfare"}
+  };
+  const caseKeyByPath = Object.fromEntries(
+    Object.entries(caseRoutes).map(([key, value]) => [cleanPortfolioPath(value.path), key])
+  );
+
+  function cleanPortfolioPath(path){
+    const cleaned = (path || "/").replace(/\/+$/, "");
+    return cleaned || "/";
+  }
+
+  function updateDocumentTitle(title){
+    document.title = title || "Maria Vera — Visual Designer & Storyteller";
+  }
+
+  const projects = {
+    shrimp:{
+      label:"Research communication",
+      title:"Hidden Suffering: Shrimp Welfare",
+      text:"A visual communication project exploring welfare risks across shrimp production, designed to make dense research easier to understand without oversimplifying it.",
+      facts:"ROLE — VISUAL STORYTELLING<br>FORMAT — EDITORIAL / INFO DESIGN<br>FOCUS — ANIMAL WELFARE",
+      approach:"The visual system balances clarity with emotional restraint: structured information, simple illustration and editorial pacing guide the reader through a difficult subject without losing the underlying evidence.",
+      bg:"#d9ece8",
+      art:`<img class="art" src="assets/image-003-37ea2b3932cb.jpg" alt="Shrimp welfare editorial spread" width="2048" height="1280" decoding="async" loading="lazy">`
+    },
+    fiji:{
+      label:"Editorial data storytelling",
+      title:"Plastic Waste in Fiji",
+      text:"A self-initiated redesign translating plastic waste research into an editorial narrative with maps, illustrations, statistics and policy context.",
+      facts:"ROLE — EDITORIAL DESIGN<br>FORMAT — 12-PAGE REPORT<br>FOCUS — PLASTIC POLLUTION / FIJI",
+      approach:"Muted colour, generous negative space and simplified forms create a calmer reading experience, while hierarchy and visualisation help the key environmental findings surface quickly.",
+      bg:"#efe9db",
+      art:`<img class="art" src="assets/image-001-88962888ea57.jpg" alt="Plastic Waste in Fiji editorial spread" width="2048" height="1280" decoding="async" loading="lazy">`
+    },
+    dark:{
+      label:"Ocean transparency",
+      title:"Dark Vessels",
+      text:"A visual explainer showing how AIS, optical imagery, SAR and VIIRS can reveal vessel activity that conventional tracking systems may miss.",
+      facts:"ROLE — VISUAL STORYTELLING<br>FORMAT — EDITORIAL EXPLAINER<br>FOCUS — OCEAN TRANSPARENCY",
+      approach:"A deep ocean palette, satellite-derived visual language and clear comparisons between data sources create a story that moves from invisibility to detection and finally to action.",
+      bg:"#06141f",
+      art:`<img class="art" src="assets/image-002-5a8266fd9fa2.jpg" alt="Dark Vessels editorial spread" width="2048" height="1280" decoding="async" loading="lazy">`
+    }
+  };
+
+  const overlay = document.getElementById("overlay");
+
+  function renderCaseOverlay(key){
+    const p = projects[key];
+    if(!p) return false;
+
+    document.getElementById("overlayLabel").textContent = p.label;
+
+    const darkCase = document.getElementById("darkCase");
+    const fijiCase = document.getElementById("fijiCase");
+    const shrimpCase = document.getElementById("shrimpCase");
+    const genericCaseHero = document.getElementById("genericCaseHero");
+    const caseArt = document.getElementById("caseArt");
+    const genericCaseColumns = document.getElementById("genericCaseColumns");
+    const genericPdfDemo = document.getElementById("genericPdfDemo");
+
+    darkCase.classList.toggle("active", key === "dark");
+    fijiCase.classList.toggle("active", key === "fiji");
+    shrimpCase.classList.toggle("active", key === "shrimp");
+
+    if(["dark","fiji","shrimp"].includes(key)){
+      genericCaseHero.style.display = "none";
+      caseArt.style.display = "none";
+      genericCaseColumns.style.display = "none";
+      genericPdfDemo.style.display = "none";
+    } else {
+      genericCaseHero.style.display = "";
+      caseArt.style.display = "";
+      genericCaseColumns.style.display = "";
+      genericPdfDemo.style.display = "";
+      document.getElementById("caseTitle").textContent = p.title;
+      document.getElementById("caseText").textContent = p.text;
+      document.getElementById("caseFacts").innerHTML = p.facts;
+      document.getElementById("caseApproach").textContent = p.approach;
+      document.getElementById("caseArt").innerHTML = p.art;
+    }
+
+    overlay.classList.add("opened");
+    overlay.setAttribute("aria-hidden","false");
+    overlay.scrollTop = 0;
+    document.body.style.overflow = "hidden";
+    return true;
+  }
+
+  function openCase(key, options = {}){
+    const route = caseRoutes[key];
+    if(!route || !renderCaseOverlay(key)) return;
+
+    const historyMode = options.historyMode || "push";
+    const currentState = history.state || {};
+    const origin = options.origin || currentState.origin || "home";
+    const depth = Number.isFinite(options.depth)
+      ? options.depth
+      : (historyMode === "push" ? (Number(currentState.depth) || 0) + 1 : (Number(currentState.depth) || 0));
+
+    const state = {portfolioView:"case", case:key, origin, depth};
+    if(historyMode === "push") history.pushState(state, "", route.path);
+    else if(historyMode === "replace") history.replaceState(state, "", route.path);
+
+    updateDocumentTitle(`Maria Vera — ${route.title}`);
+
+    if(options.track !== false){
+      trackPortfolioPage(route.path, `Maria Vera — ${route.title}`);
+      trackPortfolioEvent("case_study_open", {project:key, source:options.source || "portfolio"});
+    }
+  }
+
+  function closeOverlayVisual(){
+    overlay.classList.remove("opened");
+    overlay.setAttribute("aria-hidden","true");
+    document.body.style.overflow = "";
+  }
+
+  function returnToHome(options = {}){
+    closeOverlayVisual();
+    showWork();
+    updateDocumentTitle("Maria Vera — Visual Designer & Storyteller");
+
+    if(options.historyMode === "replace"){
+      history.replaceState({portfolioView:"home", depth:0}, "", "/");
+    }
+    if(options.track){
+      trackPortfolioPage("/", "Maria Vera — Case Studies");
+    }
+  }
+
+  document.querySelectorAll(".project").forEach(card=>{
+    card.addEventListener("click",()=>{
+      const key = card.dataset.project;
+      openCase(key, {historyMode:"push", origin:"home", source:"case_studies"});
+    });
+  });
+
+  function closeOverlay(){
+    const state = history.state || {};
+    if(state.portfolioView === "case" && state.origin === "home" && Number(state.depth) > 0){
+      history.go(-Number(state.depth));
+      return;
+    }
+    returnToHome({historyMode:"replace", track:true});
+  }
+
+  document.getElementById("closeOverlay").addEventListener("click", closeOverlay);
+
+  document.querySelectorAll("[data-case-target]").forEach(button=>{
+    button.addEventListener("click",()=>{
+      const target = button.dataset.caseTarget;
+      const state = history.state || {};
+      openCase(target, {
+        historyMode:"push",
+        origin:state.origin || "home",
+        source:"case_navigation"
+      });
+      overlay.scrollTop = 0;
+    });
+  });
+
+  function applyLocationRoute(options = {}){
+    const params = new URLSearchParams(window.location.search);
+    const forwardedRoute = params.get("portfolioRoute");
+    let path = forwardedRoute ? cleanPortfolioPath(forwardedRoute) : cleanPortfolioPath(window.location.pathname);
+    const key = caseKeyByPath[path];
+
+    if(key){
+      if(forwardedRoute){
+        history.replaceState({portfolioView:"case", case:key, origin:"direct", depth:0}, "", path);
+      } else if(!history.state || history.state.portfolioView !== "case"){
+        history.replaceState({portfolioView:"case", case:key, origin:"direct", depth:0}, "", path);
+      }
+      renderCaseOverlay(key);
+      updateDocumentTitle(`Maria Vera — ${caseRoutes[key].title}`);
+      if(options.track !== false){
+        trackPortfolioPage(path, `Maria Vera — ${caseRoutes[key].title}`);
+        trackPortfolioEvent("case_study_open", {project:key, source:"direct_url"});
+      }
+      return;
+    }
+
+    closeOverlayVisual();
+    updateDocumentTitle("Maria Vera — Visual Designer & Storyteller");
+    if(forwardedRoute || window.location.search.includes("portfolioRoute=")){
+      history.replaceState({portfolioView:"home", depth:0}, "", "/");
+    } else if(!history.state){
+      history.replaceState({portfolioView:"home", depth:0}, "", cleanPortfolioPath(window.location.pathname));
+    }
+    if(options.track !== false){
+      trackPortfolioPage("/", "Maria Vera — Case Studies");
+    }
+  }
+
+  window.addEventListener("popstate", ()=>{
+    const path = cleanPortfolioPath(window.location.pathname);
+    const key = caseKeyByPath[path];
+    if(key){
+      renderCaseOverlay(key);
+      updateDocumentTitle(`Maria Vera — ${caseRoutes[key].title}`);
+      trackPortfolioPage(path, `Maria Vera — ${caseRoutes[key].title}`);
+    } else {
+      closeOverlayVisual();
+      showWork();
+      updateDocumentTitle("Maria Vera — Visual Designer & Storyteller");
+      trackPortfolioPage("/", "Maria Vera — Case Studies");
+    }
+  });
+
+
+
+  // Engagement events: PDFs, contact links and research sources.
+  document.querySelectorAll('button[onclick*="pdf/"]').forEach(button=>{
+    button.addEventListener("click", ()=>{
+      const caseRoot = button.closest("#fijiCase, #darkCase, #shrimpCase");
+      const project = caseRoot?.id === "fijiCase" ? "fiji"
+        : caseRoot?.id === "darkCase" ? "dark"
+        : caseRoot?.id === "shrimpCase" ? "shrimp"
+        : "unknown";
+      trackPortfolioEvent("pdf_open", {project});
+    }, {capture:true});
+  });
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link=>{
+    link.addEventListener("click", ()=>{
+      trackPortfolioEvent("contact_click", {type:"email"});
+    });
+  });
+
+  document.querySelectorAll('a[href*="linkedin.com"]').forEach(link=>{
+    link.addEventListener("click", ()=>{
+      trackPortfolioEvent("contact_click", {type:"linkedin"});
+    });
+  });
+
+  document.querySelectorAll('.case-source a').forEach(link=>{
+    link.addEventListener("click", ()=>{
+      const caseRoot = link.closest("#fijiCase, #darkCase, #shrimpCase");
+      const project = caseRoot?.id === "fijiCase" ? "fiji"
+        : caseRoot?.id === "darkCase" ? "dark"
+        : caseRoot?.id === "shrimpCase" ? "shrimp"
+        : "unknown";
+      trackPortfolioEvent("source_research_click", {project});
+    });
+  });
+
+  const copyrightYear = document.getElementById("copyrightYear");
+  if(copyrightYear) copyrightYear.textContent = new Date().getFullYear();
+
+  // Open a directly shared case-study URL (or track the normal home view).
+  applyLocationRoute({track:true});
+
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape" && overlay.classList.contains("opened")) closeOverlay(); });
+
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add("visible"); });
+  },{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+  // Visual Work — manual carousel
+  (function(){
+    const carousel = document.getElementById("chickenCarousel");
+    if(!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll(".vw-slide"));
+    const dots = Array.from(carousel.querySelectorAll(".vw-dot"));
+    const prev = carousel.querySelector(".vw-prev");
+    const next = carousel.querySelector(".vw-next");
+    const counter = document.getElementById("vwCurrent");
+    let index = 0;
+    let touchStartX = null;
+
+    function goTo(newIndex){
+      index = (newIndex + slides.length) % slides.length;
+      slides.forEach((slide, i)=>slide.classList.toggle("active", i === index));
+      dots.forEach((dot, i)=>dot.classList.toggle("active", i === index));
+      counter.textContent = index + 1;
+    }
+
+    prev.addEventListener("click", ()=>goTo(index - 1));
+    next.addEventListener("click", ()=>goTo(index + 1));
+    dots.forEach(dot=>{
+      dot.addEventListener("click", ()=>goTo(Number(dot.dataset.slide)));
+    });
+
+    carousel.addEventListener("keydown", e=>{
+      if(e.key === "ArrowLeft") goTo(index - 1);
+      if(e.key === "ArrowRight") goTo(index + 1);
+    });
+
+    carousel.addEventListener("touchstart", e=>{
+      touchStartX = e.changedTouches[0].clientX;
+    }, {passive:true});
+
+    carousel.addEventListener("touchend", e=>{
+      if(touchStartX === null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if(Math.abs(dx) > 45){
+        goTo(index + (dx < 0 ? 1 : -1));
+      }
+      touchStartX = null;
+    }, {passive:true});
+  })();
+
+
+  (function(){
+    const carousel = document.getElementById("shrimpCarousel");
+    if(!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll(".vw2-slide"));
+    const dots = Array.from(carousel.querySelectorAll(".vw2-dot"));
+    const prev = carousel.querySelector(".vw2-prev");
+    const next = carousel.querySelector(".vw2-next");
+    const counter = document.getElementById("vw2Current");
+    let index = 0;
+    let touchStartX = null;
+
+    function goTo(newIndex){
+      index = (newIndex + slides.length) % slides.length;
+      slides.forEach((slide, i)=>slide.classList.toggle("active", i === index));
+      dots.forEach((dot, i)=>dot.classList.toggle("active", i === index));
+      counter.textContent = index + 1;
+    }
+
+    prev.addEventListener("click", ()=>goTo(index - 1));
+    next.addEventListener("click", ()=>goTo(index + 1));
+    dots.forEach(dot=>{
+      dot.addEventListener("click", ()=>goTo(Number(dot.dataset.slide)));
+    });
+
+    carousel.addEventListener("keydown", e=>{
+      if(e.key === "ArrowLeft") goTo(index - 1);
+      if(e.key === "ArrowRight") goTo(index + 1);
+    });
+
+    carousel.addEventListener("touchstart", e=>{
+      touchStartX = e.changedTouches[0].clientX;
+    }, {passive:true});
+
+    carousel.addEventListener("touchend", e=>{
+      if(touchStartX === null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if(Math.abs(dx) > 45){
+        goTo(index + (dx < 0 ? 1 : -1));
+      }
+      touchStartX = null;
+    }, {passive:true});
+  })();
+
+
+  (function(){
+    const carousel = document.getElementById("sealCarousel");
+    if(!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll(".vw3-slide"));
+    const dots = Array.from(carousel.querySelectorAll(".vw3-dot"));
+    const prev = carousel.querySelector(".vw3-prev");
+    const next = carousel.querySelector(".vw3-next");
+    const counter = document.getElementById("vw3Current");
+    let index = 0;
+    let touchStartX = null;
+
+    function goTo(newIndex){
+      index = (newIndex + slides.length) % slides.length;
+      slides.forEach((slide, i)=>slide.classList.toggle("active", i === index));
+      dots.forEach((dot, i)=>dot.classList.toggle("active", i === index));
+      counter.textContent = index + 1;
+    }
+
+    prev.addEventListener("click", ()=>goTo(index - 1));
+    next.addEventListener("click", ()=>goTo(index + 1));
+
+    dots.forEach(dot=>{
+      dot.addEventListener("click", ()=>goTo(Number(dot.dataset.slide)));
+    });
+
+    carousel.addEventListener("keydown", e=>{
+      if(e.key === "ArrowLeft") goTo(index - 1);
+      if(e.key === "ArrowRight") goTo(index + 1);
+    });
+
+    carousel.addEventListener("touchstart", e=>{
+      touchStartX = e.changedTouches[0].clientX;
+    }, {passive:true});
+
+    carousel.addEventListener("touchend", e=>{
+      if(touchStartX === null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if(Math.abs(dx) > 45){
+        goTo(index + (dx < 0 ? 1 : -1));
+      }
+      touchStartX = null;
+    }, {passive:true});
+  })();
+
+
+  (function(){
+    const carousel = document.getElementById("coralCarousel");
+    if(!carousel) return;
+
+    const slides = Array.from(carousel.querySelectorAll(".vw4-slide"));
+    const dots = Array.from(carousel.querySelectorAll(".vw4-dot"));
+    const prev = carousel.querySelector(".vw4-prev");
+    const next = carousel.querySelector(".vw4-next");
+    const counter = document.getElementById("vw4Current");
+    let index = 0;
+    let touchStartX = null;
+
+    function goTo(newIndex){
+      index = (newIndex + slides.length) % slides.length;
+      slides.forEach((slide, i)=>slide.classList.toggle("active", i === index));
+      dots.forEach((dot, i)=>dot.classList.toggle("active", i === index));
+      counter.textContent = index + 1;
+    }
+
+    prev.addEventListener("click", ()=>goTo(index - 1));
+    next.addEventListener("click", ()=>goTo(index + 1));
+
+    dots.forEach(dot=>{
+      dot.addEventListener("click", ()=>goTo(Number(dot.dataset.slide)));
+    });
+
+    carousel.addEventListener("keydown", e=>{
+      if(e.key === "ArrowLeft") goTo(index - 1);
+      if(e.key === "ArrowRight") goTo(index + 1);
+    });
+
+    carousel.addEventListener("touchstart", e=>{
+      touchStartX = e.changedTouches[0].clientX;
+    }, {passive:true});
+
+    carousel.addEventListener("touchend", e=>{
+      if(touchStartX === null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if(Math.abs(dx) > 45){
+        goTo(index + (dx < 0 ? 1 : -1));
+      }
+      touchStartX = null;
+    }, {passive:true});
+  })();
+
+</script>
+
+<script>
+(function () {
+  function updateAboutImageHeight() {
+    const isDesktop = window.innerWidth > 950;
+    const imgCol = document.querySelector('.about-image-column');
+    const img = imgCol ? imgCol.querySelector('img') : null;
+    const title = document.querySelector('.about-text-column h1, .about-text-column h2.seo-demoted-title');
+    const body = document.querySelector('.about-body');
+    const links = document.querySelector('.about-links');
+
+    if (!imgCol || !img || !title || !body) return;
+
+    if (!isDesktop) {
+      imgCol.style.removeProperty('height');
+      document.documentElement.style.removeProperty('--about-image-target');
+      return;
+    }
+
+    const titleTop = title.getBoundingClientRect().top;
+    const bodyBottom = body.getBoundingClientRect().bottom;
+
+    let target = bodyBottom - titleTop;
+
+    if (links) {
+      const linksStyles = getComputedStyle(links);
+      const linksMarginTop = parseFloat(linksStyles.marginTop || '0');
+      target -= (links.offsetHeight + linksMarginTop);
+    }
+
+    target = Math.max(550, Math.min(target * 1.24, 940));
+
+    document.documentElement.style.setProperty('--about-image-target', target + 'px');
+    imgCol.style.height = target + 'px';
+  }
+
+  window.addEventListener('load', updateAboutImageHeight);
+  window.addEventListener('resize', updateAboutImageHeight);
+  document.addEventListener('DOMContentLoaded', function () {
+    updateAboutImageHeight();
+    setTimeout(updateAboutImageHeight, 50);
+    setTimeout(updateAboutImageHeight, 250);
+  });
+})();
+</script>
+</body>
+</html>
