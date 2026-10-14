@@ -21,7 +21,13 @@
       if(supported.indexOf(path)!==-1){
         location.replace('/?portfolioRoute='+encodeURIComponent(path));
       }else{
-        location.replace('/');
+        document.body.innerHTML =
+          '<main style="font-family:Arial,Helvetica,sans-serif;max-width:720px;margin:12vh auto;padding:24px;color:#171717">' +
+          '<p style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#777">404</p>' +
+          '<h1 style="font-size:42px;line-height:1.05;margin:0 0 18px">Page not found.</h1>' +
+          '<p style="font-size:17px;line-height:1.5;color:#555">The page or file you requested does not exist.</p>' +
+          '<p style="margin-top:28px"><a href="/" style="color:#171717">← Back to Maria Vera portfolio</a></p>' +
+          '</main>';
       }
     })();
   </script>
