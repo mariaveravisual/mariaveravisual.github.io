@@ -10,9 +10,9 @@ Added:
 - CreativeWork structured data for each Case Study
 
 Case Study URLs:
-https://mariaveravisual.github.io/case-studies/fiji
-https://mariaveravisual.github.io/case-studies/dark-vessels
-https://mariaveravisual.github.io/case-studies/shrimp-welfare
+https://mariavera.design/case-studies/fiji
+https://mariavera.design/case-studies/dark-vessels
+https://mariavera.design/case-studies/shrimp-welfare
 
 The Case Study pages share the same assets and preserve the existing overlay experience.
 The existing 404.html remains as a fallback.
