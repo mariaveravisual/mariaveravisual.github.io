@@ -3695,7 +3695,7 @@
     if(forwardedRoute || window.location.search.includes("portfolioRoute=")){
       if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", "/");
     } else if(!history.state){
-      if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", cleanPortfolioPath(window.location.pathname));
+      if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", cleanPortfolioPath(window.location.pathname) + window.location.hash);
     }
     if(options.track !== false){
       trackPortfolioPage("/", "Maria Vera — Case Studies");
