@@ -368,7 +368,7 @@
     max-width:1100px;
     padding:90px 0 70px;
   }
-  .dark-case-intro h2, .dark-case-intro h1{
+  .dark-case-intro h2{
     margin:0 0 34px;
     font-family:var(--sans);
     font-weight:500;
@@ -933,7 +933,7 @@
   }
 
 
-  .hero h1, .hero h2.seo-demoted-title{
+  .hero h1{
     font-family:var(--sans);
     font-weight:400;
   }
@@ -1400,7 +1400,7 @@
     margin:0 0 28px;
   }
 
-  .hero h1, .hero h2.seo-demoted-title,
+  .hero h1,
   .visual-hero h1, .visual-hero h2.seo-demoted-title{
     margin:0;
   }
@@ -2467,7 +2467,7 @@
     }
 
     /* Active section only */
-    body:not(.show-visual):not(.show-about) nav a[data-nav="work"]::after,
+    body.show-cases nav a[data-nav="work"]::after,
     body.show-visual nav a[data-nav="visual"]::after,
     body.show-about nav a[data-nav="about"]::after{
       width:100% !important;
@@ -2798,6 +2798,324 @@
     .reveal{opacity:1!important;transform:none!important}
   }
 
+
+ /* VISUAL STORIES: editorial home, independent of Case Studies */
+ body.show-stories .cases-page{display:none}
+ body.show-cases .stories-page{display:none}
+ body.show-visual .stories-page,body.show-about .stories-page{display:none}
+ .stories-page{padding-bottom:70px}
+ .stories-hero{min-height:62vh;padding:clamp(90px,12vh,150px) var(--pad) 65px;display:grid;grid-template-columns:1.28fr .72fr;gap:48px;align-items:end}
+ .stories-hero h1{font-size:clamp(54px,7.7vw,125px);line-height:.98;letter-spacing:-.065em;font-weight:500;margin:0;max-width:1030px}
+ .stories-hero-side{padding-bottom:8px}
+ .stories-hero-side p{font-size:clamp(18px,1.7vw,23px);line-height:1.55;letter-spacing:-.012em;margin:0 0 34px;max-width:450px}
+ .stories-editorial-intro{padding:48px var(--pad) 40px;display:grid;grid-template-columns:1fr 1.5fr;gap:30px;border-top:1px solid var(--line)}
+ .stories-overline{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+ .stories-editorial-intro p{font-size:clamp(17px,1.55vw,22px);line-height:1.55;max-width:800px;margin:0;color:#41403d}
+ .story-feature{display:block;position:relative;margin:24px var(--pad) 0;text-decoration:none;outline-offset:6px}
+ .story-feature-image{overflow:hidden;background:#f6f5ef;border:1px solid rgba(23,23,23,.06)}
+ .story-feature-image img{width:100%;height:auto;display:block;transition:transform .6s ease}
+ .story-feature:hover .story-feature-image img{transform:scale(1.012)}
+ .story-feature-meta{display:flex;justify-content:space-between;align-items:end;gap:30px;padding:34px 0 26px;border-bottom:1px solid var(--line)}
+ .story-feature-meta h2{font-size:clamp(36px,4.5vw,70px);line-height:1.07;font-weight:500;letter-spacing:-.055em;margin:16px 0 8px}
+ .story-feature-subtitle{font-size:clamp(18px,1.7vw,24px);margin:0 0 14px}
+ .story-feature-description{font-size:16px;color:#55524e;max-width:800px;line-height:1.55;margin:0}
+ .story-feature-link{font-size:13px;flex-shrink:0;padding:0 0 10px;border-bottom:1px solid var(--ink)}
+ .story-feature-link b{font-weight:400;margin-left:6px}
+ .stories-bottom-rule{display:flex;justify-content:space-between;margin:24px var(--pad);font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+ .story-case{display:none;padding:0 var(--pad) 100px;max-width:1700px;margin:0 auto}
+ .story-case.active{display:block}
+ .story-case-intro{padding:clamp(85px,9vw,145px) 0 70px}
+ .story-case-intro h2{font-size:clamp(58px,8.6vw,146px);font-weight:500;letter-spacing:-.065em;line-height:1.02;margin:26px 0 32px}
+ .story-case-deck{font-size:clamp(19px,2vw,29px);max-width:1050px;line-height:1.42;letter-spacing:-.022em;margin:0 0 65px}
+ .story-intro-copy{padding:50px 0 70px;max-width:930px}
+ .story-intro-copy h3{font-size:clamp(30px,4vw,54px);letter-spacing:-.05em;font-weight:500;line-height:1.1;margin:18px 0}
+ .story-intro-copy p{font-size:clamp(17px,1.55vw,22px);color:#484642;line-height:1.57}
+ .story-chapters{display:flex;flex-direction:column;gap:72px}
+ .story-chapter{display:block}
+ .story-chapter-head{display:grid;grid-template-columns:150px minmax(0,1fr);gap:30px;padding:24px 0 30px;border-top:1px solid rgba(23,23,23,.15)}
+ .story-chapter-head>span{font-size:12px;letter-spacing:.13em;color:var(--muted)}
+ .story-chapter-head h3{font-size:clamp(26px,2.5vw,40px);font-weight:500;letter-spacing:-.044em;line-height:1.14;margin:0 0 10px}
+ .story-chapter-head p{font-size:16px;line-height:1.55;color:#56534e;margin:0;max-width:740px}
+ .story-chapter figure{margin:0;background:#fafaf8;border:1px solid rgba(23,23,23,.055)}
+ .story-chapter figure img{display:block;width:100%;height:auto}.story-chapter figure a{display:block;cursor:zoom-in}
+ .stories-draft-chip{display:block;margin-top:14px;font-size:12px;color:#836f4f}
+ .story-conclusion{padding:75px 0 0;margin-top:25px;border-top:1px solid var(--line);max-width:none}
+ .story-independent-note{font-size:15px;line-height:1.65;color:#595650;max-width:890px}
+ .story-source{margin:35px 0 25px}.story-source strong,.story-download strong{font-size:14px;font-weight:600;display:block;margin-bottom:10px}
+ .story-source p{font-size:15px;line-height:1.6;color:#585650;max-width:850px}
+ /* PDF call-to-action uses the same shared visual system as all three case studies. */
+ .story-download{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:42px;padding:30px 0 0;border-top:1px solid var(--line);border-bottom:0}
+ .story-download strong{display:block;font-family:var(--sans);font-weight:500;font-size:clamp(24px,2.5vw,40px);letter-spacing:-.03em;margin:0}
+ .story-download button{border:0;background:transparent;padding:0 0 4px;border-bottom:1px solid var(--ink);cursor:pointer;font-size:16px}
+ .story-back-cases{display:inline-flex;font-size:14px;margin-top:40px;border-bottom:1px solid var(--ink);padding-bottom:6px}
+ body.show-stories nav a[data-nav="stories"]::after,body.show-cases nav a[data-nav="work"]::after{width:100%}
+ nav a[aria-current="page"]::after{width:100%}
+ @media(max-width:900px){
+   .stories-hero{grid-template-columns:1fr;min-height:auto;padding-top:110px;gap:24px}
+   .stories-hero-side{max-width:650px}
+   .stories-editorial-intro{grid-template-columns:1fr;gap:15px}
+   .story-chapter-head{grid-template-columns:78px 1fr;gap:20px}
+ }
+ @media(max-width:640px){
+   header nav{column-gap:13px;row-gap:13px;flex-wrap:wrap;justify-content:center}
+   .stories-hero{padding-top:80px;padding-bottom:50px}
+   .stories-hero h1{font-size:clamp(48px,11vw,70px)}
+   .stories-hero-side p{font-size:18px}
+   .stories-editorial-intro{padding-top:28px}
+   .story-feature-meta{display:block}
+   .story-feature-link{display:inline-block;margin-top:24px}
+   .story-case-intro{padding-top:85px;padding-bottom:40px}
+   .story-case-intro h2{font-size:clamp(52px,12vw,75px)}
+   .story-case-deck{margin-bottom:40px}
+   .story-chapters{gap:48px}
+   .story-chapter-head{grid-template-columns:1fr;gap:12px;padding-top:20px}
+   .story-conclusion{padding-top:42px}
+   .story-download{align-items:flex-start;flex-direction:column}
+ }
+
+
+/* Shared hero typography: same sans-serif treatment as Visual Work and Visual Stories. */
+.cases-hero-title{margin:0;font-family:var(--sans);font-size:clamp(54px,8vw,126px);line-height:.92;font-weight:400;letter-spacing:-.055em;max-width:1100px}
+
+/* Visual Stories editorial sequence v2: no repeated visible page titles */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.story-chapters{gap:clamp(46px,6vw,92px)}
+.story-chapter{min-width:0}
+.story-chapter figure{margin:0}
+.story-chapter-caption{display:flex;align-items:flex-start;gap:clamp(16px,3vw,44px);padding:18px 1px 0;max-width:1040px}
+.story-chapter-caption-num{font-size:11px;white-space:nowrap;color:#8b857e;letter-spacing:.09em;font-variant-numeric:tabular-nums;padding-top:4px;min-width:64px}
+.story-chapter-caption-text{font-size:14px;line-height:1.65;color:#625e58;margin:0;max-width:800px}
+.story-chapter-caption .stories-draft-chip{margin-top:10px}
+.story-resources{max-width:1060px;margin:56px 0 35px;padding-top:45px;border-top:1px solid rgba(23,23,23,.16)}
+.story-resources h3{font-size:clamp(29px,3.1vw,48px);font-weight:500;letter-spacing:-.044em;line-height:1.15;margin:15px 0 13px}
+.story-resources-intro{font-size:15px;line-height:1.65;color:#625e58;max-width:850px;margin:0 0 38px}
+.story-reference-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,5vw,88px)}
+.story-reference-group{min-width:0}
+.story-reference-group h4{font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:600;color:#79736c;margin:0 0 13px;padding-bottom:14px;border-bottom:1px solid rgba(23,23,23,.19)}
+.story-reference-list{list-style:none;padding:0;margin:0}
+.story-reference-item{border-bottom:1px solid rgba(23,23,23,.12)}
+.story-reference-item a{display:block;text-decoration:none;color:inherit;padding:20px 0 22px;transition:opacity .2s}
+.story-reference-item a:hover{opacity:.67}
+.story-reference-item a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}
+.story-reference-meta{display:flex;align-items:baseline;gap:14px;color:#77716a;font-size:12px;line-height:1.5}
+.story-reference-num{font-size:10px;color:#948d84;letter-spacing:.1em}
+.story-reference-name{display:block;font-size:clamp(16px,1.35vw,20px);line-height:1.4;letter-spacing:-.018em;font-weight:500;margin:7px 0 15px}
+.story-reference-foot{display:flex;justify-content:space-between;align-items:center;color:#77716a;font-size:12px;gap:16px}
+.story-reference-foot>span:last-child{font-size:17px;color:#242321}
+@media(max-width:750px){.story-reference-grid{grid-template-columns:1fr;row-gap:38px}.story-chapter-caption{gap:15px}.story-chapter-caption-num{min-width:50px}.story-chapter-caption-text{font-size:13px}}
+
+/* Visual Stories v3 — use the existing unified hero system */
+.stories-page .stories-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);
+  column-gap:clamp(56px,7vw,120px);
+  align-items:end;
+  min-height:70vh;
+  padding:clamp(80px,12vh,150px) var(--pad) 70px;
+}
+.stories-page .stories-hero>div:first-child{align-self:end}
+.stories-page .stories-hero .kicker{margin:0 0 28px}
+.stories-page .stories-hero h1{
+  font-family:var(--sans);
+  font-weight:400;
+  font-size:clamp(54px,8vw,126px);
+  letter-spacing:-.055em;
+  line-height:.92;
+  max-width:1100px;
+  margin:0;
+}
+.stories-page .stories-hero-side{align-self:end;max-width:440px;margin-left:auto;padding:0}
+.stories-page .stories-hero-side p{font-size:clamp(18px,2vw,26px);line-height:1.32;letter-spacing:-.02em;margin:0}
+.stories-page .stories-hero-side .scroll-link{margin-top:28px}
+.stories-page .stories-editorial-intro{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);
+  column-gap:clamp(56px,7vw,120px);
+  align-items:start;
+  padding:28px 0 26px;
+  margin:0 var(--pad);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.stories-page .stories-editorial-intro p{font-size:clamp(15px,1.3vw,18px);line-height:1.6;max-width:none}
+
+/* Alternating image / text layouts, like the other case studies. */
+.story-chapters{display:flex;flex-direction:column;gap:0}
+.story-chapter,.story-chapter.reverse{
+  display:grid;
+  grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);
+  column-gap:clamp(34px,5vw,90px);
+  align-items:center;
+  padding:clamp(40px,5.2vw,84px) 0;
+  border-bottom:1px solid rgba(23,23,23,.12);
+}
+.story-chapter:first-child{padding-top:4px}
+.story-chapter:last-child{border-bottom:0}
+.story-chapter.reverse{grid-template-columns:minmax(0,1.28fr) minmax(0,.72fr)}
+.story-chapter:not(.reverse) .story-chapter-copy{grid-column:1;grid-row:1}
+.story-chapter:not(.reverse) .story-chapter-visual{grid-column:2;grid-row:1}
+.story-chapter.reverse .story-chapter-visual{grid-column:1;grid-row:1}
+.story-chapter.reverse .story-chapter-copy{grid-column:2;grid-row:1}
+.story-chapter-copy{min-width:0;max-width:450px;padding:12px 0 34px}
+.story-chapter-sequence{color:#8b857e;letter-spacing:.13em;font-size:11px;font-variant-numeric:tabular-nums;display:block;margin-bottom:24px}
+.story-chapter-copy h3{font-weight:500;font-size:clamp(27px,3.15vw,47px);line-height:1.08;letter-spacing:-.049em;margin:0 0 23px}
+.story-chapter-copy p{font-size:clamp(16px,1.45vw,21px);line-height:1.58;letter-spacing:-.014em;color:#4c4945;margin:0}
+.story-chapter-copy p i{font-style:italic}
+.story-chapter-copy .stories-draft-chip{margin:24px 0 0}
+.story-chapter-visual{margin:0;min-width:0;border:0!important;background:transparent!important}
+.story-chapter-visual a{position:relative;display:block!important;cursor:zoom-in;outline-offset:5px;overflow:hidden;background:#fafaf8;border:1px solid rgba(23,23,23,.075)}
+.story-chapter-visual a:focus-visible{outline:3px solid #171717}
+.story-chapter-visual img{display:block;width:100%;height:auto;max-height:min(63vh,570px);object-fit:contain;object-position:center;background:#fafaf8}
+.story-image-zoom-hint{position:absolute;right:14px;bottom:14px;padding:9px 12px;background:rgba(255,255,255,.94);font-size:12px;letter-spacing:.015em;box-shadow:0 2px 15px rgba(0,0,0,.06);opacity:0;transform:translateY(5px);transition:opacity .2s ease,transform .2s ease}
+.story-chapter-visual a:hover .story-image-zoom-hint,.story-chapter-visual a:focus-visible .story-image-zoom-hint{opacity:1;transform:none}
+.story-chapter-visual figcaption{margin:12px 1px 0;font-size:12px;line-height:1.4;color:#938b82}
+.story-chapter-visual figcaption span{display:inline-block;margin-right:12px}
+
+/* In-page enlarged image viewer, with optional 1:1 zoom. */
+.story-lightbox[hidden]{display:none!important}
+.story-lightbox{position:fixed;inset:0;z-index:200;background:rgba(20,19,18,.97);color:#fff;display:flex;flex-direction:column;padding:18px clamp(16px,3vw,40px) 14px}
+.story-lightbox-toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:0 0 13px}
+.story-lightbox-title{font-size:12px;letter-spacing:.05em;line-height:1.4;color:#ddd}
+.story-lightbox-actions{display:flex;gap:9px;flex-shrink:0}
+.story-lightbox-actions button{color:#fff;background:transparent;border:1px solid rgba(255,255,255,.45);padding:9px 13px;font:inherit;font-size:12px;cursor:pointer}
+.story-lightbox-actions button:hover,.story-lightbox-actions button:focus-visible{background:#fff;color:#181818}
+.story-lightbox-stage{min-height:0;flex:1;overflow:auto;display:flex;align-items:center;justify-content:center}
+.story-lightbox-image-button{display:block;border:0;background:transparent;padding:0;cursor:zoom-in;max-width:100%;max-height:100%;line-height:0}
+.story-lightbox-image{display:block;max-height:calc(100dvh - 136px);max-width:calc(100vw - 70px);width:auto;height:auto;object-fit:contain}
+.story-lightbox.zoomed .story-lightbox-stage{display:block;text-align:center}
+.story-lightbox.zoomed .story-lightbox-image-button{max-width:none;max-height:none;cursor:zoom-out;margin:auto}
+.story-lightbox.zoomed .story-lightbox-image{width:2400px;max-width:none;max-height:none;height:auto}
+.story-lightbox-hint{font-size:11px;letter-spacing:.025em;color:#bbb;line-height:1.4;margin:14px 0 0;text-align:center}
+@media(max-width:900px){
+  .stories-page .stories-hero,.stories-page .stories-editorial-intro{grid-template-columns:1fr;row-gap:24px}
+  .stories-page .stories-hero{min-height:auto;padding-top:85px;padding-bottom:65px}
+  .stories-page .stories-hero-side{max-width:650px;margin:0}
+  .story-chapter,.story-chapter.reverse{grid-template-columns:minmax(0,1fr);gap:25px;padding:48px 0}
+  .story-chapter .story-chapter-copy,.story-chapter.reverse .story-chapter-copy{grid-column:1;grid-row:1;max-width:680px;padding:0 0 12px}
+  .story-chapter .story-chapter-visual,.story-chapter.reverse .story-chapter-visual{grid-column:1;grid-row:2}
+  .story-chapter-visual img{max-height:62vh}
+  .story-chapter-sequence{margin-bottom:16px}
+  .story-chapter-copy h3{margin-bottom:14px}
+}
+@media(max-width:640px){
+  .stories-page .stories-hero{padding-top:65px;padding-bottom:48px}
+  .stories-page .stories-hero h1{font-size:clamp(48px,11vw,70px)}
+  .stories-page .stories-hero-side p{font-size:18px}
+  .stories-page .stories-editorial-intro{padding-top:26px}
+  .story-chapter,.story-chapter.reverse{gap:18px;padding:38px 0}
+  .story-chapter-copy h3{font-size:clamp(27px,7vw,37px)}
+  .story-chapter-copy p{font-size:16px}
+  .story-chapter-visual img{max-height:none}
+  .story-image-zoom-hint{opacity:1;transform:none;bottom:9px;right:9px;padding:7px 9px;font-size:11px}
+  .story-lightbox{padding:12px}
+  .story-lightbox-actions button{padding:8px 9px;font-size:11px}
+  .story-lightbox-image{max-width:calc(100vw - 24px)}
+}
+@media(prefers-reduced-motion:reduce){.story-image-zoom-hint{transition:none!important}}
+
+
+/* Editorial section rhythm — shared by Visual Stories, Case Studies and Visual Work.
+   The section divider takes the place of the repeated Selected Work/Featured Story label rows. */
+.section-content-divider,
+.stories-section-divider{
+  display:block;
+  height:0;
+  border:0;
+  border-top:1px solid var(--line);
+}
+#work .section-content-divider{margin:0 0 clamp(40px,5vw,78px)}
+.visual-page .visual-content-divider{margin:0}
+#visual-projects{scroll-margin-top:85px}
+.visual-page .visual-content-divider + .visual-project{
+  border-top:0;
+  padding-top:clamp(40px,5vw,78px);
+}
+.stories-page .stories-section-divider{margin:0 var(--pad)}
+.stories-page .story-feature{margin-top:24px;scroll-margin-top:85px}
+/* Retain original crawlable introduction, but let the imagery lead. */
+.stories-page .stories-editorial-outro{
+  display:grid;
+  grid-template-columns:minmax(190px,.58fr) minmax(0,1.42fr);
+  column-gap:clamp(42px,7vw,120px);
+  align-items:start;
+  border-top:1px solid var(--line);
+  margin:clamp(64px,7vw,110px) var(--pad) 0;
+  padding:32px 0 12px;
+}
+.stories-page .stories-editorial-outro .stories-overline{
+  display:block;
+  margin:6px 0 0;
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:600;
+  line-height:1.5;
+  color:var(--muted);
+}
+.stories-page .stories-editorial-outro p{
+  font-size:clamp(16px,1.3vw,19px);
+  line-height:1.65;
+  letter-spacing:-.01em;
+  max-width:750px;
+  margin:0;
+  color:#4c4945;
+}
+.stories-page .stories-bottom-rule{margin-top:45px}
+@media(max-width:760px){
+  .stories-page .stories-editorial-outro{
+    grid-template-columns:1fr;
+    row-gap:22px;
+    margin-top:58px;
+    padding-top:28px;
+  }
+  .stories-page .stories-editorial-outro p{font-size:16px;line-height:1.65}
+  .visual-page .visual-content-divider + .visual-project{border-top:0!important}
+}
+
+
+/* Visual Stories feature follows the approved Case Studies two-column composition. */
+.stories-page .story-feature{
+  display:grid;
+  grid-template-columns:minmax(0,.78fr) minmax(0,1.48fr);
+  align-items:center;
+  column-gap:clamp(42px,7.5vw,135px);
+  padding:clamp(50px,6vw,105px) 0 clamp(55px,6vw,100px);
+  margin:0 var(--pad);
+  border-bottom:1px solid var(--line);
+}
+.stories-page .story-feature-image{grid-column:2;grid-row:1;border:0;background:transparent;align-self:center;min-width:0}
+.stories-page .story-feature-image img{width:100%;height:auto;object-fit:contain;display:block}
+.stories-page .story-feature-meta{grid-column:1;grid-row:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;align-self:stretch;gap:clamp(20px,4vw,65px);border:0;padding:0;min-width:0}
+.stories-page .story-feature-meta h2{font-family:var(--sans);font-size:clamp(34px,3.45vw,59px);font-weight:650;line-height:1.06;letter-spacing:-.052em;margin:18px 0 clamp(20px,3vw,42px)}
+.stories-page .story-feature-subtitle{font-family:var(--sans);font-size:clamp(20px,2.05vw,33px);letter-spacing:-.028em;line-height:1.28;margin:0 0 16px}
+.stories-page .story-feature-description{font-size:clamp(16px,1.35vw,21px);line-height:1.55;letter-spacing:-.013em;max-width:430px;color:#454340;margin:0}
+.stories-page .story-feature-link{font-size:clamp(17px,1.8vw,27px);font-weight:400;letter-spacing:-.025em;border-bottom:1px solid currentColor;padding:0 0 6px;margin:0;align-self:flex-start}
+.stories-page .story-feature-link b{font-weight:400;margin-left:8px}
+.stories-page .story-feature:hover .story-feature-link b{display:inline-block;transform:translateX(4px);transition:transform .2s ease}
+@media(max-width:900px){
+  .stories-page .story-feature{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:30px}
+}
+@media(max-width:650px){
+  .stories-page .story-feature{grid-template-columns:1fr;gap:26px;padding:35px 0 55px}
+  .stories-page .story-feature-image{grid-column:1;grid-row:2}
+  .stories-page .story-feature-meta{grid-column:1;grid-row:1;gap:24px}
+  .stories-page .story-feature-meta h2{margin:12px 0 18px}
+  .stories-page .story-feature-subtitle{font-size:22px}
+  .stories-page .story-feature-link{font-size:20px}
+}
+
+
+/* Author's reflection: a restrained editorial interlude before the visual chapters. */
+.story-author-note{position:relative;margin:42px 0 42px;padding:clamp(38px,5vw,78px) clamp(25px,5vw,80px);background:#f8f8f5;border-top:1px solid #dfdfd8;border-bottom:1px solid #dfdfd8;display:grid;grid-template-columns:minmax(160px,.6fr) minmax(0,1.4fr);gap:clamp(26px,5vw,94px)}
+.story-author-label{display:flex;flex-direction:column;gap:15px;align-items:flex-start}
+.story-author-label .stories-overline{color:#7b7970}
+.story-author-label h3{font-family:var(--sans);font-size:clamp(24px,2.6vw,42px);letter-spacing:-.045em;line-height:1.1;font-weight:500;margin:0}
+.story-author-label::after{content:'';display:block;width:42px;height:1px;background:#9c9b8e;margin-top:18px}
+.story-author-text{max-width:770px}
+.story-author-text p{font-size:clamp(16px,1.3vw,20px);line-height:1.7;letter-spacing:-.01em;color:#383933;margin:0 0 1.25em}
+.story-author-text p:first-child{font-weight:500;color:#1f2722}
+.story-author-text p:last-child{margin-bottom:0}
+@media(max-width:700px){.story-author-note{grid-template-columns:1fr;padding:35px 24px;gap:24px}.story-author-label::after{margin-top:0}.story-author-text p{font-size:16px;line-height:1.67}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -2858,22 +3176,37 @@
 }
 </script>
 </head>
-<body>
+<body class="show-stories">
 <a class="skip-link" href="#top">Saltar al contenido</a>
 <div class="shell">
 <header>
 <a class="brand" href="#top">María Vera</a>
 <nav>
-<a data-nav="work" href="#work">Casos de estudio</a>
+<a data-nav="stories" href="/es/">Visual Stories</a>
+<a data-nav="work" href="/es/case-studies/">Casos de estudio</a>
 <a data-nav="visual" href="#visual-work">Trabajo visual</a>
 <a data-nav="about" href="#about-page">About</a>
-<a aria-label="View English version" class="language-switch" href="/case-studies/dark-vessels/" id="languageSwitch"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-width="1.4"></circle><path d="M3.5 12h17M12 3c2.3 2.4 3.5 5.4 3.5 9S14.3 18.6 12 21M12 3c-2.3 2.4-3.5 5.4-3.5 9S9.7 18.6 12 21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path></svg><span>EN</span></a></nav>
+<a aria-label="View English version" class="language-switch" href="/" id="languageSwitch"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-width="1.4"></circle><path d="M3.5 12h17M12 3c2.3 2.4 3.5 5.4 3.5 9S14.3 18.6 12 21M12 3c-2.3 2.4-3.5 5.4-3.5 9S9.7 18.6 12 21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path></svg><span>EN</span></a></nav>
 </header>
 <main id="top">
+<section class="stories-page" id="visual-stories" aria-label="Visual Stories">
+  <div class="stories-hero">
+    <div><div class="kicker">VISUAL STORIES</div><h1>La historia detrás de la historia.</h1></div>
+    <div class="stories-hero-side"><p>Historias visuales inspiradas en la investigación científica, la naturaleza, las culturas y las conexiones entre las personas y el mundo que nos rodea.</p><a class="scroll-link" href="#stories-selected">HISTORIA DESTACADA <span>↓</span></a></div>
+  </div>
+  <div class="stories-section-divider" aria-hidden="true"></div>
+  <a id="stories-selected" class="project story-feature reveal" data-project="forest" href="/es/visual-stories/the-forest-below/" aria-label="Explorar la historia: The Forest Below">
+    <div class="story-feature-image"><img src="../assets/the-forest-below-01.webp" width="2400" height="1697" decoding="async" alt="The Forest Below — editorial cover showing a Pisonia tree and its roots beneath the soil"/></div>
+    <div class="story-feature-meta"><div><div class="stories-overline">HISTORIA VISUAL CIENTÍFICA INDEPENDIENTE · 2026</div><h2>The Forest Below</h2><p class="story-feature-subtitle">¿Qué necesita un bosque para recuperarse?</p><p class="story-feature-description">En el atolón de Palmyra, la recuperación del bosque autóctono podría depender de relaciones ocultas entre hongos, aves marinas, cangrejos terrestres y el océano.</p></div><span class="story-feature-link">Explorar la historia <b aria-hidden="true">→</b></span></div>
+  </a>
+  <section class="stories-editorial-outro" aria-labelledby="stories-about-title"><h2 class="stories-overline" id="stories-about-title">SOBRE VISUAL STORIES</h2><p>Proyectos independientes de storytelling visual que acercan la investigación científica a través del diseño editorial, la ilustración y una comunicación visual clara. Esta serie en desarrollo explora la biodiversidad, la conservación, el bienestar animal y las relaciones entre los ecosistemas y las comunidades locales e indígenas.</p></section>
+  
+ </section>
+<div class="cases-page">
 <section class="hero">
 <div>
 <div class="kicker">Casos de estudio</div>
-<h2 class="seo-demoted-title">Ideas complejas más accesibles.</h2>
+<h2 class="cases-hero-title">Ideas complejas más accesibles.</h2>
 </div>
 <div class="hero-side">
 <p>Storytelling visual, diseño de información y comunicación de investigación.</p>
@@ -2881,13 +3214,10 @@
 </div>
 </section>
 <section class="section" id="work">
-<div class="section-head reveal">
-<h2>Trabajo seleccionado</h2>
-<p>Una selección de casos de estudio de diseño editorial, comunicación de investigación y storytelling visual.</p>
-</div>
+<div class="section-content-divider" aria-hidden="true"></div>
 <a class="project reveal" data-project="fiji" href="/es/case-studies/fiji/">
 <div class="project-visual">
-<img alt="Plastic Waste in Fiji composición editorial" class="art" decoding="async" height="1280" src="assets/image-001-88962888ea57.jpg" width="2048"/>
+<img alt="Plastic Waste in Fiji composición editorial" class="art" decoding="async" fetchpriority="high" height="1280" src="../assets/image-001-88962888ea57.jpg" width="2048"/>
 </div>
 <div class="project-meta">
 <div>
@@ -2899,7 +3229,7 @@
 </a>
 <a class="project reveal" data-project="dark" href="/es/case-studies/dark-vessels/">
 <div class="project-visual">
-<img alt="Dark Vessels composición editorial" class="art" decoding="async" height="1280" src="assets/image-002-5a8266fd9fa2.jpg" width="2048"/>
+<img alt="Dark Vessels composición editorial" class="art" decoding="async" height="1280" src="../assets/image-002-5a8266fd9fa2.jpg" width="2048"/>
 </div>
 <div class="project-meta">
 <div>
@@ -2911,7 +3241,7 @@
 </a>
 <a class="project reveal" data-project="shrimp" href="/es/case-studies/shrimp-welfare/">
 <div class="project-visual">
-<img alt="Shrimp welfare composición editorial" class="art" decoding="async" height="1280" src="assets/image-003-37ea2b3932cb.jpg" width="2048"/>
+<img alt="Shrimp welfare composición editorial" class="art" decoding="async" height="1280" src="../assets/image-003-37ea2b3932cb.jpg" width="2048"/>
 </div>
 <div class="project-meta">
 <div>
@@ -2922,6 +3252,7 @@
 </div>
 </a>
 </section>
+</div>
 </main>
 <section aria-hidden="true" class="visual-page" id="visual-work">
 <div class="visual-hero">
@@ -2934,10 +3265,7 @@
 <a class="scroll-link visual-scroll-link" href="#visual-projects">Trabajo seleccionado <span>↓</span></a>
 </div>
 </div>
-<div class="section-head visual-section-head" id="visual-projects">
-<h2>Trabajo seleccionado</h2>
-<p>Campañas, conceptos y piezas gráficas seleccionadas.</p>
-</div>
+<div class="section-content-divider visual-content-divider" id="visual-projects" aria-hidden="true"></div>
 <section class="visual-project">
 <div class="visual-project-copy">
 <div class="visual-project-number">01 / Campaña de bienestar animal</div>
@@ -2948,13 +3276,13 @@
 </div>
 <div aria-label="Carrusel de imágenes de Breaking the Cycle" class="vw-carousel" id="chickenCarousel" role="region" aria-roledescription="carousel" aria-label="Breaking the Cycle" tabindex="0">
 <div class="vw-stage">
-<div class="vw-slide active"><img alt="Animal Welfare Fund diapositiva de campaña 1" decoding="async" height="2000" src="assets/image-004-cb1791dc4f29.jpg" width="2000"/></div>
-<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 2" decoding="async" height="2000" src="assets/image-005-ebf26797545e.jpg" width="2000"/></div>
-<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 3" decoding="async" height="2000" src="assets/image-006-1450396ca789.jpg" width="2000"/></div>
-<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 4" decoding="async" height="2000" src="assets/image-007-3c1ff44b3bc6.jpg" width="2000"/></div>
-<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 5" decoding="async" height="2000" src="assets/image-008-5874d56b1ed4.jpg" width="2000"/></div>
-<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 6" decoding="async" height="2000" src="assets/image-009-2a961873050c.jpg" width="2000"/></div>
-<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 7" decoding="async" height="2000" src="assets/image-010-1af58ad5ebf3.jpg" width="2000"/></div>
+<div class="vw-slide active"><img alt="Animal Welfare Fund diapositiva de campaña 1" decoding="async" height="2000" src="../assets/image-004-cb1791dc4f29.jpg" width="2000"/></div>
+<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 2" decoding="async" height="2000" src="../assets/image-005-ebf26797545e.jpg" width="2000"/></div>
+<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 3" decoding="async" height="2000" src="../assets/image-006-1450396ca789.jpg" width="2000"/></div>
+<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 4" decoding="async" height="2000" src="../assets/image-007-3c1ff44b3bc6.jpg" width="2000"/></div>
+<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 5" decoding="async" height="2000" src="../assets/image-008-5874d56b1ed4.jpg" width="2000"/></div>
+<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 6" decoding="async" height="2000" src="../assets/image-009-2a961873050c.jpg" width="2000"/></div>
+<div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 7" decoding="async" height="2000" src="../assets/image-010-1af58ad5ebf3.jpg" width="2000"/></div>
 <button aria-label="Diapositiva anterior" class="vw-arrow vw-prev" type="button">←</button>
 <button aria-label="Diapositiva siguiente" class="vw-arrow vw-next" type="button">→</button>
 </div>
@@ -2982,12 +3310,12 @@
 </div>
 <div aria-label="Carrusel de imágenes de Eyestalk Ablation" class="vw-carousel" id="shrimpCarousel" role="region" aria-roledescription="carousel" aria-label="Eyestalk Ablation" tabindex="0">
 <div class="vw-stage">
-<div class="vw2-slide active"><img alt="Eyestalk Ablation diapositiva de campaña 1" decoding="async" height="1350" src="assets/image-011-28350a416012.jpg" width="1080"/></div>
-<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 2" decoding="async" height="1350" src="assets/image-012-f30499727d48.jpg" width="1080"/></div>
-<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 3" decoding="async" height="1350" src="assets/image-013-69aea71bf382.jpg" width="1080"/></div>
-<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 4" decoding="async" height="1350" src="assets/image-014-f347e951bbe0.jpg" width="1080"/></div>
-<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 5" decoding="async" height="1350" src="assets/image-015-bbfc5289f19c.jpg" width="1080"/></div>
-<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 6" decoding="async" height="1350" src="assets/image-016-88f5c40099df.jpg" width="1080"/></div>
+<div class="vw2-slide active"><img alt="Eyestalk Ablation diapositiva de campaña 1" decoding="async" height="1350" src="../assets/image-011-28350a416012.jpg" width="1080"/></div>
+<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 2" decoding="async" height="1350" src="../assets/image-012-f30499727d48.jpg" width="1080"/></div>
+<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 3" decoding="async" height="1350" src="../assets/image-013-69aea71bf382.jpg" width="1080"/></div>
+<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 4" decoding="async" height="1350" src="../assets/image-014-f347e951bbe0.jpg" width="1080"/></div>
+<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 5" decoding="async" height="1350" src="../assets/image-015-bbfc5289f19c.jpg" width="1080"/></div>
+<div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 6" decoding="async" height="1350" src="../assets/image-016-88f5c40099df.jpg" width="1080"/></div>
 <button aria-label="Diapositiva anterior" class="vw-arrow vw-prev vw2-prev" type="button">←</button>
 <button aria-label="Diapositiva siguiente" class="vw-arrow vw-next vw2-next" type="button">→</button>
 </div>
@@ -3013,12 +3341,12 @@
 </div>
 <div aria-label="Carrusel de imágenes de Give Them Space" class="vw-carousel" id="sealCarousel" role="region" aria-roledescription="carousel" aria-label="Give Them Space" tabindex="0">
 <div class="vw-stage">
-<div class="vw3-slide active"><img alt="Baby seal diapositiva de campaña 1" decoding="async" height="1350" src="assets/image-017-87c8a91b1fcc.jpg" width="1080"/></div>
-<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 2" decoding="async" height="1350" src="assets/image-018-11f87f17997e.jpg" width="1080"/></div>
-<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 3" decoding="async" height="1350" src="assets/image-019-bf5fa5e2343f.jpg" width="1080"/></div>
-<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 4" decoding="async" height="1350" src="assets/image-020-9df70a051c8d.jpg" width="1080"/></div>
-<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 5" decoding="async" height="1350" src="assets/image-021-a5c4c51b36fe.jpg" width="1080"/></div>
-<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 6" decoding="async" height="1350" src="assets/image-022-bb7eb0a190c8.jpg" width="1080"/></div>
+<div class="vw3-slide active"><img alt="Baby seal diapositiva de campaña 1" decoding="async" height="1350" src="../assets/image-017-87c8a91b1fcc.jpg" width="1080"/></div>
+<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 2" decoding="async" height="1350" src="../assets/image-018-11f87f17997e.jpg" width="1080"/></div>
+<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 3" decoding="async" height="1350" src="../assets/image-019-bf5fa5e2343f.jpg" width="1080"/></div>
+<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 4" decoding="async" height="1350" src="../assets/image-020-9df70a051c8d.jpg" width="1080"/></div>
+<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 5" decoding="async" height="1350" src="../assets/image-021-a5c4c51b36fe.jpg" width="1080"/></div>
+<div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 6" decoding="async" height="1350" src="../assets/image-022-bb7eb0a190c8.jpg" width="1080"/></div>
 <button aria-label="Diapositiva anterior" class="vw-arrow vw-prev vw3-prev" type="button">←</button>
 <button aria-label="Diapositiva siguiente" class="vw-arrow vw-next vw3-next" type="button">→</button>
 </div>
@@ -3044,12 +3372,12 @@
 </div>
 <div aria-label="Carrusel de imágenes de More Time for Corals" class="vw-carousel" id="coralCarousel" role="region" aria-roledescription="carousel" aria-label="More Time for Corals" tabindex="0">
 <div class="vw-stage">
-<div class="vw4-slide active"><img alt="Coral diapositiva de campaña 1" decoding="async" height="1350" src="assets/image-023-ee721cac482e.jpg" width="1080"/></div>
-<div class="vw4-slide"><img alt="Coral diapositiva de campaña 2" decoding="async" height="1350" src="assets/image-024-1f67cd525ec1.jpg" width="1080"/></div>
-<div class="vw4-slide"><img alt="Coral diapositiva de campaña 3" decoding="async" height="1350" src="assets/image-025-4e8857d806d6.jpg" width="1080"/></div>
-<div class="vw4-slide"><img alt="Coral diapositiva de campaña 4" decoding="async" height="1350" src="assets/image-026-3b6c97f84d09.jpg" width="1080"/></div>
-<div class="vw4-slide"><img alt="Coral diapositiva de campaña 5" decoding="async" height="1350" src="assets/image-027-9787937e40ad.jpg" width="1080"/></div>
-<div class="vw4-slide"><img alt="Coral diapositiva de campaña 6" decoding="async" height="1350" src="assets/image-028-06e103318838.jpg" width="1080"/></div>
+<div class="vw4-slide active"><img alt="Coral diapositiva de campaña 1" decoding="async" height="1350" src="../assets/image-023-ee721cac482e.jpg" width="1080"/></div>
+<div class="vw4-slide"><img alt="Coral diapositiva de campaña 2" decoding="async" height="1350" src="../assets/image-024-1f67cd525ec1.jpg" width="1080"/></div>
+<div class="vw4-slide"><img alt="Coral diapositiva de campaña 3" decoding="async" height="1350" src="../assets/image-025-4e8857d806d6.jpg" width="1080"/></div>
+<div class="vw4-slide"><img alt="Coral diapositiva de campaña 4" decoding="async" height="1350" src="../assets/image-026-3b6c97f84d09.jpg" width="1080"/></div>
+<div class="vw4-slide"><img alt="Coral diapositiva de campaña 5" decoding="async" height="1350" src="../assets/image-027-9787937e40ad.jpg" width="1080"/></div>
+<div class="vw4-slide"><img alt="Coral diapositiva de campaña 6" decoding="async" height="1350" src="../assets/image-028-06e103318838.jpg" width="1080"/></div>
 <button aria-label="Diapositiva anterior" class="vw-arrow vw-prev vw4-prev" type="button">←</button>
 <button aria-label="Diapositiva siguiente" class="vw-arrow vw-next vw4-next" type="button">→</button>
 </div>
@@ -3086,7 +3414,7 @@
 </div>
 </div>
 <div class="about-image-column">
-<img alt="Mangrove lagoon illustration" decoding="async" height="1200" src="assets/image-029-b59c5434e8f8.jpg" width="634"/>
+<img alt="Mangrove lagoon illustration" decoding="async" height="1200" src="../assets/image-029-b59c5434e8f8.jpg" width="634"/>
 </div>
 </div>
 <section class="about-expertise">
@@ -3206,7 +3534,7 @@
 <h3>Creando un marco común para daños muy diferentes.</h3>
 <p>La investigación modela cada amenaza para el bienestar a partir de tres dimensiones: cuántas gambas se ven afectadas, cuánto dura el daño y cuál es la intensidad del dolor. Estas dimensiones se traducen a una métrica común: dolor equivalente a discapacidad.</p>
 </div>
-<div class="shrimp-placeholder"><img alt="How do you compare suffering" class="art" decoding="async" height="1060" src="assets/image-030-948bd85bac7d.jpg" width="1500"/></div>
+<div class="shrimp-placeholder"><img alt="How do you compare suffering" class="art" decoding="async" height="1060" src="../assets/image-030-948bd85bac7d.jpg" width="1500"/></div>
 </section>
 <section class="shrimp-story-block reverse">
 <div class="shrimp-copy">
@@ -3214,7 +3542,7 @@
 <h3>Estructurando un panorama complejo de bienestar animal.</h3>
 <p>Las 18 amenazas para el bienestar se organizaron en seis grupos — calidad del agua, hábitat del estanque, gestión de la alimentación, salud, transporte y final de la producción — para facilitar la lectura y comparación de la investigación.</p>
 </div>
-<div class="shrimp-placeholder"><img alt="18 threats different forms of harm" class="art" decoding="async" height="1060" src="assets/image-031-b5a8af8c5bf3.jpg" width="1500"/></div>
+<div class="shrimp-placeholder"><img alt="18 threats different forms of harm" class="art" decoding="async" height="1060" src="../assets/image-031-b5a8af8c5bf3.jpg" width="1500"/></div>
 </section>
 <section class="shrimp-story-block">
 <div class="shrimp-copy">
@@ -3222,7 +3550,7 @@
 <h3>Poniendo el daño crónico en primer plano.</h3>
 <p>Las estimaciones medias más altas corresponden a condiciones que afectan a muchas gambas durante periodos prolongados. Los daños generalizados y crónicos pueden acumular un sufrimiento total mayor que otros eventos más visibles pero de menor duración.</p>
 </div>
-<div class="shrimp-placeholder"><img alt="The biggest harm may happen slowly" class="art" decoding="async" height="1060" src="assets/image-032-539e60cb1087.jpg" width="1500"/></div>
+<div class="shrimp-placeholder"><img alt="The biggest harm may happen slowly" class="art" decoding="async" height="1060" src="../assets/image-032-539e60cb1087.jpg" width="1500"/></div>
 </section>
 <section class="shrimp-story-block reverse">
 <div class="shrimp-copy">
@@ -3230,7 +3558,7 @@
 <h3>Poniendo el sufrimiento individual en perspectiva.</h3>
 <p>Entre cientos de miles de millones de gambas de cultivo, los daños individuales pueden acumularse hasta alcanzar una magnitud enorme. Al mismo tiempo, sigue existiendo una incertidumbre considerable y la evidencia no permite establecer con seguridad un ranking de la mayoría de las amenazas para el bienestar.</p>
 </div>
-<div class="shrimp-placeholder"><img alt="The scale changes the picture" class="art" decoding="async" height="1060" src="assets/image-033-6ea166adbe55.jpg" width="1500"/></div>
+<div class="shrimp-placeholder"><img alt="The scale changes the picture" class="art" decoding="async" height="1060" src="../assets/image-033-6ea166adbe55.jpg" width="1500"/></div>
 </section>
 </div>
 <div class="shrimp-note">
@@ -3284,7 +3612,7 @@
 <h3>El lugar detrás de las cifras.</h3>
 <p>La historia comienza situando Fiji desde un punto de vista geográfico, social y económico, ofreciendo al lector el contexto necesario para comprender la escala y las circunstancias que hay detrás de los datos que aparecen a continuación.</p>
 </div>
-<div class="fiji-placeholder"><img alt="Fiji at a glance" class="art" decoding="async" height="1060" src="assets/image-034-40b6edff0c1d.jpg" width="1500"/></div>
+<div class="fiji-placeholder"><img alt="Fiji at a glance" class="art" decoding="async" height="1060" src="../assets/image-034-40b6edff0c1d.jpg" width="1500"/></div>
 </section>
 <section class="fiji-story-block reverse">
 <div class="fiji-copy">
@@ -3292,7 +3620,7 @@
 <h3>Transformando un proceso técnico en una secuencia visual.</h3>
 <p>La investigación original combina datos de hogares, actividad comercial, turismo y pesca con inspecciones en vertederos y entrevistas a distintos actores locales. Reorganicé esa metodología en una secuencia más sencilla: importación, uso, eliminación y fuga al medio ambiente.</p>
 </div>
-<div class="fiji-placeholder"><img alt="How Fiji plastic flows were measured" class="art" decoding="async" height="1060" src="assets/image-035-9759c8a9953f.jpg" width="1500"/></div>
+<div class="fiji-placeholder"><img alt="How Fiji plastic flows were measured" class="art" decoding="async" height="1060" src="../assets/image-035-9759c8a9953f.jpg" width="1500"/></div>
 </section>
 <section class="fiji-story-block">
 <div class="fiji-copy">
@@ -3301,8 +3629,8 @@
 <p>La parte central de la historia compara la cantidad de residuos plásticos generados por los hogares, la actividad comercial, el turismo y la pesca, ayudando a comprender tanto la escala global como las diferencias entre sectores.</p>
 </div>
 <div class="fiji-image-stack">
-<div class="fiji-placeholder"><img alt="The big picture" class="art" decoding="async" height="1060" src="assets/image-036-1555e58e0793.jpg" width="1500"/></div>
-<div class="fiji-placeholder"><img alt="Plastic waste by sector" class="art" decoding="async" height="1060" src="assets/image-037-1e0182f61eaa.jpg" width="1500"/></div>
+<div class="fiji-placeholder"><img alt="The big picture" class="art" decoding="async" height="1060" src="../assets/image-036-1555e58e0793.jpg" width="1500"/></div>
+<div class="fiji-placeholder"><img alt="Plastic waste by sector" class="art" decoding="async" height="1060" src="../assets/image-037-1e0182f61eaa.jpg" width="1500"/></div>
 </div>
 </section>
 <section class="fiji-story-block reverse">
@@ -3311,7 +3639,7 @@
 <h3>Por qué una pequeña proporción también importa.</h3>
 <p>La pesca representa solo una pequeña parte del total de residuos plásticos de Fiji, pero los aparejos de pesca perdidos y los plásticos de consumo pueden llegar directamente al medio marino. Este contraste se convirtió en una parte importante de la narrativa.</p>
 </div>
-<div class="fiji-placeholder"><img alt="Plastic leakage from fisheries" class="art" decoding="async" height="1060" src="assets/image-038-172e66cd8a2e.jpg" width="1500"/></div>
+<div class="fiji-placeholder"><img alt="Plastic leakage from fisheries" class="art" decoding="async" height="1060" src="../assets/image-038-172e66cd8a2e.jpg" width="1500"/></div>
 </section>
 <section class="fiji-story-block">
 <div class="fiji-copy">
@@ -3319,7 +3647,7 @@
 <h3>Destacando los datos más importantes del estudio.</h3>
 <p>El resumen final sintetiza la investigación en un pequeño conjunto de cifras memorables, conectando el total de residuos plásticos, las fugas por sector, la intensidad del turismo y las pérdidas de aparejos de pesca en una conclusión clara.</p>
 </div>
-<div class="fiji-placeholder"><img alt="What this means" class="art" decoding="async" height="1060" src="assets/image-039-79b0556b24ed.jpg" width="1500"/></div>
+<div class="fiji-placeholder"><img alt="What this means" class="art" decoding="async" height="1060" src="../assets/image-039-79b0556b24ed.jpg" width="1500"/></div>
 </section>
 </div>
 <div class="fiji-note">
@@ -3345,7 +3673,7 @@
 </div>
 <div class="dark-case" id="darkCase">
 <section class="dark-case-intro">
-<h1 id="darkCaseTitle">Dark Vessels</h1>
+<h2 id="darkCaseTitle">Dark Vessels</h2>
 <p>Un proyecto de storytelling visual que explora la actividad pesquera oculta y el reto de hacer más comprensibles datos marinos complejos.</p>
 <div aria-label="Información del proyecto" class="case-meta-strip">
 <div class="case-meta-item">
@@ -3373,7 +3701,7 @@
 <h3>Lo que el seguimiento público no llega a mostrar.</h3>
 <p>El seguimiento público de embarcaciones solo muestra una parte de la realidad. Este proyecto explora cómo los datos satelitales pueden revelar actividad que los sistemas convencionales de seguimiento pueden pasar por alto.</p>
 </div>
-<div class="dark-placeholder"><img alt="Global AIS vessel activity map" class="art" decoding="async" fetchpriority="high" height="1060" src="assets/image-040-b46c4f16fade.jpg" width="1500"/></div>
+<div class="dark-placeholder"><img alt="Global AIS vessel activity map" class="art" decoding="async" height="1060" src="../assets/image-040-b46c4f16fade.jpg" width="1500"/></div>
 </section>
 <section class="dark-story-block">
 <div class="dark-copy">
@@ -3381,7 +3709,7 @@
 <h3>Entendiendo qué significa realmente “dark”.</h3>
 <p>“Dark” no significa automáticamente que una actividad sea ilegal. Simplemente significa que los datos públicos de AIS no muestran la imagen completa.</p>
 </div>
-<div class="dark-placeholder"><img alt="What is a dark vessel composición editorial" class="art" decoding="async" height="1060" src="assets/image-041-4844372b0954.jpg" width="1500"/></div>
+<div class="dark-placeholder"><img alt="What is a dark vessel composición editorial" class="art" decoding="async" height="1060" src="../assets/image-041-4844372b0954.jpg" width="1500"/></div>
 </section>
 <section class="dark-story-block reverse">
 <div class="dark-copy">
@@ -3389,7 +3717,7 @@
 <h3>Construyendo una visión por capas de la actividad marítima.</h3>
 <p>En lugar de tratar AIS, las imágenes ópticas, SAR y VIIRS como conjuntos de datos aislados, la narrativa muestra cómo cada uno revela una capa diferente de la actividad de las embarcaciones en el mar.</p>
 </div>
-<div class="dark-placeholder"><img alt="AIS, SAR, Optical and VIIRS comparison" class="art" decoding="async" height="1060" src="assets/image-042-dd1e9da3b65c.jpg" width="1500"/></div>
+<div class="dark-placeholder"><img alt="AIS, SAR, Optical and VIIRS comparison" class="art" decoding="async" height="1060" src="../assets/image-042-dd1e9da3b65c.jpg" width="1500"/></div>
 </section>
 <section class="dark-story-block">
 <div class="dark-copy">
@@ -3397,7 +3725,7 @@
 <h3>Transformando detecciones satelitales en una historia más clara.</h3>
 <p>La jerarquía visual avanza desde aquello que puede rastrearse hasta lo que permanece sin identificar, ayudando a explicar por qué la actividad oculta o no reportada es relevante.</p>
 </div>
-<div class="dark-placeholder"><img alt="Matched and unmatched SAR detections" class="art" decoding="async" height="1060" src="assets/image-043-f9b4b4477374.jpg" width="1500"/></div>
+<div class="dark-placeholder"><img alt="Matched and unmatched SAR detections" class="art" decoding="async" height="1060" src="../assets/image-043-f9b4b4477374.jpg" width="1500"/></div>
 </section>
 <section class="dark-story-block reverse">
 <div class="dark-copy">
@@ -3405,11 +3733,11 @@
 <h3>Conectando la visibilidad con decisiones reales.</h3>
 <p>Hacer que la actividad de las embarcaciones sea más fácil de interpretar puede contribuir a la gestión pesquera, la protección marina, el cumplimiento y la aplicación de la normativa, además de apoyar la investigación y la transparencia.</p>
 </div>
-<div class="dark-placeholder"><img alt="Why Dark Vessels Matter composición editorial" class="art" decoding="async" height="1060" src="assets/image-044-3d579307f89b.jpg" width="1500"/></div>
+<div class="dark-placeholder"><img alt="Why Dark Vessels Matter composición editorial" class="art" decoding="async" height="1060" src="../assets/image-044-3d579307f89b.jpg" width="1500"/></div>
 </section>
 </div>
 <section class="dark-full" style="margin-top:36px;">
-<div class="dark-placeholder"><img alt="A More Visible Ocean composición editorial" class="art" decoding="async" height="1060" src="assets/image-045-647ba603f819.jpg" width="1500"/></div>
+<div class="dark-placeholder"><img alt="A More Visible Ocean composición editorial" class="art" decoding="async" height="1060" src="../assets/image-045-647ba603f819.jpg" width="1500"/></div>
 </section>
 <div class="fiji-note">Proyecto conceptual independiente basado en investigación y datos de Global Fishing Watch. No encargado por Global Fishing Watch.</div>
 <div class="case-source">
@@ -3433,19 +3761,286 @@
 </a>
 </nav>
 </div>
+<div class="story-case" id="forestCase">
+  <section class="story-case-intro">
+    <div class="stories-overline">PALMYRA ATOLL · PACIFIC OCEAN</div>
+    <h2 id="forestCaseTitle">The Forest Below</h2>
+    <p class="story-case-deck">Una historia visual independiente que explora qué necesitan los bosques autóctonos del atolón de Palmyra para recuperarse y qué relaciones ecológicas ocultas podrían sostenerlos.</p>
+    <div class="case-meta-strip" aria-label="Project information">
+      <div class="case-meta-item"><span class="case-meta-label">Tipo</span><span class="case-meta-value">Historia visual independiente</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Rol</span><span class="case-meta-value">Storytelling visual · Diseño editorial · Comunicación de investigación</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Enfoque</span><span class="case-meta-value">Restauración forestal · Hongos micorrícicos · Biodiversidad</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Año</span><span class="case-meta-value">2026</span></div>
+    </div>
+  </section>
+  <section class="story-author-note" aria-label="Una reflexión personal"><div class="story-author-label"><div class="stories-overline">REFLEXIÓN PERSONAL</div><h3>Una reflexión personal</h3></div><div class="story-author-text"><p>Este storytelling ha sido inspirado en la belleza del estudio al que hace referencia.</p>
+<p>Los <i>Pisonia grandis</i>, el hongo <i>Tomentella</i>, las aves marinas, las mantas raya y los cangrejos de Palmyra Atoll viven en simbiosis, formando parte de un mismo ecosistema, como un ser único e indivisible.</p>
+<p>Nosotros, como humanos, también formamos parte de él, inseparables. Perturbar la armonía de este sistema solo nos aleja de lo que realmente somos, creando caos y sufrimiento.</p>
+<p>Entender este sistema es entender la vida y las conexiones naturales que, muchas veces, nos empeñamos en cortar.</p>
+<p>Doy gracias a los miles de personas que trabajan por y para devolver el caos al orden natural, esas que protegen la vida, la belleza y la verdad del mundo.</p></div></section>
+  <div class="story-intro-copy"><div class="stories-overline">LA HISTORIA · 12 LÁMINAS VISUALES</div><h3>Donde la ciencia se convierte en historia</h3><p>Desde la recuperación de los bosques de <i>Pisonia grandis</i> hasta la influencia de los hongos <i>Tomentella</i>, las aves marinas, los cangrejos terrestres y las mantarrayas, esta narrativa ilustrada reúne investigaciones publicadas sobre el atolón de Palmyra. Cada página sigue una relación distinta del ecosistema, desde el suelo del bosque hasta los arrecifes cercanos.</p></div>
+  <div class="story-chapters">
+<section class="story-chapter" aria-labelledby="forest-illustration-heading-01">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">01 / 12</span>
+    <h3 id="forest-illustration-heading-01">La vida invisible que sostiene un bosque insular</h3>
+    <p>Una historia visual sobre la ciencia que investiga las relaciones ocultas que intervienen en la restauración de los bosques de Palmyra Atoll.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-01.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 1 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Ilustración botánica de un árbol de Pisonia grandis y sus raíces bajo el suelo de Palmyra" width="2400" height="1697" src="../assets/the-forest-below-01.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Ilustración botánica de un árbol de Pisonia grandis y sus raíces bajo el suelo de Palmyra</figcaption>
+  </figure>
+</section>
+<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-02">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">02 / 12</span>
+    <h3 id="forest-illustration-heading-02">La recuperación del bosque autóctono de Palmyra</h3>
+    <p>En el atolón de Palmyra, en el Pacífico, los científicos estudian cómo se recuperan los bosques autóctonos de <i>Pisonia grandis</i> y qué papel podrían desempeñar las relaciones que existen bajo el suelo.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-02.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 2 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Mapa en acuarela del atolón de Palmyra, sus islas y su laguna en el océano Pacífico" width="2400" height="1697" src="../assets/the-forest-below-02.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Mapa en acuarela del atolón de Palmyra, sus islas y su laguna en el océano Pacífico</figcaption>
+  </figure>
+</section>
+<section class="story-chapter" aria-labelledby="forest-illustration-heading-03">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">03 / 12</span>
+    <h3 id="forest-illustration-heading-03">Cómo los cocoteros transformaron el hábitat de las aves marinas</h3>
+    <p>Los cocoteros sustituyeron gran parte del bosque autóctono de <i>Pisonia</i>, reduciendo el hábitat adecuado para muchas aves marinas y alterando las conexiones entre la tierra y el mar.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-03.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 3 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Comparación ilustrada entre el bosque autóctono de Pisonia y la vegetación dominada por cocoteros" width="2400" height="1697" src="../assets/the-forest-below-03.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Comparación ilustrada entre el bosque autóctono de Pisonia y la vegetación dominada por cocoteros</figcaption>
+  </figure>
+</section>
+<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-04">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">04 / 12</span>
+    <h3 id="forest-illustration-heading-04">Raíces y hongos: aliados en la restauración</h3>
+    <p>Eliminar los cocoteros es solo una parte de la restauración. Bajo el suelo, las raíces y los hongos establecen asociaciones que podrían influir en la recuperación del bosque.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-04.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 4 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Corte ilustrado con raíces de Pisonia y redes de hongos bajo el suelo del bosque" width="2400" height="1697" src="../assets/the-forest-below-04.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Corte ilustrado con raíces de Pisonia y redes de hongos bajo el suelo del bosque</figcaption>
+  </figure>
+</section>
+<section class="story-chapter" aria-labelledby="forest-illustration-heading-05">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">05 / 12</span>
+    <h3 id="forest-illustration-heading-05">La relación entre <i>Pisonia grandis</i> y <i>Tomentella</i></h3>
+    <p>La investigación describe hongos <i>Tomentella</i> asociados con raíces de <i>Pisonia grandis</i> muestreadas en 52 árboles. Esta estrecha relación podría ser importante para la recuperación del bosque.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-05.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 5 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Detalle de raíces de Pisonia grandis entrelazadas con micelio bajo tierra" width="2400" height="1697" src="../assets/the-forest-below-05.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Detalle de raíces de Pisonia grandis entrelazadas con micelio bajo tierra</figcaption>
+  </figure>
+</section>
+<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-06">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">06 / 12</span>
+    <h3 id="forest-illustration-heading-06">Un intercambio esencial bajo el suelo del bosque</h3>
+    <p>Los árboles proporcionan a los hongos azúcares producidos mediante la fotosíntesis; los hongos ayudan a las raíces a acceder al agua y a los nutrientes del suelo.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-06.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 6 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Diagrama del intercambio de nutrientes y azúcares entre raíces y hongos micorrícicos" width="2400" height="1697" src="../assets/the-forest-below-06.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Diagrama del intercambio de nutrientes y azúcares entre raíces y hongos micorrícicos</figcaption>
+  </figure>
+</section>
+<section class="story-chapter" aria-labelledby="forest-illustration-heading-07">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">07 / 12</span>
+    <h3 id="forest-illustration-heading-07">Las aves marinas llevan nutrientes del océano a la isla</h3>
+    <p>Las aves marinas transportan nutrientes desde el océano hasta la isla. Sus excrementos enriquecen el suelo con nitrógeno y fósforo y conectan el mar con los bosques autóctonos y los hongos.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-07.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 7 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Árbol de Pisonia, aves marinas y costa que muestran el transporte de nutrientes del océano al suelo" width="2400" height="1697" src="../assets/the-forest-below-07.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Árbol de Pisonia, aves marinas y costa que muestran el transporte de nutrientes del océano al suelo</figcaption>
+  </figure>
+</section>
+<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-08">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">08 / 12</span>
+    <h3 id="forest-illustration-heading-08">Del bosque al arrecife: alimento para las mantarrayas</h3>
+    <p>La lluvia puede transportar nutrientes procedentes de las aves desde el bosque hasta las aguas costeras, favoreciendo al plancton y las oportunidades de alimentación de las mantarrayas.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-08.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 8 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Mantarraya nadando cerca de Palmyra y su relación con los nutrientes procedentes del bosque" width="2400" height="1697" src="../assets/the-forest-below-08.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Mantarraya nadando cerca de Palmyra y su relación con los nutrientes procedentes del bosque</figcaption>
+  </figure>
+</section>
+<section class="story-chapter" aria-labelledby="forest-illustration-heading-09">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">09 / 12</span>
+    <h3 id="forest-illustration-heading-09">Los cangrejos terrestres y la diversidad de hongos</h3>
+    <p>Los investigadores encontraron una diversidad de hongos mayor en los suelos de las madrigueras de cangrejos terrestres que en los suelos circundantes. Esto sugiere que los cangrejos podrían influir en las condiciones del subsuelo.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-09.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 9 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Cangrejo terrestre junto a su madriguera y suelo ilustrado con hongos" width="2400" height="1697" src="../assets/the-forest-below-09.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Cangrejo terrestre junto a su madriguera y suelo ilustrado con hongos</figcaption>
+  </figure>
+</section>
+<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-10">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">10 / 12</span>
+    <h3 id="forest-illustration-heading-10">¿Pueden los hongos autóctonos ayudar a recuperar el bosque?</h3>
+    <p><i>Tomentella</i> es menos abundante a medida que aumenta la distancia a los árboles de <i>Pisonia</i> existentes. Los científicos plantean explorar si incorporar hongos autóctonos junto a árboles jóvenes podría ayudar a restaurar el bosque.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-10.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 10 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Árbol autóctono joven con raíces mostrando posibles asociaciones fúngicas en la restauración" width="2400" height="1697" src="../assets/the-forest-below-10.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Árbol autóctono joven con raíces mostrando posibles asociaciones fúngicas en la restauración</figcaption>
+  </figure>
+</section>
+<section class="story-chapter" aria-labelledby="forest-illustration-heading-11">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">11 / 12</span>
+    <h3 id="forest-illustration-heading-11">Las relaciones ecológicas que sostienen la vida en la isla</h3>
+    <p>Aves marinas, hongos, cangrejos y árboles están conectados a través de distintos hábitats. Comprender estas relaciones podría abrir nuevas vías para restaurar ecosistemas insulares frágiles.</p>
+    
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-11.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 11 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Bosque de Pisonia y aves marinas ilustrando las conexiones ecológicas del atolón de Palmyra" width="2400" height="1697" src="../assets/the-forest-below-11.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Bosque de Pisonia y aves marinas ilustrando las conexiones ecológicas del atolón de Palmyra</figcaption>
+  </figure>
+</section>
+<section class="story-chapter reverse reflection-draft" aria-labelledby="forest-illustration-heading-12">
+  <div class="story-chapter-copy">
+    <span class="story-chapter-sequence">12 / 12</span>
+    <h3 id="forest-illustration-heading-12">Una reflexión sobre nuestra conexión con la naturaleza</h3>
+    <p>La historia visual concluye con una reflexión personal sobre las conexiones entre los seres vivos y nuestro lugar en el mundo natural.</p>
+
+  </div>
+  <figure class="story-chapter-visual">
+    <a data-story-zoom="true" href="../assets/the-forest-below-13.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 12 a tamaño completo">
+      <img decoding="async" loading="eager" alt="Planta joven y sus raíces junto a una reflexión personal sobre la conexión entre seres vivos" width="2400" height="1697" src="../assets/the-forest-below-13.webp"/>
+      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
+    </a>
+    <figcaption class="sr-only">Planta joven y sus raíces junto a una reflexión personal sobre la conexión entre seres vivos</figcaption>
+  </figure>
+</section>
+</div>
+  <section class="story-conclusion"><p class="story-independent-note">Proyecto independiente de storytelling visual basado en investigaciones publicadas e información sobre conservación. No encargado por las organizaciones ni los investigadores citados, ni afiliado a ellos. Las ilustraciones son interpretaciones artísticas asistidas con IA y los detalles ecológicos no están necesariamente representados a escala.</p>
+    <section class="story-resources" aria-labelledby="forest-references-title">
+      <div class="stories-overline">FUENTES Y REFERENCIAS</div>
+      <h3 id="forest-references-title">Investigación y referencias</h3>
+      <p class="story-resources-intro">Fuentes científicas e institucionales en las que se basa esta interpretación visual independiente. La bibliografía también está incluida en la página 12 del PDF completo.</p>
+      <div class="story-reference-grid"><section class="story-reference-group" aria-label="Investigación científica">
+          <h4>Investigación científica</h4>
+          <ol class="story-reference-list"><li class="story-reference-item">
+              <a href="https://doi.org/10.1016/j.cub.2026.03.087" target="_blank" rel="noopener noreferrer" aria-label="Cornwallis et al. · 2026, Symbiotic fungi underlie the regeneration potential of island rainforests">
+                <span class="story-reference-meta"><span class="story-reference-num">01</span><span>Cornwallis et al. · 2026</span></span>
+                <span class="story-reference-name">Symbiotic fungi underlie the regeneration potential of island rainforests</span>
+                <span class="story-reference-foot"><span>Current Biology · 2026</span><span aria-hidden="true">↗</span></span>
+              </a>
+            </li><li class="story-reference-item">
+              <a href="https://doi.org/10.1038/srep00409" target="_blank" rel="noopener noreferrer" aria-label="McCauley et al. · 2012, From wing to wing: The persistence of long ecological interaction chains in less-disturbed ecosystems">
+                <span class="story-reference-meta"><span class="story-reference-num">02</span><span>McCauley et al. · 2012</span></span>
+                <span class="story-reference-name">From wing to wing: The persistence of long ecological interaction chains in less-disturbed ecosystems</span>
+                <span class="story-reference-foot"><span>Scientific Reports · 2012</span><span aria-hidden="true">↗</span></span>
+              </a>
+            </li><li class="story-reference-item">
+              <a href="https://pubs.usgs.gov/publication/70267305" target="_blank" rel="noopener noreferrer" aria-label="Struckhoff · 2025, Pre-restoration woody species crown and vegetation community mapping using high-resolution uncrewed aerial system imagery, Palmyra Atoll">
+                <span class="story-reference-meta"><span class="story-reference-num">03</span><span>Struckhoff · 2025</span></span>
+                <span class="story-reference-name">Pre-restoration woody species crown and vegetation community mapping using high-resolution uncrewed aerial system imagery, Palmyra Atoll</span>
+                <span class="story-reference-foot"><span>Pacific Science / USGS · 2025</span><span aria-hidden="true">↗</span></span>
+              </a>
+            </li></ol>
+        </section><section class="story-reference-group" aria-label="Conservación y contexto">
+          <h4>Conservación y contexto</h4>
+          <ol class="story-reference-list"><li class="story-reference-item">
+              <a href="https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/palmyra-atoll/" target="_blank" rel="noopener noreferrer" aria-label="The Nature Conservancy, Palmyra Atoll — Conservation and rainforest restoration">
+                <span class="story-reference-meta"><span class="story-reference-num">04</span><span>The Nature Conservancy</span></span>
+                <span class="story-reference-name">Palmyra Atoll — Conservation and rainforest restoration</span>
+                <span class="story-reference-foot"><span>Programa de conservación</span><span aria-hidden="true">↗</span></span>
+              </a>
+            </li><li class="story-reference-item">
+              <a href="https://www.fws.gov/refuge/palmyra-atoll" target="_blank" rel="noopener noreferrer" aria-label="U.S. Fish &amp; Wildlife Service, Palmyra Atoll National Wildlife Refuge">
+                <span class="story-reference-meta"><span class="story-reference-num">05</span><span>U.S. Fish &amp; Wildlife Service</span></span>
+                <span class="story-reference-name">Palmyra Atoll National Wildlife Refuge</span>
+                <span class="story-reference-foot"><span>Área protegida y conservación</span><span aria-hidden="true">↗</span></span>
+              </a>
+            </li><li class="story-reference-item">
+              <a href="https://www.spun.earth/articles/data-from-earths-most-remote-atoll-show-soil-fungi-are-key-to-island-regeneration" target="_blank" rel="noopener noreferrer" aria-label="SPUN, Data from Earth’s most remote atoll show soil fungi are key to island regeneration">
+                <span class="story-reference-meta"><span class="story-reference-num">06</span><span>SPUN</span></span>
+                <span class="story-reference-name">Data from Earth’s most remote atoll show soil fungi are key to island regeneration</span>
+                <span class="story-reference-foot"><span>Resumen de investigación · 2026</span><span aria-hidden="true">↗</span></span>
+              </a>
+            </li></ol>
+        </section></div>
+    </section>
+    <div class="story-download"><strong>Ver la historia visual completa</strong><button type="button" onclick="openPortfolioPdf('pdf/the-forest-below-palmyra-atoll.pdf')">Ver PDF completo →</button></div>
+    <a class="story-back-cases" href="/es/case-studies/" data-go-cases="true">Explorar Casos de estudio →</a>
+  </section>
+ </div>
+
+<div class="story-lightbox" id="storyLightbox" role="dialog" aria-modal="true" aria-labelledby="storyLightboxTitle" aria-hidden="true" hidden>
+  <div class="story-lightbox-toolbar">
+    <span class="story-lightbox-title" id="storyLightboxTitle">Imagen ampliada</span>
+    <div class="story-lightbox-actions">
+      <button type="button" id="storyLightboxToggle">Ampliar +</button>
+      <button type="button" id="storyLightboxClose" aria-label="Cerrar">Cerrar ×</button>
+    </div>
+  </div>
+  <div class="story-lightbox-stage" id="storyLightboxStage">
+    <button class="story-lightbox-image-button" id="storyLightboxImageButton" type="button" aria-label="Ampliar +">
+      <img class="story-lightbox-image" id="storyLightboxImage" alt=""/>
+    </button>
+  </div>
+  <p class="story-lightbox-hint">Haz clic en la imagen para ampliar o reducir. Pulsa Esc para cerrar.</p>
+</div>
 </div>
 
 <script>
 
   function openPortfolioPdf(relativePath){
-    let url = '/' + relativePath.replace(/^\/+/, '');
-    if(location.protocol === 'file:'){
-      const nestedCaseFile = location.pathname.includes('/case-studies/');
-      const isSpanish = document.documentElement.lang === 'es';
-      const prefix = isSpanish ? (nestedCaseFile ? '../../../' : '../') : (nestedCaseFile ? '../../' : '');
-      url = new URL(prefix + relativePath, window.location.href).href;
+    let url="/"+relativePath.replace(/^\/+/, "");
+    if(location.protocol === "file:"){
+      const root=location.href.split(/[?#]/)[0].replace(/(?:es\/)?(?:(?:case-studies|visual-stories)\/(?:[^/]+\/)?)?index\.html$/, "");
+      url=new URL(relativePath,root).href;
     }
-    window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(url,"_blank","noopener,noreferrer");
   }
 
   // Portfolio analytics — Umami
@@ -3469,26 +4064,37 @@
     }
   }
 
+  const storiesNav = document.querySelector('[data-nav="stories"]');
   const workNav = document.querySelector('[data-nav="work"]');
   const visualNav = document.querySelector('[data-nav="visual"]');
   const aboutNav = document.querySelector('[data-nav="about"]');
   const aboutPage = document.getElementById("about-page");
   const visualPage = document.getElementById("visual-work");
   function updateNavCurrent(section){
-    [workNav,visualNav,aboutNav].forEach(item => item.removeAttribute("aria-current"));
-    ({work:workNav,visual:visualNav,about:aboutNav})[section]?.setAttribute("aria-current","page");
+    [storiesNav,workNav,visualNav,aboutNav].forEach(item => item.removeAttribute("aria-current"));
+    ({stories:storiesNav,work:workNav,visual:visualNav,about:aboutNav})[section]?.setAttribute("aria-current","page");
   }
-  updateNavCurrent("work");
+  updateNavCurrent("stories");
+
+  function showStories(){
+    document.body.classList.remove("show-about","show-visual","show-cases");
+    document.body.classList.add("show-stories");
+    aboutPage.setAttribute("aria-hidden","true");
+    visualPage.setAttribute("aria-hidden","true");
+    window.scrollTo({top:0, behavior:"instant"});
+    updateNavCurrent("stories");
+  }
 
   function showWork(){
-    document.body.classList.remove("show-about","show-visual");
+    document.body.classList.remove("show-about","show-visual","show-stories");
+    document.body.classList.add("show-cases");
     aboutPage.setAttribute("aria-hidden","true");
     visualPage.setAttribute("aria-hidden","true");
     window.scrollTo({top:0, behavior:"smooth"});
     updateNavCurrent("work");
   }
   function showVisual(){
-    document.body.classList.remove("show-about");
+    document.body.classList.remove("show-about","show-stories","show-cases");
     document.body.classList.add("show-visual");
     aboutPage.setAttribute("aria-hidden","true");
     visualPage.setAttribute("aria-hidden","false");
@@ -3496,7 +4102,7 @@
     updateNavCurrent("visual");
   }
   function showAbout(){
-    document.body.classList.remove("show-visual");
+    document.body.classList.remove("show-visual","show-stories","show-cases");
     document.body.classList.add("show-about");
     visualPage.setAttribute("aria-hidden","true");
     aboutPage.setAttribute("aria-hidden","false");
@@ -3504,17 +4110,42 @@
     updateNavCurrent("about");
   }
 
+  storiesNav.addEventListener("click", e=>{
+    if(e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    showStories();
+    if(location.protocol !== "file:") history.pushState({portfolioView:"stories",depth:0}, "", "/es/");
+    updateDocumentTitle("María Vera — Visual Stories | Senior Visual Designer");
+    trackPortfolioPage("/es/", "María Vera — Visual Stories");
+    trackPortfolioEvent("section_view", {section:"visual_stories"});
+  });
   workNav.addEventListener("click", e=>{
+    if(e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     showWork();
-    trackPortfolioPage("/es/", "María Vera — Casos de estudio");
+    if(location.protocol !== "file:") history.pushState({portfolioView:"cases",depth:0}, "", "/es/case-studies/");
+    updateDocumentTitle("María Vera — Case Studies | Research Communication");
+    trackPortfolioPage("/es/case-studies/", "María Vera — Case Studies");
     trackPortfolioEvent("section_view", {section:"case_studies"});
   });
   visualNav.addEventListener("click", e=>{
+    if(e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     showVisual();
+    if(location.protocol !== "file:") history.pushState({portfolioView:"visual",depth:0}, "", "/es/#visual-work");
     trackPortfolioPage("/es/visual-work", "María Vera — Trabajo visual");
     trackPortfolioEvent("section_view", {section:"visual_work"});
+  });
+  // "Selected work" inside Visual Work must scroll within that view,
+  // without triggering route changes back to the Visual Stories homepage.
+  document.querySelector(".visual-scroll-link")?.addEventListener("click", e=>{
+    if(e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    if(!document.body.classList.contains("show-visual")) showVisual();
+    document.getElementById("visual-projects")?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "start"
+    });
   });
   aboutNav.addEventListener("click", e=>{
     e.preventDefault();
@@ -3524,12 +4155,14 @@
   });
   document.querySelector(".brand").addEventListener("click", e=>{
     e.preventDefault();
-    showWork();
-    trackPortfolioPage("/es/", "María Vera — Casos de estudio");
-    trackPortfolioEvent("section_view", {section:"case_studies", source:"brand"});
+    showStories();
+    if(location.protocol !== "file:") history.pushState({portfolioView:"stories",depth:0}, "", "/es/");
+    updateDocumentTitle("María Vera — Visual Stories | Senior Visual Designer");
+    trackPortfolioPage("/es/", "María Vera — Visual Stories");
   });
 
   const caseRoutes = {
+    forest:{path:"/es/visual-stories/the-forest-below/", title:"The Forest Below"},
     fiji:{path:"/es/case-studies/fiji/", title:"Plastic Waste in Fiji"},
     dark:{path:"/es/case-studies/dark-vessels/", title:"Dark Vessels"},
     shrimp:{path:"/es/case-studies/shrimp-welfare/", title:"Hidden Suffering: Shrimp Welfare"}
@@ -3540,21 +4173,25 @@
 
   function switchPortfolioLanguage(event){
     if(event) event.preventDefault();
-    const isCaseOpen = document.getElementById('overlay')?.classList.contains('opened');
-    const activeCase = isCaseOpen
-      ? document.querySelector('.dark-case.active, .fiji-case.active, .shrimp-case.active')
-      : null;
-    const caseKey = activeCase?.id === 'fijiCase' ? 'fiji' : activeCase?.id === 'darkCase' ? 'dark' : activeCase?.id === 'shrimpCase' ? 'shrimp' : null;
-    const slugByKey = {fiji:'fiji', dark:'dark-vessels', shrimp:'shrimp-welfare'};
-    let target = '/';
-    if(caseKey) target = '/case-studies/' + slugByKey[caseKey] + '/';
-    else if(document.body.classList.contains('show-visual')) target += '#visual-work';
-    else if(document.body.classList.contains('show-about')) target += '#about-page';
-    if(location.protocol === 'file:'){
-      const nestedCaseFile = location.pathname.includes('/case-studies/');
-      target = (nestedCaseFile ? '../../../index.html' : '../index.html') + (caseKey ? '?case=' + caseKey : (document.body.classList.contains('show-visual') ? '#visual-work' : document.body.classList.contains('show-about') ? '#about-page' : ''));
+    const activeKey = overlay.classList.contains("opened") ? overlay.dataset.activeCase : null;
+    const slugs={forest:"visual-stories/the-forest-below",fiji:"case-studies/fiji",dark:"case-studies/dark-vessels",shrimp:"case-studies/shrimp-welfare"};
+    let target="/";
+    if(activeKey && slugs[activeKey]) target="/"+slugs[activeKey]+"/";
+    else if(document.body.classList.contains("show-cases")) target="/case-studies/";
+    else if(document.body.classList.contains("show-visual")) target+="#visual-work";
+    else if(document.body.classList.contains("show-about")) target+="#about-page";
+    if(location.protocol === "file:"){
+      // Local preview: always find the outer portfolio directory before switching language.
+      const root=location.href.split(/[?#]/)[0].replace(/(?:es\/)?(?:(?:case-studies|visual-stories)\/(?:[^/]+\/)?)?index\.html$/, "");
+      const localeFile = "index.html";
+      let state="";
+      if(activeKey) state="?case="+activeKey;
+      else if(document.body.classList.contains("show-cases")) state="#work";
+      else if(document.body.classList.contains("show-visual")) state="#visual-work";
+      else if(document.body.classList.contains("show-about")) state="#about-page";
+      target=root+localeFile+state;
     }
-    window.location.href = target;
+    window.location.href=target;
   }
   const languageSwitch = document.getElementById('languageSwitch');
   if(languageSwitch) languageSwitch.addEventListener('click', switchPortfolioLanguage);
@@ -3569,6 +4206,7 @@
   }
 
   const projects = {
+    forest: {label:"Historia visual", title:"The Forest Below"},
     shrimp: {label:"Comunicación de investigación", title:"Hidden Suffering: Shrimp Welfare"},
     fiji: {label:"Storytelling editorial de datos", title:"Plastic Waste in Fiji"},
     dark: {label:"Transparencia oceánica", title:"Dark Vessels"}
@@ -3598,6 +4236,8 @@
     darkCase.classList.toggle("active", key === "dark");
     fijiCase.classList.toggle("active", key === "fiji");
     shrimpCase.classList.toggle("active", key === "shrimp");
+    const forestCase = document.getElementById("forestCase");
+    forestCase.classList.toggle("active", key === "forest");
 
     overlay.setAttribute("aria-labelledby", key + "CaseTitle");
     overlay.dataset.activeCase = key;
@@ -3646,16 +4286,13 @@
   }
 
   function returnToHome(options = {}){
+    const key=overlay.dataset.activeCase;
     closeOverlayVisual();
-    showWork();
-    updateDocumentTitle("María Vera \u2014 Dise\u00f1adora visual s\u00e9nior | Comunicaci\u00f3n visual");
-
-    if(options.historyMode === "replace"){
-      if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", "/es/");
+    if(key === "forest") showStories(); else showWork();
+    if(options.historyMode === "replace" && location.protocol !== "file:"){
+      history.replaceState({portfolioView:"home",depth:0}, "", key === "forest" ? "/es/" : "/es/case-studies/");
     }
-    if(options.track){
-      trackPortfolioPage("/es/", "María Vera — Casos de estudio");
-    }
+    if(options.track) trackPortfolioPage(key === "forest" ? "/es/" : "/es/case-studies/", "María Vera — " + (key === "forest" ? "Visual Stories" : "Case Studies"));
   }
 
   document.querySelectorAll("a.project").forEach(card=>{
@@ -3663,7 +4300,7 @@
       if(event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       lastCaseTrigger = card;
-      openCase(card.dataset.project, {historyMode:"push", origin:"home", source:"case_studies"});
+      openCase(card.dataset.project, {historyMode:"push", origin:"home", source:card.dataset.project === "forest" ? "visual_stories" : "case_studies"});
     });
   });
 
@@ -3694,67 +4331,58 @@
   });
 
   function applyLocationRoute(options = {}){
-    const params = new URLSearchParams(window.location.search);
-    const forwardedRoute = params.get("portfolioRoute");
-    const previewCase = params.get("case");
-    let path = forwardedRoute ? cleanPortfolioPath(forwardedRoute) : cleanPortfolioPath(window.location.pathname);
-    const localCase = location.protocol === "file:"
-      ? (path.includes("/case-studies/fiji/index.html") ? "fiji"
-        : path.includes("/case-studies/dark-vessels/index.html") ? "dark"
-        : path.includes("/case-studies/shrimp-welfare/index.html") ? "shrimp"
-        : null)
-      : null;
-    const key = previewCase || caseKeyByPath[path] || localCase;
-
+    const params=new URLSearchParams(window.location.search);
+    const forwardedRoute=params.get("portfolioRoute");
+    const previewCase=params.get("case");
+    const path=forwardedRoute ? cleanPortfolioPath(forwardedRoute) : cleanPortfolioPath(window.location.pathname);
+    const localCase=location.protocol === "file:" ?
+      (path.includes("/visual-stories/the-forest-below/index.html") ? "forest"
+       : path.includes("/case-studies/fiji/index.html") ? "fiji"
+       : path.includes("/case-studies/dark-vessels/index.html") ? "dark"
+       : path.includes("/case-studies/shrimp-welfare/index.html") ? "shrimp" : null) : null;
+    const key=previewCase || caseKeyByPath[path] || localCase;
     if(key){
-      if(forwardedRoute){
-        if(location.protocol !== "file:") history.replaceState({portfolioView:"case", case:key, origin:"direct", depth:0}, "", path);
-      } else if(!history.state || history.state.portfolioView !== "case"){
-        if(location.protocol !== "file:") history.replaceState({portfolioView:"case", case:key, origin:"direct", depth:0}, "", path);
-      }
+      if(location.protocol !== "file:" && (!history.state || history.state.portfolioView !== "case"))
+        history.replaceState({portfolioView:"case",case:key,origin:"direct",depth:0}, "",caseRoutes[key].path);
+      if(key === "forest") showStories(); else showWork();
       renderCaseOverlay(key);
-      updateDocumentTitle(`María Vera — ${caseRoutes[key].title}`);
+      updateDocumentTitle("María Vera — " + caseRoutes[key].title);
       if(options.track !== false){
-        trackPortfolioPage(path, `María Vera — ${caseRoutes[key].title}`);
-        trackPortfolioEvent("case_study_open", {project:key, source:"direct_url"});
+        trackPortfolioPage(caseRoutes[key].path, "María Vera — " + caseRoutes[key].title);
+        trackPortfolioEvent("case_study_open",{project:key,source:"direct_url"});
       }
       return;
     }
-
     closeOverlayVisual();
-    updateDocumentTitle("María Vera \u2014 Dise\u00f1adora visual s\u00e9nior | Comunicaci\u00f3n visual");
-    if(forwardedRoute || window.location.search.includes("portfolioRoute=")){
-      if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", "/es/");
-    } else if(!history.state){
-      if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", cleanPortfolioPath(window.location.pathname) + window.location.hash);
+    if(window.location.hash === "#visual-work" || window.location.hash === "#visual-projects"){
+      showVisual();
+      if(window.location.hash === "#visual-projects") requestAnimationFrame(()=>{
+        document.getElementById("visual-projects")?.scrollIntoView({behavior:"auto",block:"start"});
+      });
     }
-    if(options.track !== false){
-      trackPortfolioPage("/es/", "María Vera — Casos de estudio");
-    }
+    else if(path.endsWith("/case-studies") || window.location.hash === "#work") showWork();
+    else if(window.location.hash === "#about-page") showAbout();
+    else showStories();
+    if(location.protocol !== "file:" && !history.state)
+      history.replaceState({portfolioView:"home",depth:0}, "", cleanPortfolioPath(window.location.pathname)+window.location.hash);
+    if(options.track !== false) trackPortfolioPage(path,"María Vera — " + (document.body.classList.contains("show-cases") ? "Case Studies" : "Visual Stories"));
   }
 
-  window.addEventListener("popstate", ()=>{
-    const path = cleanPortfolioPath(window.location.pathname);
-    const key = caseKeyByPath[path];
-    if(key){
-      renderCaseOverlay(key);
-      updateDocumentTitle(`María Vera — ${caseRoutes[key].title}`);
-      trackPortfolioPage(path, `María Vera — ${caseRoutes[key].title}`);
-    } else {
-      closeOverlayVisual();
-      showWork();
-      updateDocumentTitle("María Vera \u2014 Dise\u00f1adora visual s\u00e9nior | Comunicaci\u00f3n visual");
-      trackPortfolioPage("/es/", "María Vera — Casos de estudio");
-    }
+  window.addEventListener("popstate",()=>applyLocationRoute({track:true}));
+  document.querySelector('[data-go-cases]')?.addEventListener("click",e=>{
+    if(e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    closeOverlayVisual();
+    showWork();
+    if(location.protocol !== "file:") history.pushState({portfolioView:"cases",depth:0}, "", "/es/case-studies/");
+    updateDocumentTitle("María Vera — Case Studies");
   });
-
-
 
   // Engagement events: PDFs, contact links and research sources.
   document.querySelectorAll('button[onclick*="pdf/"]').forEach(button=>{
     button.addEventListener("click", ()=>{
-      const caseRoot = button.closest("#fijiCase, #darkCase, #shrimpCase");
-      const project = caseRoot?.id === "fijiCase" ? "fiji"
+      const caseRoot = button.closest("#fijiCase, #darkCase, #shrimpCase, #forestCase");
+      const project = caseRoot?.id === "forestCase" ? "forest" : caseRoot?.id === "fijiCase" ? "fiji"
         : caseRoot?.id === "darkCase" ? "dark"
         : caseRoot?.id === "shrimpCase" ? "shrimp"
         : "unknown";
@@ -3777,7 +4405,7 @@
   document.querySelectorAll('.case-source a').forEach(link=>{
     link.addEventListener("click", ()=>{
       const caseRoot = link.closest("#fijiCase, #darkCase, #shrimpCase");
-      const project = caseRoot?.id === "fijiCase" ? "fiji"
+      const project = caseRoot?.id === "forestCase" ? "forest" : caseRoot?.id === "fijiCase" ? "fiji"
         : caseRoot?.id === "darkCase" ? "dark"
         : caseRoot?.id === "shrimpCase" ? "shrimp"
         : "unknown";
@@ -3790,10 +4418,6 @@
 
   // Open a directly shared case-study URL (or track the normal home view).
   applyLocationRoute({track:true});
-  if(!overlay.classList.contains("opened")){
-    if(window.location.hash === "#visual-work") showVisual();
-    if(window.location.hash === "#about-page") showAbout();
-  }
 
   document.addEventListener("keydown",e=>{
     if(!overlay.classList.contains("opened")) return;
@@ -3820,6 +4444,69 @@
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add("visible"); });
   },{threshold:.12});
   document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+
+  // Enlarged view of Visual Stories illustrations. Normal href remains as a fallback.
+  (function(){
+    const zoomDialog = document.getElementById('storyLightbox');
+    if(!zoomDialog) return;
+    const zoomImage = document.getElementById('storyLightboxImage');
+    const zoomTitle = document.getElementById('storyLightboxTitle');
+    const zoomToggle = document.getElementById('storyLightboxToggle');
+    const zoomImageButton = document.getElementById('storyLightboxImageButton');
+    const zoomClose = document.getElementById('storyLightboxClose');
+    const overlayRoot = document.getElementById('overlay');
+    let sourceLink = null;
+    function setZoom(active){
+      zoomDialog.classList.toggle('zoomed',active);
+      zoomToggle.textContent=active ? 'Reducir −' : 'Ampliar +';
+      zoomImageButton.setAttribute('aria-label',active ? 'Reducir −' : 'Ampliar +');
+      document.getElementById('storyLightboxStage').scrollTo(0,0);
+    }
+    function closeZoom(){
+      if(zoomDialog.hidden) return;
+      zoomDialog.hidden=true;
+      zoomDialog.setAttribute('aria-hidden','true');
+      overlayRoot.style.overflow='';
+      setZoom(false);
+      if(sourceLink && sourceLink.isConnected) sourceLink.focus({preventScroll:true});
+      sourceLink=null;
+    }
+    document.querySelectorAll('#forestCase a[data-story-zoom]').forEach(link=>{
+      link.addEventListener('click',function(event){
+        if(event.button !== 0 || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+        event.preventDefault();
+        sourceLink=link;
+        zoomImage.src=link.querySelector('img').src;
+        zoomImage.alt=link.querySelector('img').alt;
+        zoomTitle.textContent=link.closest('.story-chapter').querySelector('h3').textContent.trim();
+        setZoom(false);
+        zoomDialog.hidden=false;
+        zoomDialog.setAttribute('aria-hidden','false');
+        overlayRoot.style.overflow='hidden';
+        zoomClose.focus({preventScroll:true});
+      });
+    });
+    zoomClose.addEventListener('click',closeZoom);
+    zoomToggle.addEventListener('click',()=>setZoom(!zoomDialog.classList.contains('zoomed')));
+    zoomImageButton.addEventListener('click',()=>setZoom(!zoomDialog.classList.contains('zoomed')));
+    zoomDialog.addEventListener('click',event=>{if(event.target===zoomDialog)closeZoom();});
+    document.addEventListener('keydown',function(event){
+      if(zoomDialog.hidden)return;
+      if(event.key==='Escape'){
+        event.preventDefault();event.stopImmediatePropagation();closeZoom();return;
+      }
+      if(event.key==='Tab'){
+        const controls=[zoomToggle,zoomClose,zoomImageButton];
+        const index=controls.indexOf(document.activeElement);
+        if(event.shiftKey && (index<=0)){
+          event.preventDefault();event.stopImmediatePropagation();controls[controls.length-1].focus();
+        }else if(!event.shiftKey && (index===controls.length-1 || index===-1)){
+          event.preventDefault();event.stopImmediatePropagation();controls[0].focus();
+        }
+      }
+    },true);
+  })();
 
   // Slide announcements and controls for screen readers.
   [
