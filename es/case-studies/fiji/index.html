@@ -220,37 +220,6 @@
     border:0;background:transparent;cursor:pointer;
     font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:7px 0;
   }
-  .case-hero{padding:90px var(--pad) 40px}
-  .case-hero h2{
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(58px,8vw,120px);line-height:.92;letter-spacing:-.045em;margin:0 0 40px;
-  }
-  .case-intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;border-top:1px solid var(--line);padding-top:24px}
-  .case-intro p{font-size:16px;line-height:1.6;max-width:580px}
-  .case-intro .facts{font-size:12px;line-height:1.8;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-  .case-wide{margin:50px var(--pad) 100px;aspect-ratio:16/8;overflow:hidden}
-  .case-wide .art{transform:none!important}
-  .case-columns{
-    padding:0 var(--pad) 120px;
-    display:grid;grid-template-columns:.7fr 1.3fr;gap:80px;
-  }
-  .case-columns h4{
-    margin:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
-  }
-  .case-columns p{
-    margin:0;font-family:var(--serif);font-size:clamp(28px,3vw,46px);line-height:1.13;letter-spacing:-.025em;
-  }
-  .pdf-demo{
-    margin:0 var(--pad) 100px;padding:32px;border:1px solid var(--line);
-    display:flex;justify-content:space-between;gap:30px;align-items:center;
-  }
-  .pdf-demo strong{font-family:var(--serif);font-size:24px;font-weight:400}
-  .pdf-demo span{font-size:12px;color:var(--muted)}
-  .pdf-demo button{
-    border:1px solid var(--ink);background:transparent;padding:13px 18px;cursor:pointer;
-    text-transform:uppercase;font-size:11px;letter-spacing:.1em;
-  }
-
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
   .reveal.visible{opacity:1;transform:none}
 
@@ -2814,6 +2783,21 @@
   .about-professional-focus{grid-template-columns:1fr;row-gap:15px}
 }
 
+  /* Keyboard access improvements, without changing mouse or touch styling */
+  .skip-link{position:fixed;z-index:250;top:-80px;left:16px;background:#fff;color:#171717;
+    padding:12px 16px;border:2px solid #171717;font:600 13px/1.3 var(--sans);}
+  .skip-link:focus{top:12px}
+  a.project:focus-visible{outline:3px solid #171717;outline-offset:6px}
+  .case-project-link:focus-visible,.close:focus-visible,
+  .vw-arrow:focus-visible,.vw-dot:focus-visible,
+  .vw2-dot:focus-visible,.vw3-dot:focus-visible,.vw4-dot:focus-visible,
+  button:focus-visible{outline:2px solid #171717;outline-offset:4px}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto!important}
+    .overlay,.reveal,.art,.open b,.case-project-link strong span{transition:none!important;animation:none!important}
+    .reveal{opacity:1!important;transform:none!important}
+  }
+
 </style>
 <script type="application/ld+json">
 {
@@ -2835,7 +2819,8 @@
     "Science communication",
     "Environmental storytelling"
   ],
-  "description": "Diseñadora visual sénior centrada en storytelling visual, comunicación de investigación y diseño editorial y de información, con interés en conservación, bienestar animal y comunidades."
+  "description": "Diseñadora visual sénior centrada en storytelling visual, comunicación de investigación y diseño editorial y de información, con interés en conservación, bienestar animal y comunidades.",
+  "@id": "https://mariavera.design/#person"
 }
 </script>
 <script type="application/ld+json">
@@ -2847,16 +2832,34 @@
   "url": "https://mariavera.design/es/case-studies/fiji/",
   "image": "https://mariavera.design/assets/image-001-88962888ea57.jpg",
   "creator": {
-    "@type": "Person",
-    "name": "María Vera",
-    "url": "https://mariavera.design/"
+    "@id": "https://mariavera.design/#person"
   },
   "dateCreated": "2026",
-  "inLanguage": "es"
+  "inLanguage": "es",
+  "@id": "https://mariavera.design/es/case-studies/fiji/#work",
+  "author": {
+    "@id": "https://mariavera.design/#person"
+  },
+  "isBasedOn": {
+    "@type": "CreativeWork",
+    "url": "https://iucn.org/sites/default/files/2023-08/fiji-country-overview-.pdf"
+  },
+  "citation": "https://iucn.org/sites/default/files/2023-08/fiji-country-overview-.pdf",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mariavera.design/es/case-studies/fiji/"
+  },
+  "about": [
+    "Contaminación por plásticos",
+    "Gestión de residuos plásticos",
+    "Comunicación de investigación ambiental",
+    "Fiyi"
+  ]
 }
-  </script>
+</script>
 </head>
 <body>
+<a class="skip-link" href="#top">Saltar al contenido</a>
 <div class="shell">
 <header>
 <a class="brand" href="#top">María Vera</a>
@@ -2882,7 +2885,7 @@
 <h2>Trabajo seleccionado</h2>
 <p>Una selección de casos de estudio de diseño editorial, comunicación de investigación y storytelling visual.</p>
 </div>
-<article class="project reveal" data-project="fiji">
+<a class="project reveal" data-project="fiji" href="/es/case-studies/fiji/">
 <div class="project-visual">
 <img alt="Plastic Waste in Fiji composición editorial" class="art" decoding="async" height="1280" src="assets/image-001-88962888ea57.jpg" width="2048"/>
 </div>
@@ -2893,8 +2896,8 @@
 </div>
 <div class="open">Ver proyecto <b>→</b></div>
 </div>
-</article>
-<article class="project reveal" data-project="dark">
+</a>
+<a class="project reveal" data-project="dark" href="/es/case-studies/dark-vessels/">
 <div class="project-visual">
 <img alt="Dark Vessels composición editorial" class="art" decoding="async" height="1280" src="assets/image-002-5a8266fd9fa2.jpg" width="2048"/>
 </div>
@@ -2905,8 +2908,8 @@
 </div>
 <div class="open">Ver proyecto <b>→</b></div>
 </div>
-</article>
-<article class="project reveal" data-project="shrimp">
+</a>
+<a class="project reveal" data-project="shrimp" href="/es/case-studies/shrimp-welfare/">
 <div class="project-visual">
 <img alt="Shrimp welfare composición editorial" class="art" decoding="async" height="1280" src="assets/image-003-37ea2b3932cb.jpg" width="2048"/>
 </div>
@@ -2917,7 +2920,7 @@
 </div>
 <div class="open">Ver proyecto <b>→</b></div>
 </div>
-</article>
+</a>
 </section>
 </main>
 <section aria-hidden="true" class="visual-page" id="visual-work">
@@ -2943,7 +2946,7 @@
 <div class="visual-project-note">Proyecto conceptual independiente. No encargado por Animal Welfare Fund.</div>
 <div class="visual-project-meta">Campaña social · Concepto visual · Storytelling visual</div>
 </div>
-<div aria-label="Carrusel de imágenes de Breaking the Cycle" class="vw-carousel" id="chickenCarousel" tabindex="0">
+<div aria-label="Carrusel de imágenes de Breaking the Cycle" class="vw-carousel" id="chickenCarousel" role="region" aria-roledescription="carousel" aria-label="Breaking the Cycle" tabindex="0">
 <div class="vw-stage">
 <div class="vw-slide active"><img alt="Animal Welfare Fund diapositiva de campaña 1" decoding="async" height="2000" src="assets/image-004-cb1791dc4f29.jpg" width="2000"/></div>
 <div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 2" decoding="async" height="2000" src="assets/image-005-ebf26797545e.jpg" width="2000"/></div>
@@ -2977,7 +2980,7 @@
 <div class="visual-project-note">Proyecto conceptual independiente, basado en investigación de Rethink Priorities. No encargado por Rethink Priorities.</div>
 <div class="visual-project-meta">Campaña social · Concepto visual · Storytelling visual</div>
 </div>
-<div aria-label="Carrusel de imágenes de Eyestalk Ablation" class="vw-carousel" id="shrimpCarousel" tabindex="0">
+<div aria-label="Carrusel de imágenes de Eyestalk Ablation" class="vw-carousel" id="shrimpCarousel" role="region" aria-roledescription="carousel" aria-label="Eyestalk Ablation" tabindex="0">
 <div class="vw-stage">
 <div class="vw2-slide active"><img alt="Eyestalk Ablation diapositiva de campaña 1" decoding="async" height="1350" src="assets/image-011-28350a416012.jpg" width="1080"/></div>
 <div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 2" decoding="async" height="1350" src="assets/image-012-f30499727d48.jpg" width="1080"/></div>
@@ -3008,7 +3011,7 @@
 <p>Campaña de sensibilización de seis piezas que explica por qué acercarse a una cría de foca puede hacer que su madre se mantenga alejada, convirtiendo un sencillo cambio de comportamiento en una breve historia visual con una llamada a la acción clara.</p>
 <div class="visual-project-meta">Campaña social · Concepto visual · Storytelling visual</div>
 </div>
-<div aria-label="Carrusel de imágenes de Give Them Space" class="vw-carousel" id="sealCarousel" tabindex="0">
+<div aria-label="Carrusel de imágenes de Give Them Space" class="vw-carousel" id="sealCarousel" role="region" aria-roledescription="carousel" aria-label="Give Them Space" tabindex="0">
 <div class="vw-stage">
 <div class="vw3-slide active"><img alt="Baby seal diapositiva de campaña 1" decoding="async" height="1350" src="assets/image-017-87c8a91b1fcc.jpg" width="1080"/></div>
 <div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 2" decoding="async" height="1350" src="assets/image-018-11f87f17997e.jpg" width="1080"/></div>
@@ -3039,7 +3042,7 @@
 <p>Campaña visual de seis piezas sobre el blanqueamiento y la restauración de corales, utilizando una narrativa sencilla para explicar qué son los corales, por qué el calentamiento de los océanos los amenaza y por qué los esfuerzos de restauración quizá solo puedan ganar algo de tiempo.</p>
 <div class="visual-project-meta">Campaña social · Concepto visual · Storytelling visual</div>
 </div>
-<div aria-label="Carrusel de imágenes de More Time for Corals" class="vw-carousel" id="coralCarousel" tabindex="0">
+<div aria-label="Carrusel de imágenes de More Time for Corals" class="vw-carousel" id="coralCarousel" role="region" aria-roledescription="carousel" aria-label="More Time for Corals" tabindex="0">
 <div class="vw-stage">
 <div class="vw4-slide active"><img alt="Coral diapositiva de campaña 1" decoding="async" height="1350" src="assets/image-023-ee721cac482e.jpg" width="1080"/></div>
 <div class="vw4-slide"><img alt="Coral diapositiva de campaña 2" decoding="async" height="1350" src="assets/image-024-1f67cd525ec1.jpg" width="1080"/></div>
@@ -3168,14 +3171,14 @@
 </div>
 </div>
 </footer>
-<div aria-hidden="true" class="overlay" id="overlay">
+<div aria-hidden="true" aria-modal="true" class="overlay" id="overlay" role="dialog" tabindex="-1">
 <div class="overlay-top">
 <div class="title" id="overlayLabel">Caso de estudio</div>
-<button class="close" id="closeOverlay">Cerrar ×</button>
+<button class="close" id="closeOverlay" type="button">Cerrar ×</button>
 </div>
 <div class="shrimp-case" id="shrimpCase">
 <section class="shrimp-case-intro">
-<h2>Hidden Suffering: Shrimp Welfare</h2>
+<h2 id="shrimpCaseTitle">Hidden Suffering: Shrimp Welfare</h2>
 <p>Un proyecto de storytelling visual que transforma la investigación sobre el bienestar de las gambas de cultivo en una narrativa más clara y accesible, utilizando diseño editorial, ilustración y jerarquía de la información para facilitar la comprensión de hallazgos complejos.</p>
 <div aria-label="Información del proyecto" class="case-meta-strip">
 <div class="case-meta-item">
@@ -3244,16 +3247,16 @@
 <button onclick="openPortfolioPdf('pdf/Quantifying_Shrimp_Welfare_Threats_Visual_Summary_Maria_Vera.pdf')" type="button">Ver PDF completo →</button>
 </div>
 <nav aria-label="Navegación de casos de estudio" class="case-project-nav">
-<button class="case-project-link prev" data-case-target="dark" type="button">
+<a class="case-project-link prev" data-case-target="dark" href="/es/case-studies/dark-vessels/">
 <small>Proyecto anterior</small>
 <strong><span>← Dark Vessels</span></strong>
-</button>
+</a>
 <div aria-hidden="true" class="case-nav-spacer"></div>
 </nav>
 </div>
 <div class="fiji-case" id="fijiCase">
 <section class="fiji-case-intro">
-<h1>Plastic Waste in Fiji</h1>
+<h1 id="fijiCaseTitle">Plastic Waste in Fiji</h1>
 <p>Un rediseño editorial que transforma la investigación sobre residuos plásticos, su gestión y sus fugas al medio ambiente en Fiji en una narrativa visual más clara y accesible.</p>
 <div aria-label="Información del proyecto" class="case-meta-strip">
 <div class="case-meta-item">
@@ -3334,15 +3337,15 @@
 </div>
 <nav aria-label="Navegación de casos de estudio" class="case-project-nav">
 <div aria-hidden="true" class="case-nav-spacer"></div>
-<button class="case-project-link next" data-case-target="dark" type="button">
+<a class="case-project-link next" data-case-target="dark" href="/es/case-studies/dark-vessels/">
 <small>Proyecto siguiente</small>
 <strong><span>Dark Vessels →</span></strong>
-</button>
+</a>
 </nav>
 </div>
 <div class="dark-case" id="darkCase">
 <section class="dark-case-intro">
-<h2>Dark Vessels</h2>
+<h2 id="darkCaseTitle">Dark Vessels</h2>
 <p>Un proyecto de storytelling visual que explora la actividad pesquera oculta y el reto de hacer más comprensibles datos marinos complejos.</p>
 <div aria-label="Información del proyecto" class="case-meta-strip">
 <div class="case-meta-item">
@@ -3420,36 +3423,18 @@
 <button onclick="openPortfolioPdf('pdf/The_Dark_Fleet_Visual_Communication_Maria_Vera.pdf')" type="button">Ver PDF completo →</button>
 </div>
 <nav aria-label="Navegación de casos de estudio" class="case-project-nav">
-<button class="case-project-link prev" data-case-target="fiji" type="button">
+<a class="case-project-link prev" data-case-target="fiji" href="/es/case-studies/fiji/">
 <small>Proyecto anterior</small>
 <strong><span>← Plastic Waste in Fiji</span></strong>
-</button>
-<button class="case-project-link next" data-case-target="shrimp" type="button">
+</a>
+<a class="case-project-link next" data-case-target="shrimp" href="/es/case-studies/shrimp-welfare/">
 <small>Proyecto siguiente</small>
 <strong><span>Hidden Suffering →</span></strong>
-</button>
+</a>
 </nav>
 </div>
-<div class="case-hero" id="genericCaseHero">
-<h2 id="caseTitle">Título del proyecto</h2>
-<div class="case-intro">
-<p id="caseText">Introducción del proyecto.</p>
-<div class="facts" id="caseFacts"></div>
 </div>
-</div>
-<div class="case-wide" id="caseArt"></div>
-<div class="case-columns" id="genericCaseColumns">
-<h4>Enfoque</h4>
-<p id="caseApproach">Aquí se incluiría una breve explicación del enfoque visual.</p>
-</div>
-<div class="pdf-demo" id="genericPdfDemo">
-<div>
-<strong>Informe editorial completo</strong><br/>
-<span>Este botón puede abrir el PDF completo.</span>
-</div>
-<button onclick="alert('PDF placeholder — we can embed the real PDF here later.')">Ver PDF completo</button>
-</div>
-</div>
+
 <script>
 
   function openPortfolioPdf(relativePath){
@@ -3489,12 +3474,18 @@
   const aboutNav = document.querySelector('[data-nav="about"]');
   const aboutPage = document.getElementById("about-page");
   const visualPage = document.getElementById("visual-work");
+  function updateNavCurrent(section){
+    [workNav,visualNav,aboutNav].forEach(item => item.removeAttribute("aria-current"));
+    ({work:workNav,visual:visualNav,about:aboutNav})[section]?.setAttribute("aria-current","page");
+  }
+  updateNavCurrent("work");
 
   function showWork(){
     document.body.classList.remove("show-about","show-visual");
     aboutPage.setAttribute("aria-hidden","true");
     visualPage.setAttribute("aria-hidden","true");
     window.scrollTo({top:0, behavior:"smooth"});
+    updateNavCurrent("work");
   }
   function showVisual(){
     document.body.classList.remove("show-about");
@@ -3502,6 +3493,7 @@
     aboutPage.setAttribute("aria-hidden","true");
     visualPage.setAttribute("aria-hidden","false");
     window.scrollTo({top:0, behavior:"instant"});
+    updateNavCurrent("visual");
   }
   function showAbout(){
     document.body.classList.remove("show-visual");
@@ -3509,6 +3501,7 @@
     visualPage.setAttribute("aria-hidden","true");
     aboutPage.setAttribute("aria-hidden","false");
     window.scrollTo({top:0, behavior:"instant"});
+    updateNavCurrent("about");
   }
 
   workNav.addEventListener("click", e=>{
@@ -3576,36 +3569,21 @@
   }
 
   const projects = {
-    shrimp:{
-      label:"Comunicación de investigación",
-      title:"Hidden Suffering: Shrimp Welfare",
-      text:"Un proyecto de comunicación visual sobre riesgos para el bienestar en la producción de gambas, diseñado para hacer investigación compleja más comprensible sin simplificarla en exceso.",
-      facts:"ROL — STORYTELLING VISUAL<br>FORMATO — DISEÑO EDITORIAL / DE INFORMACIÓN<br>ENFOQUE — BIENESTAR ANIMAL",
-      approach:"The visual system balances clarity with emotional restraint: structured information, simple illustration and editorial pacing guide the reader through a difficult subject without losing the underlying evidence.",
-      bg:"#d9ece8",
-      art:`<img class="art" src="assets/image-003-37ea2b3932cb.jpg" alt="Shrimp welfare editorial spread" width="2048" height="1280" decoding="async" loading="lazy">`
-    },
-    fiji:{
-      label:"Storytelling editorial de datos",
-      title:"Plastic Waste in Fiji",
-      text:"Un rediseño independiente que transforma investigación sobre residuos plásticos en una narrativa editorial con mapas, ilustraciones, estadísticas y contexto normativo.",
-      facts:"ROL — DISEÑO EDITORIAL<br>FORMATO — INFORME DE 12 PÁGINAS<br>ENFOQUE — CONTAMINACIÓN POR PLÁSTICOS / FIJI",
-      approach:"Muted colour, generous negative space and simplified forms create a calmer reading experience, while hierarchy and visualisation help the key environmental findings surface quickly.",
-      bg:"#efe9db",
-      art:`<img class="art" src="assets/image-001-88962888ea57.jpg" alt="Plastic Waste in Fiji editorial spread" width="2048" height="1280" decoding="async" loading="lazy">`
-    },
-    dark:{
-      label:"Transparencia oceánica",
-      title:"Dark Vessels",
-      text:"Una explicación visual de cómo AIS, las imágenes ópticas, SAR y VIIRS pueden revelar actividad de embarcaciones que los sistemas convencionales de seguimiento pueden pasar por alto.",
-      facts:"ROL — STORYTELLING VISUAL<br>FORMATO — EXPLICACIÓN EDITORIAL<br>ENFOQUE — TRANSPARENCIA OCEÁNICA",
-      approach:"A deep ocean palette, satellite-derived visual language and clear comparisons between data sources create a story that moves from invisibility to detection and finally to action.",
-      bg:"#06141f",
-      art:`<img class="art" src="assets/image-002-5a8266fd9fa2.jpg" alt="Dark Vessels editorial spread" width="2048" height="1280" decoding="async" loading="lazy">`
-    }
+    shrimp: {label:"Comunicación de investigación", title:"Hidden Suffering: Shrimp Welfare"},
+    fiji: {label:"Storytelling editorial de datos", title:"Plastic Waste in Fiji"},
+    dark: {label:"Transparencia oceánica", title:"Dark Vessels"}
   };
 
   const overlay = document.getElementById("overlay");
+  const backgroundSections = Array.from(document.body.children).filter(section => section !== overlay && section.tagName !== "SCRIPT");
+  let lastCaseTrigger = null;
+
+  function restoreCaseFocus(){
+    const candidate = lastCaseTrigger && lastCaseTrigger.isConnected
+      ? lastCaseTrigger : document.querySelector('.project[data-project="' + (overlay.dataset.activeCase || 'fiji') + '"]');
+    if(candidate) candidate.focus({preventScroll:true});
+    lastCaseTrigger = null;
+  }
 
   function renderCaseOverlay(key){
     const p = projects[key];
@@ -3616,36 +3594,20 @@
     const darkCase = document.getElementById("darkCase");
     const fijiCase = document.getElementById("fijiCase");
     const shrimpCase = document.getElementById("shrimpCase");
-    const genericCaseHero = document.getElementById("genericCaseHero");
-    const caseArt = document.getElementById("caseArt");
-    const genericCaseColumns = document.getElementById("genericCaseColumns");
-    const genericPdfDemo = document.getElementById("genericPdfDemo");
 
     darkCase.classList.toggle("active", key === "dark");
     fijiCase.classList.toggle("active", key === "fiji");
     shrimpCase.classList.toggle("active", key === "shrimp");
 
-    if(["dark","fiji","shrimp"].includes(key)){
-      genericCaseHero.style.display = "none";
-      caseArt.style.display = "none";
-      genericCaseColumns.style.display = "none";
-      genericPdfDemo.style.display = "none";
-    } else {
-      genericCaseHero.style.display = "";
-      caseArt.style.display = "";
-      genericCaseColumns.style.display = "";
-      genericPdfDemo.style.display = "";
-      document.getElementById("caseTitle").textContent = p.title;
-      document.getElementById("caseText").textContent = p.text;
-      document.getElementById("caseFacts").innerHTML = p.facts;
-      document.getElementById("caseApproach").textContent = p.approach;
-      document.getElementById("caseArt").innerHTML = p.art;
-    }
+    overlay.setAttribute("aria-labelledby", key + "CaseTitle");
+    overlay.dataset.activeCase = key;
+    backgroundSections.forEach(section => { section.inert = true; });
 
     overlay.classList.add("opened");
     overlay.setAttribute("aria-hidden","false");
     overlay.scrollTop = 0;
     document.body.style.overflow = "hidden";
+    document.getElementById("closeOverlay").focus({preventScroll:true});
     return true;
   }
 
@@ -3675,9 +3637,12 @@
   }
 
   function closeOverlayVisual(){
+    const wasOpen = overlay.classList.contains("opened");
     overlay.classList.remove("opened");
     overlay.setAttribute("aria-hidden","true");
+    backgroundSections.forEach(section => { section.inert = false; });
     document.body.style.overflow = "";
+    if(wasOpen) restoreCaseFocus();
   }
 
   function returnToHome(options = {}){
@@ -3693,10 +3658,12 @@
     }
   }
 
-  document.querySelectorAll(".project").forEach(card=>{
-    card.addEventListener("click",()=>{
-      const key = card.dataset.project;
-      openCase(key, {historyMode:"push", origin:"home", source:"case_studies"});
+  document.querySelectorAll("a.project").forEach(card=>{
+    card.addEventListener("click", event=>{
+      if(event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      lastCaseTrigger = card;
+      openCase(card.dataset.project, {historyMode:"push", origin:"home", source:"case_studies"});
     });
   });
 
@@ -3711,8 +3678,10 @@
 
   document.getElementById("closeOverlay").addEventListener("click", closeOverlay);
 
-  document.querySelectorAll("[data-case-target]").forEach(button=>{
-    button.addEventListener("click",()=>{
+  document.querySelectorAll("a[data-case-target]").forEach(button=>{
+    button.addEventListener("click",event=>{
+      if(event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
       const target = button.dataset.caseTarget;
       const state = history.state || {};
       openCase(target, {
@@ -3757,7 +3726,7 @@
     if(forwardedRoute || window.location.search.includes("portfolioRoute=")){
       if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", "/es/");
     } else if(!history.state){
-      if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", cleanPortfolioPath(window.location.pathname));
+      if(location.protocol !== "file:") history.replaceState({portfolioView:"home", depth:0}, "", cleanPortfolioPath(window.location.pathname) + window.location.hash);
     }
     if(options.track !== false){
       trackPortfolioPage("/es/", "María Vera — Casos de estudio");
@@ -3826,12 +3795,48 @@
     if(window.location.hash === "#about-page") showAbout();
   }
 
-  document.addEventListener("keydown",e=>{ if(e.key==="Escape" && overlay.classList.contains("opened")) closeOverlay(); });
+  document.addEventListener("keydown",e=>{
+    if(!overlay.classList.contains("opened")) return;
+    if(e.key === "Escape"){
+      e.preventDefault();
+      closeOverlay();
+      return;
+    }
+    if(e.key !== "Tab") return;
+    const focusable = Array.from(overlay.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+      .filter(item => item.getClientRects().length > 0 && !item.closest('[aria-hidden="true"]'));
+    if(!focusable.length){
+      e.preventDefault(); overlay.focus({preventScroll:true}); return;
+    }
+    const first = focusable[0], last = focusable[focusable.length-1];
+    if(e.shiftKey && (document.activeElement === first || !overlay.contains(document.activeElement))){
+      e.preventDefault(); last.focus();
+    } else if(!e.shiftKey && (document.activeElement === last || !overlay.contains(document.activeElement))){
+      e.preventDefault(); first.focus();
+    }
+  });
 
   const io = new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add("visible"); });
   },{threshold:.12});
   document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+  // Slide announcements and controls for screen readers.
+  [
+    ["chickenCarousel",".vw-slide",".vw-dot","vwCurrent"],
+    ["shrimpCarousel",".vw2-slide",".vw2-dot","vw2Current"],
+    ["sealCarousel",".vw3-slide",".vw3-dot","vw3Current"],
+    ["coralCarousel",".vw4-slide",".vw4-dot","vw4Current"]
+  ].forEach(([id,slideSelector,dotSelector,counterId])=>{
+    const root = document.getElementById(id);
+    if(!root) return;
+    root.querySelectorAll(slideSelector).forEach((slide,i)=>slide.setAttribute("aria-hidden",i===0?"false":"true"));
+    root.querySelectorAll(dotSelector).forEach((dot,i)=>{
+      if(i===0) dot.setAttribute("aria-current","true"); else dot.removeAttribute("aria-current");
+    });
+    const counter = document.getElementById(counterId);
+    if(counter) counter.setAttribute("aria-live","polite");
+  });
 
   // Visual Work — manual carousel
   (function(){
@@ -3848,8 +3853,15 @@
 
     function goTo(newIndex){
       index = (newIndex + slides.length) % slides.length;
-      slides.forEach((slide, i)=>slide.classList.toggle("active", i === index));
-      dots.forEach((dot, i)=>dot.classList.toggle("active", i === index));
+      slides.forEach((slide, i)=>{
+        slide.classList.toggle("active", i === index);
+        slide.setAttribute("aria-hidden", i === index ? "false" : "true");
+      });
+      dots.forEach((dot, i)=>{
+        dot.classList.toggle("active", i === index);
+        if(i === index) dot.setAttribute("aria-current","true");
+        else dot.removeAttribute("aria-current");
+      });
       counter.textContent = index + 1;
     }
 
@@ -3893,8 +3905,15 @@
 
     function goTo(newIndex){
       index = (newIndex + slides.length) % slides.length;
-      slides.forEach((slide, i)=>slide.classList.toggle("active", i === index));
-      dots.forEach((dot, i)=>dot.classList.toggle("active", i === index));
+      slides.forEach((slide, i)=>{
+        slide.classList.toggle("active", i === index);
+        slide.setAttribute("aria-hidden", i === index ? "false" : "true");
+      });
+      dots.forEach((dot, i)=>{
+        dot.classList.toggle("active", i === index);
+        if(i === index) dot.setAttribute("aria-current","true");
+        else dot.removeAttribute("aria-current");
+      });
       counter.textContent = index + 1;
     }
 
@@ -3938,8 +3957,15 @@
 
     function goTo(newIndex){
       index = (newIndex + slides.length) % slides.length;
-      slides.forEach((slide, i)=>slide.classList.toggle("active", i === index));
-      dots.forEach((dot, i)=>dot.classList.toggle("active", i === index));
+      slides.forEach((slide, i)=>{
+        slide.classList.toggle("active", i === index);
+        slide.setAttribute("aria-hidden", i === index ? "false" : "true");
+      });
+      dots.forEach((dot, i)=>{
+        dot.classList.toggle("active", i === index);
+        if(i === index) dot.setAttribute("aria-current","true");
+        else dot.removeAttribute("aria-current");
+      });
       counter.textContent = index + 1;
     }
 
@@ -3984,8 +4010,15 @@
 
     function goTo(newIndex){
       index = (newIndex + slides.length) % slides.length;
-      slides.forEach((slide, i)=>slide.classList.toggle("active", i === index));
-      dots.forEach((dot, i)=>dot.classList.toggle("active", i === index));
+      slides.forEach((slide, i)=>{
+        slide.classList.toggle("active", i === index);
+        slide.setAttribute("aria-hidden", i === index ? "false" : "true");
+      });
+      dots.forEach((dot, i)=>{
+        dot.classList.toggle("active", i === index);
+        if(i === index) dot.setAttribute("aria-current","true");
+        else dot.removeAttribute("aria-current");
+      });
       counter.textContent = index + 1;
     }
 
