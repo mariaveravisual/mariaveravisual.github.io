@@ -2781,6 +2781,39 @@
   @media (max-width:700px){
     nav .language-switch{display:inline-flex !important;flex-direction:row !important;align-items:center !important;gap:7px !important;font-size:12px !important;letter-spacing:.09em !important;margin-top:4px !important;padding-top:8px !important;border-top:1px solid rgba(23,23,23,.12) !important;}
   }
+
+/* Professional context — separate from the personal About introduction. */
+.about-professional-focus{
+  display:grid;
+  grid-template-columns:minmax(170px, .31fr) minmax(0, 1fr);
+  column-gap:clamp(28px, 5vw, 84px);
+  padding-bottom:clamp(32px, 4vw, 54px);
+  margin-bottom:clamp(36px, 5vw, 64px);
+  border-bottom:1px solid var(--line);
+}
+.about-professional-focus h2{
+  margin:3px 0 0;
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.12em;
+  line-height:1.6;
+  text-transform:uppercase;
+}
+.about-professional-copy{max-width:900px}
+.about-professional-copy p{
+  margin:0 0 15px;
+  color:#454545;
+  font-size:clamp(16px,1.28vw,20px);
+  font-weight:400;
+  line-height:1.55;
+  letter-spacing:-.01em;
+}
+.about-professional-copy p:last-child{margin-bottom:0}
+@media (max-width:760px){
+  .about-professional-focus{grid-template-columns:1fr;row-gap:15px}
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -2798,10 +2831,13 @@
     "Editorial design",
     "Information design",
     "Data storytelling",
-    "Visual communication"
-  ]
+    "Visual communication",
+    "Science communication",
+    "Environmental storytelling"
+  ],
+  "description": "Senior visual designer focused on visual storytelling, research communication, editorial and information design, with interests in conservation, animal welfare and communities."
 }
-  </script>
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -3051,6 +3087,14 @@
 </div>
 </div>
 <section class="about-expertise">
+<div class="about-professional-focus" aria-label="Professional focus">
+<h2>Professional focus</h2>
+<div class="about-professional-copy">
+<p>As a senior visual designer, my work combines visual storytelling, research communication, editorial design and information design. I create visual narratives that make complex research, scientific findings and data clearer and more accessible.</p>
+<p>My visual approach is generally clean and minimalist, allowing the information and visuals that matter most to take centre stage.</p>
+<p>I’m particularly interested in long-term remote roles with nonprofits and research-led organisations working in biodiversity and conservation, animal welfare, environmental science, and projects involving local and Indigenous communities.</p>
+</div>
+</div>
 <div class="about-location">
 <svg aria-hidden="true" viewbox="0 0 24 24">
 <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>

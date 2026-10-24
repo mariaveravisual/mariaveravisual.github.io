@@ -2780,6 +2780,39 @@
   @media (max-width:700px){
     nav .language-switch{display:inline-flex !important;flex-direction:row !important;align-items:center !important;gap:7px !important;font-size:12px !important;letter-spacing:.09em !important;margin-top:4px !important;padding-top:8px !important;border-top:1px solid rgba(23,23,23,.12) !important;}
   }
+
+/* Professional context — separate from the personal About introduction. */
+.about-professional-focus{
+  display:grid;
+  grid-template-columns:minmax(170px, .31fr) minmax(0, 1fr);
+  column-gap:clamp(28px, 5vw, 84px);
+  padding-bottom:clamp(32px, 4vw, 54px);
+  margin-bottom:clamp(36px, 5vw, 64px);
+  border-bottom:1px solid var(--line);
+}
+.about-professional-focus h2{
+  margin:3px 0 0;
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.12em;
+  line-height:1.6;
+  text-transform:uppercase;
+}
+.about-professional-copy{max-width:900px}
+.about-professional-copy p{
+  margin:0 0 15px;
+  color:#454545;
+  font-size:clamp(16px,1.28vw,20px);
+  font-weight:400;
+  line-height:1.55;
+  letter-spacing:-.01em;
+}
+.about-professional-copy p:last-child{margin-bottom:0}
+@media (max-width:760px){
+  .about-professional-focus{grid-template-columns:1fr;row-gap:15px}
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -2797,10 +2830,13 @@
     "Diseño editorial",
     "Diseño de información",
     "Data storytelling",
-    "Comunicación visual"
-  ]
+    "Comunicación visual",
+    "Science communication",
+    "Environmental storytelling"
+  ],
+  "description": "Diseñadora visual sénior centrada en storytelling visual, comunicación de investigación y diseño editorial y de información, con interés en conservación, bienestar animal y comunidades."
 }
-  </script>
+</script>
 </head>
 <body>
 <div class="shell">
@@ -3033,6 +3069,14 @@
 </div>
 </div>
 <section class="about-expertise">
+<div class="about-professional-focus" aria-label="Enfoque profesional">
+<h2>Enfoque profesional</h2>
+<div class="about-professional-copy">
+<p>Como diseñadora visual sénior, combino storytelling visual, comunicación de investigación, diseño editorial y diseño de información. Creo narrativas visuales que hacen más claros y accesibles los estudios, los hallazgos científicos y los datos complejos.</p>
+<p>Mi enfoque visual suele ser limpio y minimalista, para dar protagonismo a la información y a los elementos visuales que realmente importan.</p>
+<p>Me interesan especialmente los puestos remotos a largo plazo en organizaciones sin ánimo de lucro y equipos de investigación que trabajen en biodiversidad y conservación, bienestar animal, ciencia ambiental y proyectos vinculados a comunidades locales y pueblos indígenas.</p>
+</div>
+</div>
 <div class="about-location">
 <svg aria-hidden="true" viewbox="0 0 24 24">
 <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
