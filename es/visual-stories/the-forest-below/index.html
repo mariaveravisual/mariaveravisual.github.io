@@ -3174,6 +3174,22 @@ document.addEventListener("click", function(event) {
 .author-signature-link:focus-visible{outline:2px solid currentColor;outline-offset:5px}
 @media(max-width:670px){.author-signature{grid-template-columns:1fr;gap:22px}.author-signature-copy{margin-bottom:20px}}
 </style>
+<style id="project-closing-refinement">
+/* Balanced spacing around report/download CTA */
+.fiji-report-link,.dark-report-link,.shrimp-report-link,.story-download{padding-bottom:30px}
+.story-download{margin-bottom:0}
+/* Compact editorial signature */
+.author-signature{grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr);gap:clamp(20px,4vw,70px);padding:26px 0 32px}
+.author-signature-label{font-size:10px;letter-spacing:.11em}
+.author-signature-name{font-size:clamp(22px,2vw,29px);margin-bottom:5px}
+.author-signature-role{font-size:12px;margin-bottom:12px}
+.author-signature-copy{font-size:clamp(13px,1.1vw,15px);line-height:1.5;margin-bottom:12px;max-width:530px}
+.author-signature-link{font-size:13px}
+.case-project-nav{margin-top:0;padding-top:30px}
+.case-project-nav + .continue-exploring{margin-top:52px}
+.author-signature + .case-project-nav{margin-top:0}
+@media(max-width:670px){.author-signature{grid-template-columns:1fr;gap:12px}}
+</style>
 </head>
 <body class="show-stories">
 <a class="skip-link" href="#top">Saltar al contenido</a>

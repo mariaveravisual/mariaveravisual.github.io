@@ -2889,6 +2889,22 @@ document.addEventListener("click", function(event) {
 .author-signature-link:focus-visible{outline:2px solid currentColor;outline-offset:5px}
 @media(max-width:670px){.author-signature{grid-template-columns:1fr;gap:22px}.author-signature-copy{margin-bottom:20px}}
 </style>
+<style id="project-closing-refinement">
+/* Balanced spacing around report/download CTA */
+.fiji-report-link,.dark-report-link,.shrimp-report-link,.story-download{padding-bottom:30px}
+.story-download{margin-bottom:0}
+/* Compact editorial signature */
+.author-signature{grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr);gap:clamp(20px,4vw,70px);padding:26px 0 32px}
+.author-signature-label{font-size:10px;letter-spacing:.11em}
+.author-signature-name{font-size:clamp(22px,2vw,29px);margin-bottom:5px}
+.author-signature-role{font-size:12px;margin-bottom:12px}
+.author-signature-copy{font-size:clamp(13px,1.1vw,15px);line-height:1.5;margin-bottom:12px;max-width:530px}
+.author-signature-link{font-size:13px}
+.case-project-nav{margin-top:0;padding-top:30px}
+.case-project-nav + .continue-exploring{margin-top:52px}
+.author-signature + .case-project-nav{margin-top:0}
+@media(max-width:670px){.author-signature{grid-template-columns:1fr;gap:12px}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#top">Skip to content</a>
@@ -3456,7 +3472,6 @@ document.addEventListener("click", function(event) {
 <button onclick="openPortfolioPdf('pdf/The_Dark_Fleet_Visual_Communication_Maria_Vera.pdf')" type="button">View full PDF →</button>
 </div>
 <aside class="author-signature" aria-label="Project authorship"><div class="author-signature-label">VISUAL DESIGN & RESEARCH COMMUNICATION</div><div><h2 class="author-signature-name">Maria Vera</h2><p class="author-signature-role">Senior Visual Designer & Visual Storyteller</p><p class="author-signature-copy">Editorial design and visual communication making research and complex ideas more accessible.</p><a class="author-signature-link" href="/about/">About the author →</a></div></aside>
-<section class="continue-exploring" aria-label="Continue exploring"><h2 class="continue-exploring-heading">CONTINUE EXPLORING</h2><div class="continue-exploring-grid"><a class="continue-exploring-card" href="/visual-stories/the-forest-below/"><img class="continue-exploring-image" src="/assets/the-forest-below-01.webp" alt="The Forest Below — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">VISUAL STORY · ECOLOGICAL STORYTELLING</span><span class="continue-exploring-title">The Forest Below</span><span class="continue-exploring-cta">Explore project →</span></a><a class="continue-exploring-card" href="/case-studies/fiji/"><img class="continue-exploring-image" src="/assets/image-001-88962888ea57.jpg" alt="Plastic Waste in Fiji — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASE STUDY · RESEARCH COMMUNICATION</span><span class="continue-exploring-title">Plastic Waste in Fiji</span><span class="continue-exploring-cta">Explore project →</span></a></div></section>
 <nav aria-label="Case study navigation" class="case-project-nav">
 <a class="case-project-link prev" data-case-target="fiji" href="/case-studies/fiji/">
 <small>Previous project</small>
@@ -3467,6 +3482,8 @@ document.addEventListener("click", function(event) {
 <strong><span>Hidden Suffering →</span></strong>
 </a>
 </nav>
+<section class="continue-exploring" aria-label="Continue exploring"><h2 class="continue-exploring-heading">CONTINUE EXPLORING</h2><div class="continue-exploring-grid"><a class="continue-exploring-card" href="/visual-stories/the-forest-below/"><img class="continue-exploring-image" src="/assets/the-forest-below-01.webp" alt="The Forest Below — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">VISUAL STORY · ECOLOGICAL STORYTELLING</span><span class="continue-exploring-title">The Forest Below</span><span class="continue-exploring-cta">Explore project →</span></a><a class="continue-exploring-card" href="/case-studies/fiji/"><img class="continue-exploring-image" src="/assets/image-001-88962888ea57.jpg" alt="Plastic Waste in Fiji — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASE STUDY · RESEARCH COMMUNICATION</span><span class="continue-exploring-title">Plastic Waste in Fiji</span><span class="continue-exploring-cta">Explore project →</span></a></div></section>
+
 </div>
 </div>
 

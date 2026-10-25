@@ -3207,6 +3207,22 @@ document.addEventListener("click", function(event) {
 .author-signature-link:focus-visible{outline:2px solid currentColor;outline-offset:5px}
 @media(max-width:670px){.author-signature{grid-template-columns:1fr;gap:22px}.author-signature-copy{margin-bottom:20px}}
 </style>
+<style id="project-closing-refinement">
+/* Balanced spacing around report/download CTA */
+.fiji-report-link,.dark-report-link,.shrimp-report-link,.story-download{padding-bottom:30px}
+.story-download{margin-bottom:0}
+/* Compact editorial signature */
+.author-signature{grid-template-columns:minmax(150px,.55fr) minmax(0,1.45fr);gap:clamp(20px,4vw,70px);padding:26px 0 32px}
+.author-signature-label{font-size:10px;letter-spacing:.11em}
+.author-signature-name{font-size:clamp(22px,2vw,29px);margin-bottom:5px}
+.author-signature-role{font-size:12px;margin-bottom:12px}
+.author-signature-copy{font-size:clamp(13px,1.1vw,15px);line-height:1.5;margin-bottom:12px;max-width:530px}
+.author-signature-link{font-size:13px}
+.case-project-nav{margin-top:0;padding-top:30px}
+.case-project-nav + .continue-exploring{margin-top:52px}
+.author-signature + .case-project-nav{margin-top:0}
+@media(max-width:670px){.author-signature{grid-template-columns:1fr;gap:12px}}
+</style>
 </head>
 <body class="show-stories">
 <a class="skip-link" href="#top">Saltar al contenido</a>
@@ -3607,7 +3623,6 @@ document.addEventListener("click", function(event) {
 <button onclick="openPortfolioPdf('pdf/Quantifying_Shrimp_Welfare_Threats_Visual_Summary_Maria_Vera.pdf')" type="button">Ver PDF completo →</button>
 </div>
 <aside class="author-signature" aria-label="Autoría del proyecto"><div class="author-signature-label">DISEÑO VISUAL Y COMUNICACIÓN DE INVESTIGACIÓN</div><div><h2 class="author-signature-name">María Vera</h2><p class="author-signature-role">Diseñadora visual sénior y visual storyteller</p><p class="author-signature-copy">Diseño editorial y comunicación visual para hacer más accesibles investigaciones e ideas complejas.</p><a class="author-signature-link" href="/es/about/">Sobre la autora →</a></div></aside>
-<section class="continue-exploring" aria-label="Seguir explorando"><h2 class="continue-exploring-heading">SEGUIR EXPLORANDO</h2><div class="continue-exploring-grid"><a class="continue-exploring-card" href="/es/visual-stories/the-forest-below/"><img class="continue-exploring-image" src="/assets/the-forest-below-01.webp" alt="The Forest Below — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">HISTORIA VISUAL · STORYTELLING ECOLÓGICO</span><span class="continue-exploring-title">The Forest Below</span><span class="continue-exploring-cta">Ver proyecto →</span></a><a class="continue-exploring-card" href="/es/case-studies/dark-vessels/"><img class="continue-exploring-image" src="/assets/image-002-5a8266fd9fa2.jpg" alt="Dark Vessels — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASO DE ESTUDIO · STORYTELLING DE DATOS</span><span class="continue-exploring-title">Dark Vessels</span><span class="continue-exploring-cta">Ver proyecto →</span></a></div></section>
 <nav aria-label="Navegación de casos de estudio" class="case-project-nav">
 <a class="case-project-link prev" data-case-target="dark" href="/es/case-studies/dark-vessels/">
 <small>Proyecto anterior</small>
@@ -3615,6 +3630,8 @@ document.addEventListener("click", function(event) {
 </a>
 <div aria-hidden="true" class="case-nav-spacer"></div>
 </nav>
+<section class="continue-exploring" aria-label="Seguir explorando"><h2 class="continue-exploring-heading">SEGUIR EXPLORANDO</h2><div class="continue-exploring-grid"><a class="continue-exploring-card" href="/es/visual-stories/the-forest-below/"><img class="continue-exploring-image" src="/assets/the-forest-below-01.webp" alt="The Forest Below — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">HISTORIA VISUAL · STORYTELLING ECOLÓGICO</span><span class="continue-exploring-title">The Forest Below</span><span class="continue-exploring-cta">Ver proyecto →</span></a><a class="continue-exploring-card" href="/es/case-studies/dark-vessels/"><img class="continue-exploring-image" src="/assets/image-002-5a8266fd9fa2.jpg" alt="Dark Vessels — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASO DE ESTUDIO · STORYTELLING DE DATOS</span><span class="continue-exploring-title">Dark Vessels</span><span class="continue-exploring-cta">Ver proyecto →</span></a></div></section>
+
 </div>
 <div class="fiji-case" id="fijiCase">
 <section class="fiji-case-intro">
