@@ -84,4 +84,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-work/" />
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://mariavera.design/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/" />
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mariavera.design/es/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/" />
+    <lastmod>2026-10-25</lastmod>
+  </url>
 </urlset>
