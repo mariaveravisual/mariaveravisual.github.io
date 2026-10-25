@@ -3184,7 +3184,20 @@ document.addEventListener("click", function(event) {
   event.stopImmediatePropagation();
 }, true);
 </script>
-</head>
+<style id="continue-exploring-style">
+.continue-exploring{margin:clamp(68px,8vw,116px) 0 clamp(28px,4vw,60px);padding-top:27px;border-top:1px solid rgba(23,23,23,.18)}
+.continue-exploring-heading{margin:0 0 clamp(26px,3.5vw,48px);font:600 12px/1.3 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.continue-exploring-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(22px,3.3vw,55px)}
+.continue-exploring-card{display:block;color:inherit;text-decoration:none;min-width:0}
+.continue-exploring-image{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#f1f1ee;transition:filter .2s ease}
+.continue-exploring-card:hover .continue-exploring-image{filter:brightness(.95)}
+.continue-exploring-meta{display:block;margin:18px 0 12px;font:500 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.08em;color:#77746f}
+.continue-exploring-title{display:block;margin:0 0 14px;font:400 clamp(23px,2.5vw,38px)/1.12 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.035em}
+.continue-exploring-cta{display:inline-block;border-bottom:1px solid currentColor;padding-bottom:3px;font:400 15px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif}
+.continue-exploring-card:focus-visible{outline:2px solid currentColor;outline-offset:7px}
+@media(max-width:670px){.continue-exploring-grid{grid-template-columns:1fr;gap:42px}.continue-exploring-image{aspect-ratio:16/9}}
+@media(prefers-reduced-motion:reduce){.continue-exploring-image{transition:none}}
+</style></head>
 <body class="show-stories">
 <a class="skip-link" href="#top">Saltar al contenido</a>
 <div class="shell">
@@ -3583,6 +3596,7 @@ document.addEventListener("click", function(event) {
 <strong>Ver el informe editorial completo</strong>
 <button onclick="openPortfolioPdf('pdf/Quantifying_Shrimp_Welfare_Threats_Visual_Summary_Maria_Vera.pdf')" type="button">Ver PDF completo →</button>
 </div>
+<section class="continue-exploring" aria-label="Seguir explorando"><h2 class="continue-exploring-heading">SEGUIR EXPLORANDO</h2><div class="continue-exploring-grid"><a class="continue-exploring-card" href="/es/visual-stories/the-forest-below/"><img class="continue-exploring-image" src="/assets/the-forest-below-01.webp" alt="The Forest Below — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">HISTORIA VISUAL · STORYTELLING ECOLÓGICO</span><span class="continue-exploring-title">The Forest Below</span><span class="continue-exploring-cta">Ver proyecto →</span></a><a class="continue-exploring-card" href="/es/case-studies/dark-vessels/"><img class="continue-exploring-image" src="/assets/image-002-5a8266fd9fa2.jpg" alt="Dark Vessels — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASO DE ESTUDIO · STORYTELLING DE DATOS</span><span class="continue-exploring-title">Dark Vessels</span><span class="continue-exploring-cta">Ver proyecto →</span></a></div></section>
 <nav aria-label="Navegación de casos de estudio" class="case-project-nav">
 <a class="case-project-link prev" data-case-target="dark" href="/es/case-studies/dark-vessels/">
 <small>Proyecto anterior</small>
