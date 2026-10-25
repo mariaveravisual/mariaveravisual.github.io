@@ -2798,7 +2798,7 @@
   }
 
 
- /* HISTORIAS VISUALES: editorial home, independent of Case Studies */
+ /* VISUAL STORIES: editorial home, independent of Case Studies */
  body.show-stories .cases-page{display:none}
  body.show-cases .stories-page{display:none}
  body.show-visual .stories-page,body.show-about .stories-page{display:none}
@@ -2873,10 +2873,10 @@
  }
 
 
-/* Shared hero typography: same sans-serif treatment as Visual Work and Historias visuales. */
+/* Shared hero typography: same sans-serif treatment as Visual Work and Visual Stories. */
 .cases-hero-title{margin:0;font-family:var(--sans);font-size:clamp(54px,8vw,126px);line-height:.92;font-weight:400;letter-spacing:-.055em;max-width:1100px}
 
-/* Historias visuales editorial sequence v2: no repeated visible page titles */
+/* Visual Stories editorial sequence v2: no repeated visible page titles */
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .story-chapters{gap:clamp(46px,6vw,92px)}
 .story-chapter{min-width:0}
@@ -2903,7 +2903,7 @@
 .story-reference-foot>span:last-child{font-size:17px;color:#242321}
 @media(max-width:750px){.story-reference-grid{grid-template-columns:1fr;row-gap:38px}.story-chapter-caption{gap:15px}.story-chapter-caption-num{min-width:50px}.story-chapter-caption-text{font-size:13px}}
 
-/* Historias visuales v3 — use the existing unified hero system */
+/* Visual Stories v3 — use the existing unified hero system */
 .stories-page .stories-hero{
   display:grid;
   grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);
@@ -3013,7 +3013,7 @@
 @media(prefers-reduced-motion:reduce){.story-image-zoom-hint{transition:none!important}}
 
 
-/* Editorial section rhythm — shared by Historias visuales, Case Studies and Visual Work.
+/* Editorial section rhythm — shared by Visual Stories, Case Studies and Visual Work.
    The section divider takes the place of the repeated Selected Work/Featured Story label rows. */
 .section-content-divider,
 .stories-section-divider{
@@ -3071,7 +3071,7 @@
 }
 
 
-/* Historias visuales feature follows the approved Case Studies two-column composition. */
+/* Visual Stories feature follows the approved Case Studies two-column composition. */
 .stories-page .story-feature{
   display:grid;
   grid-template-columns:minmax(0,.78fr) minmax(0,1.48fr);
@@ -3148,16 +3148,16 @@
 <header>
 <a class="brand" href="#top">María Vera</a>
 <nav>
-<a data-nav="stories" href="/es/">Historias visuales</a>
+<a data-nav="stories" href="/es/">Visual Stories</a>
 <a data-nav="work" href="/es/case-studies/">Casos de estudio</a>
 <a data-nav="visual" href="#visual-work">Trabajo visual</a>
-<a data-nav="about" href="#about-page">About</a>
+<a data-nav="about" href="/es/about/">About</a>
 <a aria-label="View English version" class="language-switch" href="/" id="languageSwitch"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-width="1.4"></circle><path d="M3.5 12h17M12 3c2.3 2.4 3.5 5.4 3.5 9S14.3 18.6 12 21M12 3c-2.3 2.4-3.5 5.4-3.5 9S9.7 18.6 12 21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path></svg><span>EN</span></a></nav>
 </header>
 <main id="top">
-<section class="stories-page" id="visual-stories" aria-label="Historias visuales">
+<section class="stories-page" id="visual-stories" aria-label="Visual Stories">
   <div class="stories-hero">
-    <div><div class="kicker">HISTORIAS VISUALES</div><h1>La historia detrás de la historia.</h1></div>
+    <div><div class="kicker">VISUAL STORIES</div><h1>La historia detrás de la historia.</h1></div>
     <div class="stories-hero-side"><p>Historias visuales inspiradas en la investigación científica, la naturaleza, las culturas y las conexiones entre las personas y el mundo que nos rodea.</p><a class="scroll-link" href="#stories-selected">HISTORIA DESTACADA <span>↓</span></a></div>
   </div>
   <div class="stories-section-divider" aria-hidden="true"></div>
@@ -3165,7 +3165,7 @@
     <div class="story-feature-image"><img src="../assets/the-forest-below-01.webp" width="2400" height="1697" decoding="async" alt="The Forest Below — editorial cover showing a Pisonia tree and its roots beneath the soil"/></div>
     <div class="story-feature-meta"><div><div class="stories-overline">HISTORIA VISUAL CIENTÍFICA INDEPENDIENTE · 2026</div><h2>The Forest Below</h2><p class="story-feature-subtitle">¿Qué necesita un bosque para recuperarse?</p><p class="story-feature-description">En el atolón de Palmyra, la recuperación del bosque autóctono podría depender de relaciones ocultas entre hongos, aves marinas, cangrejos terrestres y el océano.</p></div><span class="story-feature-link">Explorar la historia <b aria-hidden="true">→</b></span></div>
   </a>
-  <section class="stories-editorial-outro" aria-labelledby="stories-about-title"><h2 class="stories-overline" id="stories-about-title">SOBRE HISTORIAS VISUALES</h2><p>Proyectos independientes de storytelling visual que acercan la investigación científica a través del diseño editorial, la ilustración y una comunicación visual clara. Esta serie en desarrollo explora la biodiversidad, la conservación, el bienestar animal y las relaciones entre los ecosistemas y las comunidades locales e indígenas.</p></section>
+  <section class="stories-editorial-outro" aria-labelledby="stories-about-title"><h2 class="stories-overline" id="stories-about-title">SOBRE VISUAL STORIES</h2><p>Proyectos independientes de storytelling visual que acercan la investigación científica a través del diseño editorial, la ilustración y una comunicación visual clara. Esta serie en desarrollo explora la biodiversidad, la conservación, el bienestar animal y las relaciones entre los ecosistemas y las comunidades locales e indígenas.</p></section>
   
  </section>
 <div class="cases-page">
@@ -3361,96 +3361,7 @@
 </div>
 </section>
 </section>
-<section aria-hidden="true" class="about-page" id="about-page">
-<div class="about-squarespace">
-<div class="about-text-column">
-<h2 class="seo-demoted-title">Más allá del rol</h2>
-<div class="about-body">
-<p>Hola, soy María, diseñadora visual con más de una década de experiencia en diseño editorial, digital, branding y e-commerce.</p>
-<p>Estoy abierta a un puesto remoto a largo plazo desde el que pueda ayudar a mejorar la vida de otros y la vida misma. Busco un lugar en el que poner el corazón y cuyos valores estén alineados con los míos: la integridad, la verdad y el amor.</p>
-<p>Estoy profundamente interesada en el storytelling visual y en la comunicación de investigación, transformando información compleja en narrativas visuales claras y atractivas. Me interesa crear piezas visuales que, tal vez, muevan a otros a tomar decisiones que favorezcan un bien mayor.</p>
-<p>Llevo mucho tiempo trabajando en remoto, a menudo viviendo y viajando por distintos países del mundo. Me encanta la fotografía y mirar el mundo a través de mi cámara.</p>
-<p>Si crees que mi experiencia y mi perfil podrían contribuir al propósito de vuestro trabajo, estaré encantada de saber de vosotros.</p>
-<p>¡Espero que tengas un gran día!</p>
-<p>María</p>
-<div class="about-links">
-<a href="mailto:mariavera.visual@gmail.com">mariavera.visual@gmail.com</a>
-<a aria-label="Perfil de LinkedIn" href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-</div>
-</div>
-</div>
-<div class="about-image-column">
-<img alt="Mangrove lagoon illustration" decoding="async" height="1200" src="../assets/image-029-b59c5434e8f8.jpg" width="634"/>
-</div>
-</div>
-<section class="about-expertise">
-<div class="about-professional-focus" aria-label="Enfoque profesional">
-<h2>Enfoque profesional</h2>
-<div class="about-professional-copy">
-<p>Como diseñadora visual sénior, combino storytelling visual, comunicación de investigación, diseño editorial y diseño de información. Creo narrativas visuales que hacen más claros y accesibles los estudios, los hallazgos científicos y los datos complejos.</p>
-<p>Mi enfoque visual suele ser limpio y minimalista, para dar protagonismo a la información y a los elementos visuales que realmente importan.</p>
-<p>Me interesan especialmente los puestos remotos a largo plazo en organizaciones sin ánimo de lucro y equipos de investigación que trabajen en biodiversidad y conservación, bienestar animal, ciencia ambiental y proyectos vinculados a comunidades locales y pueblos indígenas.</p>
-</div>
-</div>
-<div class="about-location">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
-<circle cx="12" cy="10" fill="none" r="2.2" stroke="currentColor" stroke-width="1.6"></circle>
-</svg>
-<span>España · Remoto / Internacional</span>
-</div>
-<div class="about-expertise-grid">
-<div class="expertise-column expertise-skills">
-<h2>Habilidades</h2>
-<ul>
-<li>Dirección creativa y desarrollo de conceptos</li>
-<li>Storytelling visual</li>
-<li>Diseño editorial y data storytelling</li>
-<li>Marca e identidad visual</li>
-<li>Sistemas visuales y guías de estilo</li>
-<li>Flujos de trabajo creativos potenciados con IA</li>
-<li>Fotografía</li>
-</ul>
-</div>
-<div class="expertise-column">
-<h2>Software</h2>
-<ul>
-<li>Adobe Photoshop</li>
-<li>Adobe Illustrator</li>
-<li>Adobe Lightroom</li>
-</ul>
-</div>
-<div class="expertise-column">
-<h2>Herramientas de IA</h2>
-<ul>
-<li>ChatGPT</li>
-<li>Gemini</li>
-<li>DALL·E</li>
-<li>OpenArt</li>
-<li>Adobe Firefly</li>
-<li>Claude</li>
-</ul>
-</div>
-<div class="expertise-column">
-<h2>Personalidad</h2>
-<ul>
-<li>Empática</li>
-<li>Independiente</li>
-<li>Cercana y curiosa</li>
-<li>Adaptable y flexible</li>
-<li>Colaborativa</li>
-</ul>
-</div>
-<div class="expertise-column">
-<h2>Idiomas</h2>
-<ul>
-<li>Español — Nativo</li>
-<li>Inglés — Competencia profesional</li>
-</ul>
-</div>
-</div>
-</section>
-</section>
+<section aria-hidden="true" class="about-page" id="about-page"></section>
 </div>
 <footer class="site-footer">
 <div class="site-footer-inner">
@@ -3743,7 +3654,7 @@
 <p>Los <i>Pisonia grandis</i>, el hongo <i>Tomentella</i>, las aves marinas, las mantas raya y los cangrejos de Palmyra Atoll viven en simbiosis, formando parte de un mismo ecosistema, como un ser único e indivisible.</p>
 <p>Nosotros, como humanos, también formamos parte de él, inseparables. Perturbar la armonía de este sistema solo nos aleja de lo que realmente somos, creando caos y sufrimiento.</p>
 <p>Entender este sistema es entender la vida y las conexiones naturales que, muchas veces, nos empeñamos en cortar.</p>
-<p>Doy gracias a los miles de personas que trabajan por y para devolver el caos al orden natural, a aquellas que protegen la vida, la verdad y la belleza de este mundo.</p></div></section>
+<p>Doy gracias a los miles de personas que trabajan por y para devolver el caos al orden natural, esas que protegen la vida, la belleza y la verdad del mundo.</p></div></section>
   <div class="story-intro-copy"><div class="stories-overline">LA HISTORIA · 12 LÁMINAS VISUALES</div><h3>Donde la ciencia se convierte en historia</h3><p>Desde la recuperación de los bosques de <i>Pisonia grandis</i> hasta la influencia de los hongos <i>Tomentella</i>, las aves marinas, los cangrejos terrestres y las mantarrayas, esta narrativa ilustrada reúne investigaciones publicadas sobre el atolón de Palmyra. Cada página sigue una relación distinta del ecosistema, desde el suelo del bosque hasta los arrecifes cercanos.</p></div>
   <div class="story-chapters">
 <section class="story-chapter" aria-labelledby="forest-illustration-heading-01">
@@ -4081,8 +3992,8 @@
     e.preventDefault();
     showStories();
     if(location.protocol !== "file:") history.pushState({portfolioView:"stories",depth:0}, "", "/es/");
-    updateDocumentTitle("María Vera — Historias visuales | Senior Visual Designer");
-    trackPortfolioPage("/es/", "María Vera — Historias visuales");
+    updateDocumentTitle("María Vera — Visual Stories | Senior Visual Designer");
+    trackPortfolioPage("/es/", "María Vera — Visual Stories");
     trackPortfolioEvent("section_view", {section:"visual_stories"});
   });
   workNav.addEventListener("click", e=>{
@@ -4103,7 +4014,7 @@
     trackPortfolioEvent("section_view", {section:"visual_work"});
   });
   // "Selected work" inside Visual Work must scroll within that view,
-  // without triggering route changes back to the Historias visuales homepage.
+  // without triggering route changes back to the Visual Stories homepage.
   document.querySelector(".visual-scroll-link")?.addEventListener("click", e=>{
     if(e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
@@ -4113,18 +4024,13 @@
       block: "start"
     });
   });
-  aboutNav.addEventListener("click", e=>{
-    e.preventDefault();
-    showAbout();
-    trackPortfolioPage("/es/about", "María Vera — About");
-    trackPortfolioEvent("section_view", {section:"about"});
-  });
+  // About now navigates to its own indexable URL.
   document.querySelector(".brand").addEventListener("click", e=>{
     e.preventDefault();
     showStories();
     if(location.protocol !== "file:") history.pushState({portfolioView:"stories",depth:0}, "", "/es/");
-    updateDocumentTitle("María Vera — Historias visuales | Senior Visual Designer");
-    trackPortfolioPage("/es/", "María Vera — Historias visuales");
+    updateDocumentTitle("María Vera — Visual Stories | Senior Visual Designer");
+    trackPortfolioPage("/es/", "María Vera — Visual Stories");
   });
 
   const caseRoutes = {
@@ -4258,7 +4164,7 @@
     if(options.historyMode === "replace" && location.protocol !== "file:"){
       history.replaceState({portfolioView:"home",depth:0}, "", key === "forest" ? "/es/" : "/es/case-studies/");
     }
-    if(options.track) trackPortfolioPage(key === "forest" ? "/es/" : "/es/case-studies/", "María Vera — " + (key === "forest" ? "Historias visuales" : "Case Studies"));
+    if(options.track) trackPortfolioPage(key === "forest" ? "/es/" : "/es/case-studies/", "María Vera — " + (key === "forest" ? "Visual Stories" : "Case Studies"));
   }
 
   document.querySelectorAll("a.project").forEach(card=>{
@@ -4331,7 +4237,7 @@
     else showStories();
     if(location.protocol !== "file:" && !history.state)
       history.replaceState({portfolioView:"home",depth:0}, "", cleanPortfolioPath(window.location.pathname)+window.location.hash);
-    if(options.track !== false) trackPortfolioPage(path,"María Vera — " + (document.body.classList.contains("show-cases") ? "Case Studies" : "Historias visuales"));
+    if(options.track !== false) trackPortfolioPage(path,"María Vera — " + (document.body.classList.contains("show-cases") ? "Case Studies" : "Visual Stories"));
   }
 
   window.addEventListener("popstate",()=>applyLocationRoute({track:true}));
@@ -4412,7 +4318,7 @@
   document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 
 
-  // Enlarged view of Historias visuales illustrations. Normal href remains as a fallback.
+  // Enlarged view of Visual Stories illustrations. Normal href remains as a fallback.
   (function(){
     const zoomDialog = document.getElementById('storyLightbox');
     if(!zoomDialog) return;
