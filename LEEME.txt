@@ -1,0 +1,25 @@
+PAQUETE DE NAVEGACIÓN — MARIAVERA.DESIGN
+
+Incluye únicamente archivos HTML de las secciones principales y sitemap.xml.
+NO ES UNA COPIA COMPLETA DEL REPOSITORIO: NO borres assets/, pdf/, visual-stories/, las carpetas individuales de case-studies ni 404.html.
+
+Sube las carpetas/archivos de este ZIP a la RAÍZ del repositorio, conservando la estructura. Sobrescribe solo los archivos con la misma ruta.
+
+Páginas incluidas:
+/index.html
+/about/index.html
+/case-studies/index.html
+/visual-work/index.html
+/es/index.html
+/es/about/index.html
+/es/case-studies/index.html
+/es/visual-work/index.html
+/sitemap.xml
+
+Navegación normalizada: Visual Stories /, Case Studies /case-studies/, Visual Work /visual-work/, About /about/ (y equivalentes /es/).
+
+Nota: los recursos se sirven de la carpeta /assets/ que ya existe en GitHub. Previsualiza en el dominio tras subir: abrir desde Desktop puede dejar imágenes sin mostrar.
+
+Comprobar: cada ruta directamente, recarga F5, menú desde cada sección, selector ES/EN, tres enlaces de proyectos, y carruseles de Visual Work.
+
+Este paquete se basa en los últimos HTML disponibles en esta conversación; si has hecho ediciones posteriores directamente en GitHub, compara antes de sobrescribir.

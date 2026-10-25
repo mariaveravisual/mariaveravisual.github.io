@@ -1,75 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mariavera.design/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/" />
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/case-studies/fiji/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/fiji/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/fiji/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/fiji/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/fiji/" />
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/case-studies/dark-vessels/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/dark-vessels/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/dark-vessels/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/dark-vessels/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/dark-vessels/" />
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/case-studies/shrimp-welfare/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/shrimp-welfare/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/shrimp-welfare/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/shrimp-welfare/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/shrimp-welfare/" />
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/visual-stories/the-forest-below/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/visual-stories/the-forest-below/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-stories/the-forest-below/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/visual-stories/the-forest-below/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-stories/the-forest-below/" />
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/about/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/about/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/about/" />
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/es/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/" />
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/es/case-studies/fiji/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/fiji/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/fiji/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/fiji/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/fiji/" />
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/es/case-studies/dark-vessels/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/dark-vessels/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/dark-vessels/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/dark-vessels/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/dark-vessels/" />
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/es/case-studies/shrimp-welfare/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/shrimp-welfare/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/shrimp-welfare/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/case-studies/shrimp-welfare/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/shrimp-welfare/" />
     <lastmod>2026-10-24</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/es/visual-stories/the-forest-below/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/visual-stories/the-forest-below/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-stories/the-forest-below/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/visual-stories/the-forest-below/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-stories/the-forest-below/" />
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://mariavera.design/es/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/about/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/about/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/about/" />
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mariavera.design/visual-work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/visual-work/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-work/" />
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://mariavera.design/es/visual-work/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/visual-work/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-work/" />
     <lastmod>2026-10-25</lastmod>
   </url>
 </urlset>

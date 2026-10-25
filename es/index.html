@@ -11,7 +11,7 @@
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <meta content="#ffffff" name="theme-color"/>
 <link href="https://mariavera.design/es/" rel="canonical"/><link href="https://mariavera.design/" hreflang="en" rel="alternate"/><link href="https://mariavera.design/es/" hreflang="es" rel="alternate"/><link href="https://mariavera.design/" hreflang="x-default" rel="alternate"/>
-<link rel="icon" type="image/png" href="/favicon.png"/>
+<link href="/favicon.png" rel="icon" type="image/png"/>
 <meta content="es_ES" property="og:locale"/><meta content="en_US" property="og:locale:alternate"/>
 <meta content="website" property="og:type"/>
 <meta content="https://mariavera.design/es/" property="og:url"/>
@@ -3141,33 +3141,32 @@
 }
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://mariavera.design/es/#visual-stories","url":"https://mariavera.design/es/","name":"María Vera — Historias visuales | Diseñadora visual sénior","description":"Historias visuales inspiradas en la investigación científica, la naturaleza, las culturas y las conexiones entre las personas y el mundo que nos rodea. Storytelling visual, diseño editorial y comunicación de investigación.","inLanguage":"es","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"The Forest Below","url":"https://mariavera.design/es/visual-stories/the-forest-below/"}]}}</script>
-</head>
-<body class="show-stories">
+<style>header nav a[data-nav]::after{width:0!important}header nav a[data-nav="stories"]::after{width:100%!important}</style></head>
+<body class="show-stories"><script>document.addEventListener('click', function(e){const a=e.target.closest('header nav a[data-nav]');if(!a || e.button!==0 || e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return; const url=a.getAttribute('href'); if(!url||!url.startsWith('/'))return;e.preventDefault();e.stopImmediatePropagation();window.location.assign(url);},true);</script>
 <a class="skip-link" href="#top">Saltar al contenido</a>
 <div class="shell">
 <header>
-<a class="brand" href="#top">María Vera</a>
+<a class="brand" href="/es/">María Vera</a>
 <nav>
 <a data-nav="stories" href="/es/">Visual Stories</a>
 <a data-nav="work" href="/es/case-studies/">Casos de estudio</a>
-<a data-nav="visual" href="#visual-work">Trabajo visual</a>
+<a data-nav="visual" href="/es/visual-work/">Trabajo visual</a>
 <a data-nav="about" href="/es/about/">About</a>
 <a aria-label="View English version" class="language-switch" href="/" id="languageSwitch"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-width="1.4"></circle><path d="M3.5 12h17M12 3c2.3 2.4 3.5 5.4 3.5 9S14.3 18.6 12 21M12 3c-2.3 2.4-3.5 5.4-3.5 9S9.7 18.6 12 21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path></svg><span>EN</span></a></nav>
 </header>
 <main id="top">
-<section class="stories-page" id="visual-stories" aria-label="Visual Stories">
-  <div class="stories-hero">
-    <div><div class="kicker">VISUAL STORIES</div><h1>La historia detrás de la historia.</h1></div>
-    <div class="stories-hero-side"><p>Historias visuales inspiradas en la investigación científica, la naturaleza, las culturas y las conexiones entre las personas y el mundo que nos rodea.</p><a class="scroll-link" href="#stories-selected">HISTORIA DESTACADA <span>↓</span></a></div>
-  </div>
-  <div class="stories-section-divider" aria-hidden="true"></div>
-  <a id="stories-selected" class="project story-feature reveal" data-project="forest" href="/es/visual-stories/the-forest-below/" aria-label="Explorar la historia: The Forest Below">
-    <div class="story-feature-image"><img src="../assets/the-forest-below-01.webp" width="2400" height="1697" decoding="async" alt="The Forest Below — editorial cover showing a Pisonia tree and its roots beneath the soil"/></div>
-    <div class="story-feature-meta"><div><div class="stories-overline">HISTORIA VISUAL CIENTÍFICA INDEPENDIENTE · 2026</div><h2>The Forest Below</h2><p class="story-feature-subtitle">¿Qué necesita un bosque para recuperarse?</p><p class="story-feature-description">En el atolón de Palmyra, la recuperación del bosque autóctono podría depender de relaciones ocultas entre hongos, aves marinas, cangrejos terrestres y el océano.</p></div><span class="story-feature-link">Explorar la historia <b aria-hidden="true">→</b></span></div>
-  </a>
-  <section class="stories-editorial-outro" aria-labelledby="stories-about-title"><h2 class="stories-overline" id="stories-about-title">SOBRE VISUAL STORIES</h2><p>Proyectos independientes de storytelling visual que acercan la investigación científica a través del diseño editorial, la ilustración y una comunicación visual clara. Esta serie en desarrollo explora la biodiversidad, la conservación, el bienestar animal y las relaciones entre los ecosistemas y las comunidades locales e indígenas.</p></section>
-  
- </section>
+<section aria-label="Visual Stories" class="stories-page" id="visual-stories">
+<div class="stories-hero">
+<div><div class="kicker">VISUAL STORIES</div><h1>La historia detrás de la historia.</h1></div>
+<div class="stories-hero-side"><p>Historias visuales inspiradas en la investigación científica, la naturaleza, las culturas y las conexiones entre las personas y el mundo que nos rodea.</p><a class="scroll-link" href="#stories-selected">HISTORIA DESTACADA <span>↓</span></a></div>
+</div>
+<div aria-hidden="true" class="stories-section-divider"></div>
+<a aria-label="Explorar la historia: The Forest Below" class="project story-feature reveal" data-project="forest" href="/es/visual-stories/the-forest-below/" id="stories-selected">
+<div class="story-feature-image"><img alt="The Forest Below — editorial cover showing a Pisonia tree and its roots beneath the soil" decoding="async" height="1697" src="../assets/the-forest-below-01.webp" width="2400"/></div>
+<div class="story-feature-meta"><div><div class="stories-overline">HISTORIA VISUAL CIENTÍFICA INDEPENDIENTE · 2026</div><h2>The Forest Below</h2><p class="story-feature-subtitle">¿Qué necesita un bosque para recuperarse?</p><p class="story-feature-description">En el atolón de Palmyra, la recuperación del bosque autóctono podría depender de relaciones ocultas entre hongos, aves marinas, cangrejos terrestres y el océano.</p></div><span class="story-feature-link">Explorar la historia <b aria-hidden="true">→</b></span></div>
+</a>
+<section aria-labelledby="stories-about-title" class="stories-editorial-outro"><h2 class="stories-overline" id="stories-about-title">SOBRE VISUAL STORIES</h2><p>Proyectos independientes de storytelling visual que acercan la investigación científica a través del diseño editorial, la ilustración y una comunicación visual clara. Esta serie en desarrollo explora la biodiversidad, la conservación, el bienestar animal y las relaciones entre los ecosistemas y las comunidades locales e indígenas.</p></section>
+</section>
 <div class="cases-page">
 <section class="hero">
 <div>
@@ -3180,7 +3179,7 @@
 </div>
 </section>
 <section class="section" id="work">
-<div class="section-content-divider" aria-hidden="true"></div>
+<div aria-hidden="true" class="section-content-divider"></div>
 <a class="project reveal" data-project="fiji" href="/es/case-studies/fiji/">
 <div class="project-visual">
 <img alt="Plastic Waste in Fiji composición editorial" class="art" decoding="async" fetchpriority="high" height="1280" src="../assets/image-001-88962888ea57.jpg" width="2048"/>
@@ -3231,7 +3230,7 @@
 <a class="scroll-link visual-scroll-link" href="#visual-projects">Trabajo seleccionado <span>↓</span></a>
 </div>
 </div>
-<div class="section-content-divider visual-content-divider" id="visual-projects" aria-hidden="true"></div>
+<div aria-hidden="true" class="section-content-divider visual-content-divider" id="visual-projects"></div>
 <section class="visual-project">
 <div class="visual-project-copy">
 <div class="visual-project-number">01 / Campaña de bienestar animal</div>
@@ -3240,7 +3239,7 @@
 <div class="visual-project-note">Proyecto conceptual independiente. No encargado por Animal Welfare Fund.</div>
 <div class="visual-project-meta">Campaña social · Concepto visual · Storytelling visual</div>
 </div>
-<div aria-label="Carrusel de imágenes de Breaking the Cycle" class="vw-carousel" id="chickenCarousel" role="region" aria-roledescription="carousel" aria-label="Breaking the Cycle" tabindex="0">
+<div aria-label="Breaking the Cycle" aria-roledescription="carousel" class="vw-carousel" id="chickenCarousel" role="region" tabindex="0">
 <div class="vw-stage">
 <div class="vw-slide active"><img alt="Animal Welfare Fund diapositiva de campaña 1" decoding="async" height="2000" src="../assets/image-004-cb1791dc4f29.jpg" width="2000"/></div>
 <div class="vw-slide"><img alt="Animal Welfare Fund diapositiva de campaña 2" decoding="async" height="2000" src="../assets/image-005-ebf26797545e.jpg" width="2000"/></div>
@@ -3274,7 +3273,7 @@
 <div class="visual-project-note">Proyecto conceptual independiente, basado en investigación de Rethink Priorities. No encargado por Rethink Priorities.</div>
 <div class="visual-project-meta">Campaña social · Concepto visual · Storytelling visual</div>
 </div>
-<div aria-label="Carrusel de imágenes de Eyestalk Ablation" class="vw-carousel" id="shrimpCarousel" role="region" aria-roledescription="carousel" aria-label="Eyestalk Ablation" tabindex="0">
+<div aria-label="Eyestalk Ablation" aria-roledescription="carousel" class="vw-carousel" id="shrimpCarousel" role="region" tabindex="0">
 <div class="vw-stage">
 <div class="vw2-slide active"><img alt="Eyestalk Ablation diapositiva de campaña 1" decoding="async" height="1350" src="../assets/image-011-28350a416012.jpg" width="1080"/></div>
 <div class="vw2-slide"><img alt="Eyestalk Ablation diapositiva de campaña 2" decoding="async" height="1350" src="../assets/image-012-f30499727d48.jpg" width="1080"/></div>
@@ -3305,7 +3304,7 @@
 <p>Campaña de sensibilización de seis piezas que explica por qué acercarse a una cría de foca puede hacer que su madre se mantenga alejada, convirtiendo un sencillo cambio de comportamiento en una breve historia visual con una llamada a la acción clara.</p>
 <div class="visual-project-meta">Campaña social · Concepto visual · Storytelling visual</div>
 </div>
-<div aria-label="Carrusel de imágenes de Give Them Space" class="vw-carousel" id="sealCarousel" role="region" aria-roledescription="carousel" aria-label="Give Them Space" tabindex="0">
+<div aria-label="Give Them Space" aria-roledescription="carousel" class="vw-carousel" id="sealCarousel" role="region" tabindex="0">
 <div class="vw-stage">
 <div class="vw3-slide active"><img alt="Baby seal diapositiva de campaña 1" decoding="async" height="1350" src="../assets/image-017-87c8a91b1fcc.jpg" width="1080"/></div>
 <div class="vw3-slide"><img alt="Baby seal diapositiva de campaña 2" decoding="async" height="1350" src="../assets/image-018-11f87f17997e.jpg" width="1080"/></div>
@@ -3336,7 +3335,7 @@
 <p>Campaña visual de seis piezas sobre el blanqueamiento y la restauración de corales, utilizando una narrativa sencilla para explicar qué son los corales, por qué el calentamiento de los océanos los amenaza y por qué los esfuerzos de restauración quizá solo puedan ganar algo de tiempo.</p>
 <div class="visual-project-meta">Campaña social · Concepto visual · Storytelling visual</div>
 </div>
-<div aria-label="Carrusel de imágenes de More Time for Corals" class="vw-carousel" id="coralCarousel" role="region" aria-roledescription="carousel" aria-label="More Time for Corals" tabindex="0">
+<div aria-label="More Time for Corals" aria-roledescription="carousel" class="vw-carousel" id="coralCarousel" role="region" tabindex="0">
 <div class="vw-stage">
 <div class="vw4-slide active"><img alt="Coral diapositiva de campaña 1" decoding="async" height="1350" src="../assets/image-023-ee721cac482e.jpg" width="1080"/></div>
 <div class="vw4-slide"><img alt="Coral diapositiva de campaña 2" decoding="async" height="1350" src="../assets/image-024-1f67cd525ec1.jpg" width="1080"/></div>
@@ -3639,276 +3638,262 @@
 </nav>
 </div>
 <div class="story-case" id="forestCase">
-  <section class="story-case-intro">
-    <div class="stories-overline">PALMYRA ATOLL · PACIFIC OCEAN</div>
-    <h2 id="forestCaseTitle">The Forest Below</h2>
-    <p class="story-case-deck">Una historia visual independiente que explora qué necesitan los bosques autóctonos del atolón de Palmyra para recuperarse y qué relaciones ecológicas ocultas podrían sostenerlos.</p>
-    <div class="case-meta-strip" aria-label="Project information">
-      <div class="case-meta-item"><span class="case-meta-label">Tipo</span><span class="case-meta-value">Historia visual independiente</span></div>
-      <div class="case-meta-item"><span class="case-meta-label">Rol</span><span class="case-meta-value">Storytelling visual · Diseño editorial · Comunicación de investigación</span></div>
-      <div class="case-meta-item"><span class="case-meta-label">Enfoque</span><span class="case-meta-value">Restauración forestal · Hongos micorrícicos · Biodiversidad</span></div>
-      <div class="case-meta-item"><span class="case-meta-label">Año</span><span class="case-meta-value">2026</span></div>
-    </div>
-  </section>
-  <section class="story-author-note" aria-label="Una reflexión personal"><div class="story-author-label"><div class="stories-overline">REFLEXIÓN PERSONAL</div><h3>Una reflexión personal</h3></div><div class="story-author-text"><p>Este storytelling ha sido inspirado en la belleza del estudio al que hace referencia.</p>
+<section class="story-case-intro">
+<div class="stories-overline">PALMYRA ATOLL · PACIFIC OCEAN</div>
+<h2 id="forestCaseTitle">The Forest Below</h2>
+<p class="story-case-deck">Una historia visual independiente que explora qué necesitan los bosques autóctonos del atolón de Palmyra para recuperarse y qué relaciones ecológicas ocultas podrían sostenerlos.</p>
+<div aria-label="Project information" class="case-meta-strip">
+<div class="case-meta-item"><span class="case-meta-label">Tipo</span><span class="case-meta-value">Historia visual independiente</span></div>
+<div class="case-meta-item"><span class="case-meta-label">Rol</span><span class="case-meta-value">Storytelling visual · Diseño editorial · Comunicación de investigación</span></div>
+<div class="case-meta-item"><span class="case-meta-label">Enfoque</span><span class="case-meta-value">Restauración forestal · Hongos micorrícicos · Biodiversidad</span></div>
+<div class="case-meta-item"><span class="case-meta-label">Año</span><span class="case-meta-value">2026</span></div>
+</div>
+</section>
+<section aria-label="Una reflexión personal" class="story-author-note"><div class="story-author-label"><div class="stories-overline">REFLEXIÓN PERSONAL</div><h3>Una reflexión personal</h3></div><div class="story-author-text"><p>Este storytelling ha sido inspirado en la belleza del estudio al que hace referencia.</p>
 <p>Los <i>Pisonia grandis</i>, el hongo <i>Tomentella</i>, las aves marinas, las mantas raya y los cangrejos de Palmyra Atoll viven en simbiosis, formando parte de un mismo ecosistema, como un ser único e indivisible.</p>
 <p>Nosotros, como humanos, también formamos parte de él, inseparables. Perturbar la armonía de este sistema solo nos aleja de lo que realmente somos, creando caos y sufrimiento.</p>
 <p>Entender este sistema es entender la vida y las conexiones naturales que, muchas veces, nos empeñamos en cortar.</p>
 <p>Doy gracias a los miles de personas que trabajan por y para devolver el caos al orden natural, esas que protegen la vida, la belleza y la verdad del mundo.</p></div></section>
-  <div class="story-intro-copy"><div class="stories-overline">LA HISTORIA · 12 LÁMINAS VISUALES</div><h3>Donde la ciencia se convierte en historia</h3><p>Desde la recuperación de los bosques de <i>Pisonia grandis</i> hasta la influencia de los hongos <i>Tomentella</i>, las aves marinas, los cangrejos terrestres y las mantarrayas, esta narrativa ilustrada reúne investigaciones publicadas sobre el atolón de Palmyra. Cada página sigue una relación distinta del ecosistema, desde el suelo del bosque hasta los arrecifes cercanos.</p></div>
-  <div class="story-chapters">
-<section class="story-chapter" aria-labelledby="forest-illustration-heading-01">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">01 / 12</span>
-    <h3 id="forest-illustration-heading-01">La vida invisible que sostiene un bosque insular</h3>
-    <p>Una historia visual sobre la ciencia que investiga las relaciones ocultas que intervienen en la restauración de los bosques de Palmyra Atoll.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-01.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 1 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Ilustración botánica de un árbol de Pisonia grandis y sus raíces bajo el suelo de Palmyra" width="2400" height="1697" src="../assets/the-forest-below-01.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Ilustración botánica de un árbol de Pisonia grandis y sus raíces bajo el suelo de Palmyra</figcaption>
-  </figure>
+<div class="story-intro-copy"><div class="stories-overline">LA HISTORIA · 12 LÁMINAS VISUALES</div><h3>Donde la ciencia se convierte en historia</h3><p>Desde la recuperación de los bosques de <i>Pisonia grandis</i> hasta la influencia de los hongos <i>Tomentella</i>, las aves marinas, los cangrejos terrestres y las mantarrayas, esta narrativa ilustrada reúne investigaciones publicadas sobre el atolón de Palmyra. Cada página sigue una relación distinta del ecosistema, desde el suelo del bosque hasta los arrecifes cercanos.</p></div>
+<div class="story-chapters">
+<section aria-labelledby="forest-illustration-heading-01" class="story-chapter">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">01 / 12</span>
+<h3 id="forest-illustration-heading-01">La vida invisible que sostiene un bosque insular</h3>
+<p>Una historia visual sobre la ciencia que investiga las relaciones ocultas que intervienen en la restauración de los bosques de Palmyra Atoll.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 1 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-01.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Ilustración botánica de un árbol de Pisonia grandis y sus raíces bajo el suelo de Palmyra" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-01.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Ilustración botánica de un árbol de Pisonia grandis y sus raíces bajo el suelo de Palmyra</figcaption>
+</figure>
 </section>
-<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-02">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">02 / 12</span>
-    <h3 id="forest-illustration-heading-02">La recuperación del bosque autóctono de Palmyra</h3>
-    <p>En el atolón de Palmyra, en el Pacífico, los científicos estudian cómo se recuperan los bosques autóctonos de <i>Pisonia grandis</i> y qué papel podrían desempeñar las relaciones que existen bajo el suelo.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-02.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 2 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Mapa en acuarela del atolón de Palmyra, sus islas y su laguna en el océano Pacífico" width="2400" height="1697" src="../assets/the-forest-below-02.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Mapa en acuarela del atolón de Palmyra, sus islas y su laguna en el océano Pacífico</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-02" class="story-chapter reverse">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">02 / 12</span>
+<h3 id="forest-illustration-heading-02">La recuperación del bosque autóctono de Palmyra</h3>
+<p>En el atolón de Palmyra, en el Pacífico, los científicos estudian cómo se recuperan los bosques autóctonos de <i>Pisonia grandis</i> y qué papel podrían desempeñar las relaciones que existen bajo el suelo.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 2 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-02.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Mapa en acuarela del atolón de Palmyra, sus islas y su laguna en el océano Pacífico" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-02.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Mapa en acuarela del atolón de Palmyra, sus islas y su laguna en el océano Pacífico</figcaption>
+</figure>
 </section>
-<section class="story-chapter" aria-labelledby="forest-illustration-heading-03">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">03 / 12</span>
-    <h3 id="forest-illustration-heading-03">Cómo los cocoteros transformaron el hábitat de las aves marinas</h3>
-    <p>Los cocoteros sustituyeron gran parte del bosque autóctono de <i>Pisonia</i>, reduciendo el hábitat adecuado para muchas aves marinas y alterando las conexiones entre la tierra y el mar.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-03.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 3 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Comparación ilustrada entre el bosque autóctono de Pisonia y la vegetación dominada por cocoteros" width="2400" height="1697" src="../assets/the-forest-below-03.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Comparación ilustrada entre el bosque autóctono de Pisonia y la vegetación dominada por cocoteros</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-03" class="story-chapter">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">03 / 12</span>
+<h3 id="forest-illustration-heading-03">Cómo los cocoteros transformaron el hábitat de las aves marinas</h3>
+<p>Los cocoteros sustituyeron gran parte del bosque autóctono de <i>Pisonia</i>, reduciendo el hábitat adecuado para muchas aves marinas y alterando las conexiones entre la tierra y el mar.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 3 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-03.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Comparación ilustrada entre el bosque autóctono de Pisonia y la vegetación dominada por cocoteros" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-03.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Comparación ilustrada entre el bosque autóctono de Pisonia y la vegetación dominada por cocoteros</figcaption>
+</figure>
 </section>
-<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-04">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">04 / 12</span>
-    <h3 id="forest-illustration-heading-04">Raíces y hongos: aliados en la restauración</h3>
-    <p>Eliminar los cocoteros es solo una parte de la restauración. Bajo el suelo, las raíces y los hongos establecen asociaciones que podrían influir en la recuperación del bosque.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-04.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 4 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Corte ilustrado con raíces de Pisonia y redes de hongos bajo el suelo del bosque" width="2400" height="1697" src="../assets/the-forest-below-04.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Corte ilustrado con raíces de Pisonia y redes de hongos bajo el suelo del bosque</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-04" class="story-chapter reverse">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">04 / 12</span>
+<h3 id="forest-illustration-heading-04">Raíces y hongos: aliados en la restauración</h3>
+<p>Eliminar los cocoteros es solo una parte de la restauración. Bajo el suelo, las raíces y los hongos establecen asociaciones que podrían influir en la recuperación del bosque.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 4 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-04.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Corte ilustrado con raíces de Pisonia y redes de hongos bajo el suelo del bosque" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-04.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Corte ilustrado con raíces de Pisonia y redes de hongos bajo el suelo del bosque</figcaption>
+</figure>
 </section>
-<section class="story-chapter" aria-labelledby="forest-illustration-heading-05">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">05 / 12</span>
-    <h3 id="forest-illustration-heading-05">La relación entre <i>Pisonia grandis</i> y <i>Tomentella</i></h3>
-    <p>La investigación describe hongos <i>Tomentella</i> asociados con raíces de <i>Pisonia grandis</i> muestreadas en 52 árboles. Esta estrecha relación podría ser importante para la recuperación del bosque.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-05.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 5 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Detalle de raíces de Pisonia grandis entrelazadas con micelio bajo tierra" width="2400" height="1697" src="../assets/the-forest-below-05.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Detalle de raíces de Pisonia grandis entrelazadas con micelio bajo tierra</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-05" class="story-chapter">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">05 / 12</span>
+<h3 id="forest-illustration-heading-05">La relación entre <i>Pisonia grandis</i> y <i>Tomentella</i></h3>
+<p>La investigación describe hongos <i>Tomentella</i> asociados con raíces de <i>Pisonia grandis</i> muestreadas en 52 árboles. Esta estrecha relación podría ser importante para la recuperación del bosque.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 5 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-05.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Detalle de raíces de Pisonia grandis entrelazadas con micelio bajo tierra" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-05.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Detalle de raíces de Pisonia grandis entrelazadas con micelio bajo tierra</figcaption>
+</figure>
 </section>
-<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-06">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">06 / 12</span>
-    <h3 id="forest-illustration-heading-06">Un intercambio esencial bajo el suelo del bosque</h3>
-    <p>Los árboles proporcionan a los hongos azúcares producidos mediante la fotosíntesis; los hongos ayudan a las raíces a acceder al agua y a los nutrientes del suelo.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-06.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 6 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Diagrama del intercambio de nutrientes y azúcares entre raíces y hongos micorrícicos" width="2400" height="1697" src="../assets/the-forest-below-06.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Diagrama del intercambio de nutrientes y azúcares entre raíces y hongos micorrícicos</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-06" class="story-chapter reverse">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">06 / 12</span>
+<h3 id="forest-illustration-heading-06">Un intercambio esencial bajo el suelo del bosque</h3>
+<p>Los árboles proporcionan a los hongos azúcares producidos mediante la fotosíntesis; los hongos ayudan a las raíces a acceder al agua y a los nutrientes del suelo.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 6 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-06.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Diagrama del intercambio de nutrientes y azúcares entre raíces y hongos micorrícicos" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-06.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Diagrama del intercambio de nutrientes y azúcares entre raíces y hongos micorrícicos</figcaption>
+</figure>
 </section>
-<section class="story-chapter" aria-labelledby="forest-illustration-heading-07">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">07 / 12</span>
-    <h3 id="forest-illustration-heading-07">Las aves marinas llevan nutrientes del océano a la isla</h3>
-    <p>Las aves marinas transportan nutrientes desde el océano hasta la isla. Sus excrementos enriquecen el suelo con nitrógeno y fósforo y conectan el mar con los bosques autóctonos y los hongos.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-07.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 7 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Árbol de Pisonia, aves marinas y costa que muestran el transporte de nutrientes del océano al suelo" width="2400" height="1697" src="../assets/the-forest-below-07.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Árbol de Pisonia, aves marinas y costa que muestran el transporte de nutrientes del océano al suelo</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-07" class="story-chapter">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">07 / 12</span>
+<h3 id="forest-illustration-heading-07">Las aves marinas llevan nutrientes del océano a la isla</h3>
+<p>Las aves marinas transportan nutrientes desde el océano hasta la isla. Sus excrementos enriquecen el suelo con nitrógeno y fósforo y conectan el mar con los bosques autóctonos y los hongos.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 7 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-07.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Árbol de Pisonia, aves marinas y costa que muestran el transporte de nutrientes del océano al suelo" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-07.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Árbol de Pisonia, aves marinas y costa que muestran el transporte de nutrientes del océano al suelo</figcaption>
+</figure>
 </section>
-<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-08">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">08 / 12</span>
-    <h3 id="forest-illustration-heading-08">Del bosque al arrecife: alimento para las mantarrayas</h3>
-    <p>La lluvia puede transportar nutrientes procedentes de las aves desde el bosque hasta las aguas costeras, favoreciendo al plancton y las oportunidades de alimentación de las mantarrayas.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-08.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 8 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Mantarraya nadando cerca de Palmyra y su relación con los nutrientes procedentes del bosque" width="2400" height="1697" src="../assets/the-forest-below-08.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Mantarraya nadando cerca de Palmyra y su relación con los nutrientes procedentes del bosque</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-08" class="story-chapter reverse">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">08 / 12</span>
+<h3 id="forest-illustration-heading-08">Del bosque al arrecife: alimento para las mantarrayas</h3>
+<p>La lluvia puede transportar nutrientes procedentes de las aves desde el bosque hasta las aguas costeras, favoreciendo al plancton y las oportunidades de alimentación de las mantarrayas.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 8 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-08.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Mantarraya nadando cerca de Palmyra y su relación con los nutrientes procedentes del bosque" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-08.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Mantarraya nadando cerca de Palmyra y su relación con los nutrientes procedentes del bosque</figcaption>
+</figure>
 </section>
-<section class="story-chapter" aria-labelledby="forest-illustration-heading-09">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">09 / 12</span>
-    <h3 id="forest-illustration-heading-09">Los cangrejos terrestres y la diversidad de hongos</h3>
-    <p>Los investigadores encontraron una diversidad de hongos mayor en los suelos de las madrigueras de cangrejos terrestres que en los suelos circundantes. Esto sugiere que los cangrejos podrían influir en las condiciones del subsuelo.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-09.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 9 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Cangrejo terrestre junto a su madriguera y suelo ilustrado con hongos" width="2400" height="1697" src="../assets/the-forest-below-09.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Cangrejo terrestre junto a su madriguera y suelo ilustrado con hongos</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-09" class="story-chapter">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">09 / 12</span>
+<h3 id="forest-illustration-heading-09">Los cangrejos terrestres y la diversidad de hongos</h3>
+<p>Los investigadores encontraron una diversidad de hongos mayor en los suelos de las madrigueras de cangrejos terrestres que en los suelos circundantes. Esto sugiere que los cangrejos podrían influir en las condiciones del subsuelo.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 9 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-09.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Cangrejo terrestre junto a su madriguera y suelo ilustrado con hongos" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-09.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Cangrejo terrestre junto a su madriguera y suelo ilustrado con hongos</figcaption>
+</figure>
 </section>
-<section class="story-chapter reverse" aria-labelledby="forest-illustration-heading-10">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">10 / 12</span>
-    <h3 id="forest-illustration-heading-10">¿Pueden los hongos autóctonos ayudar a recuperar el bosque?</h3>
-    <p><i>Tomentella</i> es menos abundante a medida que aumenta la distancia a los árboles de <i>Pisonia</i> existentes. Los científicos plantean explorar si incorporar hongos autóctonos junto a árboles jóvenes podría ayudar a restaurar el bosque.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-10.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 10 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Árbol autóctono joven con raíces mostrando posibles asociaciones fúngicas en la restauración" width="2400" height="1697" src="../assets/the-forest-below-10.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Árbol autóctono joven con raíces mostrando posibles asociaciones fúngicas en la restauración</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-10" class="story-chapter reverse">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">10 / 12</span>
+<h3 id="forest-illustration-heading-10">¿Pueden los hongos autóctonos ayudar a recuperar el bosque?</h3>
+<p><i>Tomentella</i> es menos abundante a medida que aumenta la distancia a los árboles de <i>Pisonia</i> existentes. Los científicos plantean explorar si incorporar hongos autóctonos junto a árboles jóvenes podría ayudar a restaurar el bosque.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 10 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-10.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Árbol autóctono joven con raíces mostrando posibles asociaciones fúngicas en la restauración" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-10.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Árbol autóctono joven con raíces mostrando posibles asociaciones fúngicas en la restauración</figcaption>
+</figure>
 </section>
-<section class="story-chapter" aria-labelledby="forest-illustration-heading-11">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">11 / 12</span>
-    <h3 id="forest-illustration-heading-11">Las relaciones ecológicas que sostienen la vida en la isla</h3>
-    <p>Aves marinas, hongos, cangrejos y árboles están conectados a través de distintos hábitats. Comprender estas relaciones podría abrir nuevas vías para restaurar ecosistemas insulares frágiles.</p>
-    
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-11.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 11 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Bosque de Pisonia y aves marinas ilustrando las conexiones ecológicas del atolón de Palmyra" width="2400" height="1697" src="../assets/the-forest-below-11.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Bosque de Pisonia y aves marinas ilustrando las conexiones ecológicas del atolón de Palmyra</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-11" class="story-chapter">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">11 / 12</span>
+<h3 id="forest-illustration-heading-11">Las relaciones ecológicas que sostienen la vida en la isla</h3>
+<p>Aves marinas, hongos, cangrejos y árboles están conectados a través de distintos hábitats. Comprender estas relaciones podría abrir nuevas vías para restaurar ecosistemas insulares frágiles.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 11 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-11.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Bosque de Pisonia y aves marinas ilustrando las conexiones ecológicas del atolón de Palmyra" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-11.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Bosque de Pisonia y aves marinas ilustrando las conexiones ecológicas del atolón de Palmyra</figcaption>
+</figure>
 </section>
-<section class="story-chapter reverse reflection-draft" aria-labelledby="forest-illustration-heading-12">
-  <div class="story-chapter-copy">
-    <span class="story-chapter-sequence">12 / 12</span>
-    <h3 id="forest-illustration-heading-12">Una reflexión sobre nuestra conexión con la naturaleza</h3>
-    <p>La historia visual concluye con una reflexión personal sobre las conexiones entre los seres vivos y nuestro lugar en el mundo natural.</p>
-
-  </div>
-  <figure class="story-chapter-visual">
-    <a data-story-zoom="true" href="../assets/the-forest-below-13.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar ilustración 12 a tamaño completo">
-      <img decoding="async" loading="eager" alt="Planta joven y sus raíces junto a una reflexión personal sobre la conexión entre seres vivos" width="2400" height="1697" src="../assets/the-forest-below-13.webp"/>
-      <span class="story-image-zoom-hint" aria-hidden="true">Ampliar ilustración ↗</span>
-    </a>
-    <figcaption class="sr-only">Planta joven y sus raíces junto a una reflexión personal sobre la conexión entre seres vivos</figcaption>
-  </figure>
+<section aria-labelledby="forest-illustration-heading-12" class="story-chapter reverse reflection-draft">
+<div class="story-chapter-copy">
+<span class="story-chapter-sequence">12 / 12</span>
+<h3 id="forest-illustration-heading-12">Una reflexión sobre nuestra conexión con la naturaleza</h3>
+<p>La historia visual concluye con una reflexión personal sobre las conexiones entre los seres vivos y nuestro lugar en el mundo natural.</p>
+</div>
+<figure class="story-chapter-visual">
+<a aria-label="Ampliar ilustración 12 a tamaño completo" data-story-zoom="true" href="../assets/the-forest-below-13.webp" rel="noopener noreferrer" target="_blank">
+<img alt="Planta joven y sus raíces junto a una reflexión personal sobre la conexión entre seres vivos" decoding="async" height="1697" loading="eager" src="../assets/the-forest-below-13.webp" width="2400"/>
+<span aria-hidden="true" class="story-image-zoom-hint">Ampliar ilustración ↗</span>
+</a>
+<figcaption class="sr-only">Planta joven y sus raíces junto a una reflexión personal sobre la conexión entre seres vivos</figcaption>
+</figure>
 </section>
 </div>
-  <section class="story-conclusion"><p class="story-independent-note">Proyecto independiente de storytelling visual basado en investigaciones publicadas e información sobre conservación. No encargado por las organizaciones ni los investigadores citados, ni afiliado a ellos. Las ilustraciones son interpretaciones artísticas asistidas con IA y los detalles ecológicos no están necesariamente representados a escala.</p>
-    <section class="story-resources" aria-labelledby="forest-references-title">
-      <div class="stories-overline">FUENTES Y REFERENCIAS</div>
-      <h3 id="forest-references-title">Investigación y referencias</h3>
-      <p class="story-resources-intro">Fuentes científicas e institucionales en las que se basa esta interpretación visual independiente. La bibliografía también está incluida en la página 12 del PDF completo.</p>
-      <div class="story-reference-grid"><section class="story-reference-group" aria-label="Investigación científica">
-          <h4>Investigación científica</h4>
-          <ol class="story-reference-list"><li class="story-reference-item">
-              <a href="https://doi.org/10.1016/j.cub.2026.03.087" target="_blank" rel="noopener noreferrer" aria-label="Cornwallis et al. · 2026, Symbiotic fungi underlie the regeneration potential of island rainforests">
-                <span class="story-reference-meta"><span class="story-reference-num">01</span><span>Cornwallis et al. · 2026</span></span>
-                <span class="story-reference-name">Symbiotic fungi underlie the regeneration potential of island rainforests</span>
-                <span class="story-reference-foot"><span>Current Biology · 2026</span><span aria-hidden="true">↗</span></span>
-              </a>
-            </li><li class="story-reference-item">
-              <a href="https://doi.org/10.1038/srep00409" target="_blank" rel="noopener noreferrer" aria-label="McCauley et al. · 2012, From wing to wing: The persistence of long ecological interaction chains in less-disturbed ecosystems">
-                <span class="story-reference-meta"><span class="story-reference-num">02</span><span>McCauley et al. · 2012</span></span>
-                <span class="story-reference-name">From wing to wing: The persistence of long ecological interaction chains in less-disturbed ecosystems</span>
-                <span class="story-reference-foot"><span>Scientific Reports · 2012</span><span aria-hidden="true">↗</span></span>
-              </a>
-            </li><li class="story-reference-item">
-              <a href="https://pubs.usgs.gov/publication/70267305" target="_blank" rel="noopener noreferrer" aria-label="Struckhoff · 2025, Pre-restoration woody species crown and vegetation community mapping using high-resolution uncrewed aerial system imagery, Palmyra Atoll">
-                <span class="story-reference-meta"><span class="story-reference-num">03</span><span>Struckhoff · 2025</span></span>
-                <span class="story-reference-name">Pre-restoration woody species crown and vegetation community mapping using high-resolution uncrewed aerial system imagery, Palmyra Atoll</span>
-                <span class="story-reference-foot"><span>Pacific Science / USGS · 2025</span><span aria-hidden="true">↗</span></span>
-              </a>
-            </li></ol>
-        </section><section class="story-reference-group" aria-label="Conservación y contexto">
-          <h4>Conservación y contexto</h4>
-          <ol class="story-reference-list"><li class="story-reference-item">
-              <a href="https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/palmyra-atoll/" target="_blank" rel="noopener noreferrer" aria-label="The Nature Conservancy, Palmyra Atoll — Conservation and rainforest restoration">
-                <span class="story-reference-meta"><span class="story-reference-num">04</span><span>The Nature Conservancy</span></span>
-                <span class="story-reference-name">Palmyra Atoll — Conservation and rainforest restoration</span>
-                <span class="story-reference-foot"><span>Programa de conservación</span><span aria-hidden="true">↗</span></span>
-              </a>
-            </li><li class="story-reference-item">
-              <a href="https://www.fws.gov/refuge/palmyra-atoll" target="_blank" rel="noopener noreferrer" aria-label="U.S. Fish &amp; Wildlife Service, Palmyra Atoll National Wildlife Refuge">
-                <span class="story-reference-meta"><span class="story-reference-num">05</span><span>U.S. Fish &amp; Wildlife Service</span></span>
-                <span class="story-reference-name">Palmyra Atoll National Wildlife Refuge</span>
-                <span class="story-reference-foot"><span>Área protegida y conservación</span><span aria-hidden="true">↗</span></span>
-              </a>
-            </li><li class="story-reference-item">
-              <a href="https://www.spun.earth/articles/data-from-earths-most-remote-atoll-show-soil-fungi-are-key-to-island-regeneration" target="_blank" rel="noopener noreferrer" aria-label="SPUN, Data from Earth’s most remote atoll show soil fungi are key to island regeneration">
-                <span class="story-reference-meta"><span class="story-reference-num">06</span><span>SPUN</span></span>
-                <span class="story-reference-name">Data from Earth’s most remote atoll show soil fungi are key to island regeneration</span>
-                <span class="story-reference-foot"><span>Resumen de investigación · 2026</span><span aria-hidden="true">↗</span></span>
-              </a>
-            </li></ol>
-        </section></div>
-    </section>
-    <div class="story-download"><strong>Ver la historia visual completa</strong><button type="button" onclick="openPortfolioPdf('pdf/the-forest-below-palmyra-atoll.pdf')">Ver PDF completo →</button></div>
-    <a class="story-back-cases" href="/es/case-studies/" data-go-cases="true">Explorar Casos de estudio →</a>
-  </section>
- </div>
-
-<div class="story-lightbox" id="storyLightbox" role="dialog" aria-modal="true" aria-labelledby="storyLightboxTitle" aria-hidden="true" hidden>
-  <div class="story-lightbox-toolbar">
-    <span class="story-lightbox-title" id="storyLightboxTitle">Imagen ampliada</span>
-    <div class="story-lightbox-actions">
-      <button type="button" id="storyLightboxToggle">Ampliar +</button>
-      <button type="button" id="storyLightboxClose" aria-label="Cerrar">Cerrar ×</button>
-    </div>
-  </div>
-  <div class="story-lightbox-stage" id="storyLightboxStage">
-    <button class="story-lightbox-image-button" id="storyLightboxImageButton" type="button" aria-label="Ampliar +">
-      <img class="story-lightbox-image" id="storyLightboxImage" alt=""/>
-    </button>
-  </div>
-  <p class="story-lightbox-hint">Haz clic en la imagen para ampliar o reducir. Pulsa Esc para cerrar.</p>
+<section class="story-conclusion"><p class="story-independent-note">Proyecto independiente de storytelling visual basado en investigaciones publicadas e información sobre conservación. No encargado por las organizaciones ni los investigadores citados, ni afiliado a ellos. Las ilustraciones son interpretaciones artísticas asistidas con IA y los detalles ecológicos no están necesariamente representados a escala.</p>
+<section aria-labelledby="forest-references-title" class="story-resources">
+<div class="stories-overline">FUENTES Y REFERENCIAS</div>
+<h3 id="forest-references-title">Investigación y referencias</h3>
+<p class="story-resources-intro">Fuentes científicas e institucionales en las que se basa esta interpretación visual independiente. La bibliografía también está incluida en la página 12 del PDF completo.</p>
+<div class="story-reference-grid"><section aria-label="Investigación científica" class="story-reference-group">
+<h4>Investigación científica</h4>
+<ol class="story-reference-list"><li class="story-reference-item">
+<a aria-label="Cornwallis et al. · 2026, Symbiotic fungi underlie the regeneration potential of island rainforests" href="https://doi.org/10.1016/j.cub.2026.03.087" rel="noopener noreferrer" target="_blank">
+<span class="story-reference-meta"><span class="story-reference-num">01</span><span>Cornwallis et al. · 2026</span></span>
+<span class="story-reference-name">Symbiotic fungi underlie the regeneration potential of island rainforests</span>
+<span class="story-reference-foot"><span>Current Biology · 2026</span><span aria-hidden="true">↗</span></span>
+</a>
+</li><li class="story-reference-item">
+<a aria-label="McCauley et al. · 2012, From wing to wing: The persistence of long ecological interaction chains in less-disturbed ecosystems" href="https://doi.org/10.1038/srep00409" rel="noopener noreferrer" target="_blank">
+<span class="story-reference-meta"><span class="story-reference-num">02</span><span>McCauley et al. · 2012</span></span>
+<span class="story-reference-name">From wing to wing: The persistence of long ecological interaction chains in less-disturbed ecosystems</span>
+<span class="story-reference-foot"><span>Scientific Reports · 2012</span><span aria-hidden="true">↗</span></span>
+</a>
+</li><li class="story-reference-item">
+<a aria-label="Struckhoff · 2025, Pre-restoration woody species crown and vegetation community mapping using high-resolution uncrewed aerial system imagery, Palmyra Atoll" href="https://pubs.usgs.gov/publication/70267305" rel="noopener noreferrer" target="_blank">
+<span class="story-reference-meta"><span class="story-reference-num">03</span><span>Struckhoff · 2025</span></span>
+<span class="story-reference-name">Pre-restoration woody species crown and vegetation community mapping using high-resolution uncrewed aerial system imagery, Palmyra Atoll</span>
+<span class="story-reference-foot"><span>Pacific Science / USGS · 2025</span><span aria-hidden="true">↗</span></span>
+</a>
+</li></ol>
+</section><section aria-label="Conservación y contexto" class="story-reference-group">
+<h4>Conservación y contexto</h4>
+<ol class="story-reference-list"><li class="story-reference-item">
+<a aria-label="The Nature Conservancy, Palmyra Atoll — Conservation and rainforest restoration" href="https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/palmyra-atoll/" rel="noopener noreferrer" target="_blank">
+<span class="story-reference-meta"><span class="story-reference-num">04</span><span>The Nature Conservancy</span></span>
+<span class="story-reference-name">Palmyra Atoll — Conservation and rainforest restoration</span>
+<span class="story-reference-foot"><span>Programa de conservación</span><span aria-hidden="true">↗</span></span>
+</a>
+</li><li class="story-reference-item">
+<a aria-label="U.S. Fish &amp; Wildlife Service, Palmyra Atoll National Wildlife Refuge" href="https://www.fws.gov/refuge/palmyra-atoll" rel="noopener noreferrer" target="_blank">
+<span class="story-reference-meta"><span class="story-reference-num">05</span><span>U.S. Fish &amp; Wildlife Service</span></span>
+<span class="story-reference-name">Palmyra Atoll National Wildlife Refuge</span>
+<span class="story-reference-foot"><span>Área protegida y conservación</span><span aria-hidden="true">↗</span></span>
+</a>
+</li><li class="story-reference-item">
+<a aria-label="SPUN, Data from Earth’s most remote atoll show soil fungi are key to island regeneration" href="https://www.spun.earth/articles/data-from-earths-most-remote-atoll-show-soil-fungi-are-key-to-island-regeneration" rel="noopener noreferrer" target="_blank">
+<span class="story-reference-meta"><span class="story-reference-num">06</span><span>SPUN</span></span>
+<span class="story-reference-name">Data from Earth’s most remote atoll show soil fungi are key to island regeneration</span>
+<span class="story-reference-foot"><span>Resumen de investigación · 2026</span><span aria-hidden="true">↗</span></span>
+</a>
+</li></ol>
+</section></div>
+</section>
+<div class="story-download"><strong>Ver la historia visual completa</strong><button onclick="openPortfolioPdf('pdf/the-forest-below-palmyra-atoll.pdf')" type="button">Ver PDF completo →</button></div>
+<a class="story-back-cases" data-go-cases="true" href="/es/case-studies/">Explorar Casos de estudio →</a>
+</section>
+</div>
+<div aria-hidden="true" aria-labelledby="storyLightboxTitle" aria-modal="true" class="story-lightbox" hidden="" id="storyLightbox" role="dialog">
+<div class="story-lightbox-toolbar">
+<span class="story-lightbox-title" id="storyLightboxTitle">Imagen ampliada</span>
+<div class="story-lightbox-actions">
+<button id="storyLightboxToggle" type="button">Ampliar +</button>
+<button aria-label="Cerrar" id="storyLightboxClose" type="button">Cerrar ×</button>
 </div>
 </div>
-
+<div class="story-lightbox-stage" id="storyLightboxStage">
+<button aria-label="Ampliar +" class="story-lightbox-image-button" id="storyLightboxImageButton" type="button">
+<img alt="" class="story-lightbox-image" id="storyLightboxImage"/>
+</button>
+</div>
+<p class="story-lightbox-hint">Haz clic en la imagen para ampliar o reducir. Pulsa Esc para cerrar.</p>
+</div>
+</div>
 <script>
 
   function openPortfolioPdf(relativePath){
