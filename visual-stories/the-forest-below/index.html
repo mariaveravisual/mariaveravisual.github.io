@@ -3164,7 +3164,17 @@ document.addEventListener("click", function(event) {
 .continue-exploring-card:focus-visible{outline:2px solid currentColor;outline-offset:7px}
 @media(max-width:670px){.continue-exploring-grid{grid-template-columns:1fr;gap:42px}.continue-exploring-image{aspect-ratio:16/9}}
 @media(prefers-reduced-motion:reduce){.continue-exploring-image{transition:none}}
-</style></head>
+</style><style id="author-signature-style">
+.author-signature{border-top:1px solid rgba(23,23,23,.18);padding:clamp(30px,4vw,52px) 0 clamp(38px,5vw,72px);display:grid;grid-template-columns:minmax(170px,.55fr) minmax(0,1.45fr);gap:clamp(32px,6vw,100px);align-items:start}
+.author-signature-label{font:600 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.author-signature-name{font:400 clamp(30px,3vw,45px)/1.12 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.04em;margin:0 0 9px}
+.author-signature-role{font:400 14px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#77746f;margin:0 0 22px}
+.author-signature-copy{font:400 clamp(16px,1.4vw,19px)/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#4c4945;max-width:600px;margin:0 0 23px}
+.author-signature-link{display:inline-block;color:inherit;font:400 15px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;border-bottom:1px solid currentColor;padding-bottom:3px;text-decoration:none}
+.author-signature-link:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+@media(max-width:670px){.author-signature{grid-template-columns:1fr;gap:22px}.author-signature-copy{margin-bottom:20px}}
+</style>
+</head>
 <body class="show-stories">
 <a class="skip-link" href="#top">Skip to content</a>
 <div class="shell">
@@ -4001,7 +4011,8 @@ document.addEventListener("click", function(event) {
     </section>
     <div class="story-download"><strong>View the complete visual story</strong><button type="button" onclick="openPortfolioPdf('pdf/the-forest-below-palmyra-atoll.pdf')">View full PDF →</button></div>
     <a class="story-back-cases" href="/case-studies/" data-go-cases="true">Explore Case Studies →</a>
-  <section class="continue-exploring" aria-label="Continue exploring"><h2 class="continue-exploring-heading">CONTINUE EXPLORING</h2><div class="continue-exploring-grid"><a class="continue-exploring-card" href="/case-studies/fiji/"><img class="continue-exploring-image" src="/assets/image-001-88962888ea57.jpg" alt="Plastic Waste in Fiji — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASE STUDY · RESEARCH COMMUNICATION</span><span class="continue-exploring-title">Plastic Waste in Fiji</span><span class="continue-exploring-cta">Explore project →</span></a><a class="continue-exploring-card" href="/case-studies/dark-vessels/"><img class="continue-exploring-image" src="/assets/image-002-5a8266fd9fa2.jpg" alt="Dark Vessels — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASE STUDY · DATA STORYTELLING</span><span class="continue-exploring-title">Dark Vessels</span><span class="continue-exploring-cta">Explore project →</span></a></div></section>
+  <aside class="author-signature" aria-label="Project authorship"><div class="author-signature-label">STORY & VISUAL DIRECTION</div><div><h2 class="author-signature-name">Maria Vera</h2><p class="author-signature-role">Senior Visual Designer & Visual Storyteller</p><p class="author-signature-copy">Independent visual storytelling inspired by scientific research, nature and the connections between living systems.</p><a class="author-signature-link" href="/about/">About the author →</a></div></aside>
+<section class="continue-exploring" aria-label="Continue exploring"><h2 class="continue-exploring-heading">CONTINUE EXPLORING</h2><div class="continue-exploring-grid"><a class="continue-exploring-card" href="/case-studies/fiji/"><img class="continue-exploring-image" src="/assets/image-001-88962888ea57.jpg" alt="Plastic Waste in Fiji — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASE STUDY · RESEARCH COMMUNICATION</span><span class="continue-exploring-title">Plastic Waste in Fiji</span><span class="continue-exploring-cta">Explore project →</span></a><a class="continue-exploring-card" href="/case-studies/dark-vessels/"><img class="continue-exploring-image" src="/assets/image-002-5a8266fd9fa2.jpg" alt="Dark Vessels — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASE STUDY · DATA STORYTELLING</span><span class="continue-exploring-title">Dark Vessels</span><span class="continue-exploring-cta">Explore project →</span></a></div></section>
 </section>
  </div>
 

@@ -3197,7 +3197,17 @@ document.addEventListener("click", function(event) {
 .continue-exploring-card:focus-visible{outline:2px solid currentColor;outline-offset:7px}
 @media(max-width:670px){.continue-exploring-grid{grid-template-columns:1fr;gap:42px}.continue-exploring-image{aspect-ratio:16/9}}
 @media(prefers-reduced-motion:reduce){.continue-exploring-image{transition:none}}
-</style></head>
+</style><style id="author-signature-style">
+.author-signature{border-top:1px solid rgba(23,23,23,.18);padding:clamp(30px,4vw,52px) 0 clamp(38px,5vw,72px);display:grid;grid-template-columns:minmax(170px,.55fr) minmax(0,1.45fr);gap:clamp(32px,6vw,100px);align-items:start}
+.author-signature-label{font:600 11px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.author-signature-name{font:400 clamp(30px,3vw,45px)/1.12 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.04em;margin:0 0 9px}
+.author-signature-role{font:400 14px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#77746f;margin:0 0 22px}
+.author-signature-copy{font:400 clamp(16px,1.4vw,19px)/1.6 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#4c4945;max-width:600px;margin:0 0 23px}
+.author-signature-link{display:inline-block;color:inherit;font:400 15px/1.4 "Helvetica Neue",Helvetica,Arial,sans-serif;border-bottom:1px solid currentColor;padding-bottom:3px;text-decoration:none}
+.author-signature-link:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+@media(max-width:670px){.author-signature{grid-template-columns:1fr;gap:22px}.author-signature-copy{margin-bottom:20px}}
+</style>
+</head>
 <body class="show-stories">
 <a class="skip-link" href="#top">Saltar al contenido</a>
 <div class="shell">
@@ -3772,6 +3782,7 @@ document.addEventListener("click", function(event) {
 <strong>Ver el informe editorial completo</strong>
 <button onclick="openPortfolioPdf('pdf/The_Dark_Fleet_Visual_Communication_Maria_Vera.pdf')" type="button">Ver PDF completo →</button>
 </div>
+<aside class="author-signature" aria-label="Autoría del proyecto"><div class="author-signature-label">DISEÑO VISUAL Y COMUNICACIÓN DE INVESTIGACIÓN</div><div><h2 class="author-signature-name">María Vera</h2><p class="author-signature-role">Diseñadora visual sénior y visual storyteller</p><p class="author-signature-copy">Diseño editorial y comunicación visual para hacer más accesibles investigaciones e ideas complejas.</p><a class="author-signature-link" href="/es/about/">Sobre la autora →</a></div></aside>
 <section class="continue-exploring" aria-label="Seguir explorando"><h2 class="continue-exploring-heading">SEGUIR EXPLORANDO</h2><div class="continue-exploring-grid"><a class="continue-exploring-card" href="/es/visual-stories/the-forest-below/"><img class="continue-exploring-image" src="/assets/the-forest-below-01.webp" alt="The Forest Below — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">HISTORIA VISUAL · STORYTELLING ECOLÓGICO</span><span class="continue-exploring-title">The Forest Below</span><span class="continue-exploring-cta">Ver proyecto →</span></a><a class="continue-exploring-card" href="/es/case-studies/fiji/"><img class="continue-exploring-image" src="/assets/image-001-88962888ea57.jpg" alt="Plastic Waste in Fiji — visual project preview" loading="lazy" decoding="async"><span class="continue-exploring-meta">CASO DE ESTUDIO · COMUNICACIÓN DE INVESTIGACIÓN</span><span class="continue-exploring-title">Plastic Waste in Fiji</span><span class="continue-exploring-cta">Ver proyecto →</span></a></div></section>
 <nav aria-label="Navegación de casos de estudio" class="case-project-nav">
 <a class="case-project-link prev" data-case-target="fiji" href="/es/case-studies/fiji/">
