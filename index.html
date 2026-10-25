@@ -3151,7 +3151,7 @@
 <a data-nav="stories" href="/">Visual Stories</a>
 <a data-nav="work" href="/case-studies/">Case Studies</a>
 <a data-nav="visual" href="#visual-work">Visual Work</a>
-<a data-nav="about" href="#about-page">About</a>
+<a data-nav="about" href="/about/">About</a>
 <a aria-label="Ver versión en español" class="language-switch" href="/es/" id="languageSwitch"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-width="1.4"></circle><path d="M3.5 12h17M12 3c2.3 2.4 3.5 5.4 3.5 9S14.3 18.6 12 21M12 3c-2.3 2.4-3.5 5.4-3.5 9S9.7 18.6 12 21" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path></svg><span>ES</span></a></nav>
 </header>
 <main id="top">
@@ -3361,96 +3361,7 @@
 </div>
 </section>
 </section>
-<section aria-hidden="true" class="about-page" id="about-page">
-<div class="about-squarespace">
-<div class="about-text-column">
-<h2 class="seo-demoted-title">Beyond the work</h2>
-<div class="about-body">
-<p>Hi! I’m Maria, a visual designer with over a decade of experience across editorial, digital, branding and e-commerce design.</p>
-<p>I’m open to a long-term remote role where I can help make others’ lives better, and life itself better. I’m looking for a place where I can put my heart into what I do, and whose values align with mine: integrity, truth and love.</p>
-<p>I’m deeply interested in visual storytelling and research communication, turning complex information into clear and engaging visual narratives. I’m interested in creating visual work that might, perhaps, move others to make decisions that contribute to a greater good.</p>
-<p>I’ve been working remotely for many years, often while living and travelling in different countries around the world. I love photography and seeing the world through my camera.</p>
-<p>If you think my experience and profile could contribute to the purpose behind your work, I’d be happy to hear from you.</p>
-<p>I hope you have a wonderful day!</p>
-<p>Maria</p>
-<div class="about-links">
-<a href="mailto:mariavera.visual@gmail.com">mariavera.visual@gmail.com</a>
-<a aria-label="LinkedIn profile" href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-</div>
-</div>
-</div>
-<div class="about-image-column">
-<img alt="Mangrove lagoon illustration" decoding="async" height="1200" src="assets/image-029-b59c5434e8f8.jpg" width="634"/>
-</div>
-</div>
-<section class="about-expertise">
-<div class="about-professional-focus" aria-label="Professional focus">
-<h2>Professional focus</h2>
-<div class="about-professional-copy">
-<p>As a senior visual designer, my work combines visual storytelling, research communication, editorial design and information design. I create visual narratives that make complex research, scientific findings and data clearer and more accessible.</p>
-<p>My visual approach is generally clean and minimalist, allowing the information and visuals that matter most to take centre stage.</p>
-<p>I’m particularly interested in long-term remote roles with nonprofits and research-led organisations working in biodiversity and conservation, animal welfare, environmental science, and projects involving local and Indigenous communities.</p>
-</div>
-</div>
-<div class="about-location">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
-<circle cx="12" cy="10" fill="none" r="2.2" stroke="currentColor" stroke-width="1.6"></circle>
-</svg>
-<span>Spain · Remote / International</span>
-</div>
-<div class="about-expertise-grid">
-<div class="expertise-column expertise-skills">
-<h2>Skills</h2>
-<ul>
-<li>Creative Direction &amp; Concept Development</li>
-<li>Visual Storytelling</li>
-<li>Editorial Design &amp; Data Storytelling</li>
-<li>Brand &amp; Visual Identity</li>
-<li>Visual Systems &amp; Guidelines</li>
-<li>AI-Enhanced Creative Workflows</li>
-<li>Photography</li>
-</ul>
-</div>
-<div class="expertise-column">
-<h2>Software</h2>
-<ul>
-<li>Adobe Photoshop</li>
-<li>Adobe Illustrator</li>
-<li>Adobe Lightroom</li>
-</ul>
-</div>
-<div class="expertise-column">
-<h2>AI Tools</h2>
-<ul>
-<li>ChatGPT</li>
-<li>Gemini</li>
-<li>DALL·E</li>
-<li>OpenArt</li>
-<li>Adobe Firefly</li>
-<li>Claude</li>
-</ul>
-</div>
-<div class="expertise-column">
-<h2>Working Style</h2>
-<ul>
-<li>Thoughtful</li>
-<li>Independent</li>
-<li>Easy-going &amp; Curious</li>
-<li>Adaptable</li>
-<li>Collaborative</li>
-</ul>
-</div>
-<div class="expertise-column">
-<h2>Languages</h2>
-<ul>
-<li>Spanish — Native</li>
-<li>English — Professional Working Proficiency</li>
-</ul>
-</div>
-</div>
-</section>
-</section>
+<section aria-hidden="true" class="about-page" id="about-page"></section>
 </div>
 <footer class="site-footer">
 <div class="site-footer-inner">
@@ -4113,12 +4024,7 @@
       block: "start"
     });
   });
-  aboutNav.addEventListener("click", e=>{
-    e.preventDefault();
-    showAbout();
-    trackPortfolioPage("/about", "Maria Vera — About");
-    trackPortfolioEvent("section_view", {section:"about"});
-  });
+  // About is now an independent, indexable page; use the normal navigation link.
   document.querySelector(".brand").addEventListener("click", e=>{
     e.preventDefault();
     showStories();
@@ -4327,7 +4233,7 @@
       });
     }
     else if(path.endsWith("/case-studies") || window.location.hash === "#work") showWork();
-    else if(window.location.hash === "#about-page") showAbout();
+    else if(window.location.hash === "#about-page") { window.location.replace("/about/"); }
     else showStories();
     if(location.protocol !== "file:" && !history.state)
       history.replaceState({portfolioView:"home",depth:0}, "", cleanPortfolioPath(window.location.pathname)+window.location.hash);
