@@ -1399,7 +1399,7 @@
     margin:0 0 28px;
   }
 
-  .hero h1,
+  .hero h1, .hero h2.cases-hero-title,
   .visual-hero h1, .visual-hero h2.seo-demoted-title{
     margin:0;
   }
@@ -3115,6 +3115,12 @@
 .story-author-text p:last-child{margin-bottom:0}
 @media(max-width:700px){.story-author-note{grid-template-columns:1fr;padding:35px 24px;gap:24px}.story-author-label::after{margin-top:0}.story-author-text p{font-size:16px;line-height:1.67}}
 
+/* Preserve the Case Studies heading style when returning from a case overlay. */
+body.show-cases .cases-page > .hero h2.cases-hero-title {
+  margin:0; font-family:var(--sans); font-size:clamp(54px,8vw,126px);
+  line-height:.92; font-weight:400; letter-spacing:-.055em; max-width:1100px;
+}
+body.show-cases .cases-page > .hero {display:grid;}
 </style>
 <script type="application/ld+json">
 {
@@ -3956,7 +3962,7 @@ document.addEventListener("click", function(event) {
     [storiesNav,workNav,visualNav,aboutNav].forEach(item => item.removeAttribute("aria-current"));
     ({stories:storiesNav,work:workNav,visual:visualNav,about:aboutNav})[section]?.setAttribute("aria-current","page");
   }
-  updateNavCurrent("stories");
+  updateNavCurrent(document.body.classList.contains("show-cases") ? "work" : "stories");
 
   function showStories(){
     document.body.classList.remove("show-about","show-visual","show-cases");
@@ -4166,6 +4172,7 @@ document.addEventListener("click", function(event) {
     const key=overlay.dataset.activeCase;
     closeOverlayVisual();
     if(key === "forest") showStories(); else showWork();
+    updateDocumentTitle("Maria Vera — " + (key === "forest" ? "Visual Stories" : "Case Studies"));
     if(options.historyMode === "replace" && location.protocol !== "file:"){
       history.replaceState({portfolioView:"home",depth:0}, "", key === "forest" ? "/" : "/case-studies/");
     }
@@ -4240,6 +4247,7 @@ document.addEventListener("click", function(event) {
     else if(path.endsWith("/case-studies") || window.location.hash === "#work") showWork();
     else if(window.location.hash === "#about-page") { window.location.replace("/about/"); }
     else showStories();
+    updateDocumentTitle("Maria Vera — " + (document.body.classList.contains("show-cases") ? "Case Studies" : document.body.classList.contains("show-visual") ? "Visual Work" : "Visual Stories"));
     if(location.protocol !== "file:" && !history.state)
       history.replaceState({portfolioView:"home",depth:0}, "", cleanPortfolioPath(window.location.pathname)+window.location.hash);
     if(options.track !== false) trackPortfolioPage(path,"Maria Vera — " + (document.body.classList.contains("show-cases") ? "Case Studies" : "Visual Stories"));
