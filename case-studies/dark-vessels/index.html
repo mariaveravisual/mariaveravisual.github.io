@@ -3731,6 +3731,13 @@ document.addEventListener("click", function(event) {
   });
 
   function closeOverlay(){
+    // Dedicated project pages return to the real listing, not the old embedded SPA view.
+    // This keeps the original Case Studies header and its styles intact.
+    if(location.protocol !== "file:"){
+      const destination = overlay.dataset.activeCase === "forest" ? "/" : "/case-studies/";
+      window.location.replace(destination);
+      return;
+    }
     const state = history.state || {};
     if(state.portfolioView === "case" && state.origin === "home" && Number(state.depth) > 0){
       history.go(-Number(state.depth));
