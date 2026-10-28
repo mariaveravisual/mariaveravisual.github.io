@@ -3117,6 +3117,80 @@
 .story-author-text p:last-child{margin-bottom:0}
 @media(max-width:700px){.story-author-note{grid-template-columns:1fr;padding:35px 24px;gap:24px}.story-author-label::after{margin-top:0}.story-author-text p{font-size:16px;line-height:1.67}}
 
+
+/* Forest Below: stack editorial copy and illustration on phones and tablets.
+   Desktop-specific grid placements otherwise create an implicit second column,
+   squeezing the copy to a few characters and overlapping the artwork. */
+@media (max-width: 900px) {
+  #forestCase .story-chapter,
+  #forestCase .story-chapter.reverse {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 0;
+    row-gap: 24px;
+    width: 100%;
+    align-items: start;
+  }
+
+  #forestCase .story-chapter:not(.reverse) > .story-chapter-copy,
+  #forestCase .story-chapter.reverse > .story-chapter-copy {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    padding: 0;
+  }
+
+  #forestCase .story-chapter:not(.reverse) > .story-chapter-visual,
+  #forestCase .story-chapter.reverse > .story-chapter-visual {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  #forestCase .story-chapter-visual > a {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #forestCase .story-chapter-visual img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 640px) {
+  #forestCase .story-chapter,
+  #forestCase .story-chapter.reverse {
+    row-gap: 20px;
+    padding: 34px 0;
+  }
+
+  #forestCase .story-chapter-copy h3 {
+    font-size: clamp(27px, 7vw, 35px);
+    line-height: 1.14;
+    margin-bottom: 16px;
+  }
+
+  #forestCase .story-chapter-copy p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  #forestCase .story-chapter-sequence {
+    margin-bottom: 14px;
+  }
+}
+
 </style>
 <script type="application/ld+json">
 {
