@@ -30,6 +30,7 @@
 <!-- Umami Analytics -->
 <link crossorigin="" href="https://cloud.umami.is" rel="preconnect"/>
 <script data-auto-pageview="false" data-website-id="72652adc-74e3-4a58-8fe7-31967dc9fd72" defer="" src="https://cloud.umami.is/script.js"></script>
+<script defer src="/assets/reading-time.js"></script>
 <style>
   :root{
     --bg:#ffffff;
@@ -4117,6 +4118,7 @@ document.addEventListener("click", function(event) {
   }
 
   function trackPortfolioPage(url, title, retry = 0){
+    if (window.portfolioReadingTime) window.portfolioReadingTime.setPage(url, title);
     if(window.umami && typeof window.umami.track === "function"){
       window.umami.track(props => ({ ...props, url, title }));
       return;
@@ -4445,6 +4447,7 @@ document.addEventListener("click", function(event) {
     showWork();
     if(location.protocol !== "file:") history.pushState({portfolioView:"cases",depth:0}, "", "/es/case-studies/");
     updateDocumentTitle("María Vera — Case Studies");
+    trackPortfolioPage("/es/case-studies/", "María Vera — Case Studies");
   });
 
   // Engagement events: PDFs, contact links and research sources.
