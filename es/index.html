@@ -4255,6 +4255,7 @@ document.addEventListener("click", function(event) {
     showWork();
     if(location.protocol !== "file:") history.pushState({portfolioView:"cases",depth:0}, "", "/es/case-studies/");
     updateDocumentTitle("María Vera — Case Studies");
+    trackPortfolioPage("/es/case-studies/", "María Vera — Case Studies");
   });
 
   // Engagement events: PDFs, contact links and research sources.
