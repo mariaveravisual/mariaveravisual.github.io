@@ -3509,8 +3509,8 @@ document.addEventListener("click", function(event) {
 <p>I hope you have a wonderful day!</p>
 <p>Maria</p>
 <div class="about-links">
-<a href="mailto:mariavera.visual@gmail.com">mariavera.visual@gmail.com</a>
-<a aria-label="LinkedIn profile" href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a href="mailto:mariavera.visual@gmail.com" data-umami-event="contact_click" data-umami-event-type="email" data-umami-event-location="about">mariavera.visual@gmail.com</a>
+<a aria-label="LinkedIn profile" href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank" data-umami-event="contact_click" data-umami-event-type="linkedin" data-umami-event-location="about">LinkedIn</a>
 </div>
 </div>
 </div>
@@ -3594,8 +3594,8 @@ document.addEventListener("click", function(event) {
 <div class="site-footer-role">Visual Designer &amp; Storyteller</div>
 <div class="site-footer-copy">© <span id="copyrightYear">2026</span></div>
 <div class="site-footer-links">
-<a href="mailto:mariavera.visual@gmail.com">Email</a>
-<a href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a href="mailto:mariavera.visual@gmail.com" data-umami-event="contact_click" data-umami-event-type="email" data-umami-event-location="footer">Email</a>
+<a href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank" data-umami-event="contact_click" data-umami-event-type="linkedin" data-umami-event-location="footer">LinkedIn</a>
 </div>
 </div>
 </div>
@@ -4147,7 +4147,19 @@ document.addEventListener("click", function(event) {
   }
 
   // Portfolio analytics — Umami
+  // Keep one pageview per logical route. Navigation back to another route is still tracked.
+  const recentPortfolioEvents = new Map();
+  let lastPortfolioPage = null;
+  let pendingPageToken = 0;
   function trackPortfolioEvent(name, data = {}, retry = 0){
+    if(retry === 0){
+      const key = name === "case_study_open"
+        ? name + ":" + (data.project || "")
+        : name + ":" + JSON.stringify(data);
+      const now = Date.now();
+      if(now - (recentPortfolioEvents.get(key) || 0) < 900) return;
+      recentPortfolioEvents.set(key, now);
+    }
     if(window.umami && typeof window.umami.track === "function"){
       window.umami.track(name, data);
       return;
@@ -4157,14 +4169,21 @@ document.addEventListener("click", function(event) {
     }
   }
 
-  function trackPortfolioPage(url, title, retry = 0){
-    if (window.portfolioReadingTime) window.portfolioReadingTime.setPage(url, title);
+  function trackPortfolioPage(url, title, retry = 0, token){
+    if(retry === 0){
+      if(url === lastPortfolioPage) return;
+      lastPortfolioPage = url;
+      token = ++pendingPageToken;
+      if(window.portfolioReadingTime) window.portfolioReadingTime.setPage(url, title);
+    } else if(token !== pendingPageToken){
+      return; // Discard stale retries after navigation to another route.
+    }
     if(window.umami && typeof window.umami.track === "function"){
       window.umami.track(props => ({ ...props, url, title }));
       return;
     }
     if(retry < 5){
-      setTimeout(() => trackPortfolioPage(url, title, retry + 1), 400);
+      setTimeout(() => trackPortfolioPage(url, title, retry + 1, token), 400);
     }
   }
 
@@ -4494,17 +4513,7 @@ document.addEventListener("click", function(event) {
     }, {capture:true});
   });
 
-  document.querySelectorAll('a[href^="mailto:"]').forEach(link=>{
-    link.addEventListener("click", ()=>{
-      trackPortfolioEvent("contact_click", {type:"email"});
-    });
-  });
 
-  document.querySelectorAll('a[href*="linkedin.com"]').forEach(link=>{
-    link.addEventListener("click", ()=>{
-      trackPortfolioEvent("contact_click", {type:"linkedin"});
-    });
-  });
 
   document.querySelectorAll('.case-source a').forEach(link=>{
     link.addEventListener("click", ()=>{
