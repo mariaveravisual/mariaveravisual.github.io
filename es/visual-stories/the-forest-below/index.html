@@ -3509,8 +3509,8 @@ document.addEventListener("click", function(event) {
 <p>¡Espero que tengas un gran día!</p>
 <p>María</p>
 <div class="about-links">
-<a href="mailto:mariavera.visual@gmail.com" data-umami-event="contact_click" data-umami-event-type="email" data-umami-event-location="about">mariavera.visual@gmail.com</a>
-<a aria-label="Perfil de LinkedIn" href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank" data-umami-event="contact_click" data-umami-event-type="linkedin" data-umami-event-location="about">LinkedIn</a>
+<a href="mailto:mariavera.visual@gmail.com" data-umami-event="contact_click" data-umami-event-language="es" data-umami-event-type="email" data-umami-event-location="about">mariavera.visual@gmail.com</a>
+<a aria-label="Perfil de LinkedIn" href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank" data-umami-event="contact_click" data-umami-event-language="es" data-umami-event-type="linkedin" data-umami-event-location="about">LinkedIn</a>
 </div>
 </div>
 </div>
@@ -3594,8 +3594,8 @@ document.addEventListener("click", function(event) {
 <div class="site-footer-role">Diseñadora visual y storyteller</div>
 <div class="site-footer-copy">© <span id="copyrightYear">2026</span></div>
 <div class="site-footer-links">
-<a href="mailto:mariavera.visual@gmail.com" data-umami-event="contact_click" data-umami-event-type="email" data-umami-event-location="footer">Email</a>
-<a href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank" data-umami-event="contact_click" data-umami-event-type="linkedin" data-umami-event-location="footer">LinkedIn</a>
+<a href="mailto:mariavera.visual@gmail.com" data-umami-event="contact_click" data-umami-event-language="es" data-umami-event-type="email" data-umami-event-location="footer">Email</a>
+<a href="https://www.linkedin.com/in/mariaveram/" rel="noopener noreferrer" target="_blank" data-umami-event="contact_click" data-umami-event-language="es" data-umami-event-type="linkedin" data-umami-event-location="footer">LinkedIn</a>
 </div>
 </div>
 </div>
@@ -4161,7 +4161,7 @@ document.addEventListener("click", function(event) {
       recentPortfolioEvents.set(key, now);
     }
     if(window.umami && typeof window.umami.track === "function"){
-      window.umami.track(name, data);
+      window.umami.track(name, { ...data, language: document.documentElement.lang === "es" ? "es" : "en" });
       return;
     }
     if(retry < 5){
