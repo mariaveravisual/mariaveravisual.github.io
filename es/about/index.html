@@ -3086,6 +3086,40 @@
 .story-author-text p:last-child{margin-bottom:0}
 @media(max-width:700px){.story-author-note{grid-template-columns:1fr;padding:35px 24px;gap:24px}.story-author-label::after{margin-top:0}.story-author-text p{font-size:16px;line-height:1.67}}
 
+
+  /* About photograph: preserve the existing image column and add an editorial caption. */
+  .about-image-column{overflow:visible !important}
+  .about-image-column .about-photo{display:flex;flex-direction:column;width:100%;height:100%;margin:0}
+  .about-image-column .about-photo img{
+    display:block !important;
+    flex:1 1 auto;
+    min-height:0 !important;
+    height:calc(100% - 30px) !important;
+    width:100% !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+  }
+  .about-image-column .about-photo figcaption{
+    flex:0 0 auto;
+    padding-top:11px;
+    font-family:var(--sans);
+    font-size:12px;
+    font-weight:400;
+    line-height:1.5;
+    letter-spacing:.01em;
+    color:var(--muted);
+    text-align:left;
+  }
+  @media(max-width:950px){
+    .about-image-column .about-photo{height:auto}
+    .about-image-column .about-photo img{
+      flex:none;
+      height:auto !important;
+      aspect-ratio:auto !important;
+      object-fit:contain !important;
+    }
+  }
+
 </style><style>body.show-about .about-page{display:block}nav a[aria-current="page"]::after{width:100%}</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","@id":"https://mariavera.design/es/about/#webpage","url":"https://mariavera.design/es/about/","name":"Sobre María Vera","inLanguage":"es","mainEntity":{"@type":"Person","@id":"https://mariavera.design/#person","name":"María Vera","jobTitle":"Diseñadora visual sénior","url":"https://mariavera.design/","sameAs":["https://www.linkedin.com/in/mariaveram/"],"knowsAbout":["Storytelling visual","Comunicación de investigación","Diseño editorial","Diseño de información","Comunicación científica"],"description":"Diseñadora visual sénior que combina storytelling visual, comunicación de investigación, diseño editorial y de información para hacer accesibles los datos y la investigación."}}</script><style>header nav a[data-nav]::after{width:0!important}header nav a[data-nav="about"]::after{width:100%!important}</style><script data-portfolio-nav-fix>
 document.addEventListener("click", function(event) {
   const anchor = event.target.closest("header nav a, header a.brand");
@@ -3124,7 +3158,10 @@ document.addEventListener("click", function(event) {
 </div>
 </div>
 <div class="about-image-column">
-<img alt="Mangrove lagoon illustration" decoding="async" height="1200" src="/assets/image-029-b59c5434e8f8.jpg" width="634"/>
+<figure class="about-photo">
+<img alt="Cloud reflections over wet sand at Talacre Beach, North Wales" decoding="async" fetchpriority="high" height="1200" src="/assets/talacre-beach-north-wales.jpg" width="634"/>
+<figcaption>Talacre Beach, North Wales</figcaption>
+</figure>
 </div>
 </div>
 <section class="about-expertise">
