@@ -41,7 +41,9 @@
           name: name,
           url: page,
           title: title,
-          data: data
+          data: Object.assign({}, data, {
+            language: page === "/es" || page.indexOf("/es/") === 0 ? "es" : "en"
+          })
         });
       });
       return true;
