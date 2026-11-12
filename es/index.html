@@ -4245,6 +4245,7 @@ document.addEventListener("click", function(event) {
   document.querySelectorAll("a.project").forEach(card=>{
     card.addEventListener("click", event=>{
       if(event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      if(!caseRoutes[card.dataset.project]) return; // Allow standalone Visual Stories pages to navigate normally.
       event.preventDefault();
       lastCaseTrigger = card;
       openCase(card.dataset.project, {historyMode:"push", origin:"home", source:card.dataset.project === "forest" ? "visual_stories" : "case_studies"});
