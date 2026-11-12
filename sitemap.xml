@@ -96,4 +96,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/case-studies/" />
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://mariavera.design/visual-stories/the-mountain-beneath/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/visual-stories/the-mountain-beneath/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-stories/the-mountain-beneath/" />
+    <lastmod>2026-11-12</lastmod>
+  </url>
+  <url>
+    <loc>https://mariavera.design/es/visual-stories/the-mountain-beneath/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mariavera.design/visual-stories/the-mountain-beneath/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://mariavera.design/es/visual-stories/the-mountain-beneath/" />
+    <lastmod>2026-11-12</lastmod>
+  </url>
 </urlset>
