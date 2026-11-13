@@ -4558,6 +4558,16 @@ document.addEventListener("click", function(event) {
 
 
 
+  // Research reference links in both Visual Stories also emit the source click event.
+  document.querySelectorAll('.story-reference-item a').forEach(link=>{
+    link.addEventListener("click", ()=>{
+      const storyRoot = link.closest("#forestCase, #mountainCase");
+      const project = storyRoot?.id === "mountainCase" ? "mountain" : "forest";
+      const source = link.querySelector(".story-reference-name")?.textContent?.trim() || link.textContent.trim();
+      trackPortfolioEvent("source_research_click", {project, source:source.slice(0, 250)});
+    });
+  });
+
   document.querySelectorAll('.case-source a').forEach(link=>{
     link.addEventListener("click", ()=>{
       const caseRoot = link.closest("#fijiCase, #darkCase, #shrimpCase");
