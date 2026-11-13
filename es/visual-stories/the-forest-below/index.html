@@ -29,7 +29,7 @@
 <meta content="https://mariavera.design/assets/the-forest-below-social.jpg" name="twitter:image"/>
 <!-- Umami Analytics -->
 <link crossorigin="" href="https://cloud.umami.is" rel="preconnect"/>
-<script data-auto-pageview="false" data-website-id="72652adc-74e3-4a58-8fe7-31967dc9fd72" defer="" src="https://cloud.umami.is/script.js"></script>
+<script data-website-id="72652adc-74e3-4a58-8fe7-31967dc9fd72" defer="" src="https://cloud.umami.is/script.js"></script>
 <script defer src="/assets/reading-time.js"></script>
 <style>
   :root{
@@ -4214,7 +4214,7 @@ document.addEventListener("click", function(event) {
     if(url === lastPortfolioPage) return;
     lastPortfolioPage = url;
     if(window.portfolioReadingTime) window.portfolioReadingTime.setPage(url, title);
-    queuePortfolioAnalytics({type: "pageview", url, title});
+    // The Umami tracker handles initial and SPA pageviews automatically.
   }
 
   const storiesNav = document.querySelector('[data-nav="stories"]');
