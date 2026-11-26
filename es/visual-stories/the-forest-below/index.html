@@ -4967,6 +4967,11 @@ document.addEventListener("click", function(event) {
     const title=button.getAttribute("data-share-title");
     const feedback=button.parentElement.querySelector(".portfolio-share-feedback");
     if(!url||!feedback)return;
+    // Record the share-button click once, before native sharing or clipboard access.
+    const sharePath=new URL(url,window.location.href).pathname.replace(/\/+$/,"");
+    const shareSlug=sharePath.split("/").pop();
+    const project=({"dark-vessels":"dark","shrimp-welfare":"shrimp"})[shareSlug]||shareSlug;
+    trackPortfolioEvent("project_share",{project,section:sharePath.includes("/visual-stories/")?"visual_stories":"case_studies"});
     if(navigator.share&&window.matchMedia&&window.matchMedia("(pointer: coarse)").matches){
       try{await navigator.share({title:title,url:url});return;}
       catch(error){if(error&&error.name==="AbortError")return;}
